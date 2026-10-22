@@ -42,3 +42,5 @@ substitute for native target build or device acceptance.
 ## License
 
 The repository is licensed under GNU AGPL-3.0-only. See [`LICENSE`](LICENSE).
+
+Release journals live in [GitHub Releases](https://github.com/NDDev-Technocracy-OpenNetwork-NDS/nddev-opennetwork-design-system/releases).
