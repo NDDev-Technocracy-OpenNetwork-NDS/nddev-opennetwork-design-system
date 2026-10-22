@@ -1,0 +1,45 @@
+name: main-ci
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: main-validation
+  cancel-in-progress: false
+
+jobs:
+  contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3
+        with:
+          just-version: '1.59.0'
+      - name: Install verified Flutter SDK
+        shell: bash
+        run: |
+          flutter_archive="$RUNNER_TEMP/flutter-sdk.tar.xz"
+          curl --fail --show-error --location --retry 2 --max-time 300 \
+            https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.47.7-stable.tar.xz \
+            --output "$flutter_archive"
+          echo "af7455f540df951184c7953fbe3cf884766e7541dacf8571f9f582db03dd6230  $flutter_archive" | sha256sum --check -
+          tar -xf "$flutter_archive" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.15.0'
+      - name: Install pinned launcher renderer
+        run: python3 -m pip install --require-hashes -r tools/requirements-icons.txt
+      - name: Resolve Flutter dependencies
+        working-directory: packages/flutter
+        run: flutter pub get --enforce-lockfile
+      - name: Analyze and test
+        run: bash tools/with-renderer-zlib.sh just check
