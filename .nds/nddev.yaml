@@ -35,6 +35,10 @@ spec:
     purpose: lock
     reason: NDS contract lock pinning the standards corpus with the visual-source amendment.
     decision: {state: approved, by: rldyourmnd, date: "2026-10-22", origin: document, reference: standarts/decisions/0013-estate-hygiene-and-standards-adoption.md}
+  - paths: [.python-version]
+    purpose: tool-config
+    reason: Pinned CPython toolchain feeding the token and icon generators.
+    decision: {state: approved, by: rldyourmnd, date: "2026-10-22", origin: document, reference: standarts/decisions/0013-estate-hygiene-and-standards-adoption.md}
   - paths: [packages]
     purpose: package
     reason: Published Flutter package generated from the canonical tokens.
