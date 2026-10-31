@@ -1,5 +1,5 @@
 # std-0001 repository manifest — schema: `nddev schema manifest`.
-apiVersion: nddev.ai/v1alpha3
+apiVersion: nddev.ai/v1alpha4
 kind: Repository
 metadata:
   id: nddev-opennetwork-design-system
@@ -8,7 +8,6 @@ metadata:
 spec:
   standard:
     id: std-0001
-    version: 3.0.0
   role: component
   profiles:
   - design
@@ -21,28 +20,14 @@ spec:
   - name: design-tokens
     source: tokens/tokens.json
     direction: schema-first
-    generated: [tokens/tokens.css]
-  variations:
-  - paths: [.gds]
-    purpose: config
-    reason: GDS-owned repository anchor and policy projections; std-0001 excludes .gds by its own boundary rule.
-    decision: {state: approved, by: rldyourmnd, date: "2026-10-22", origin: document, reference: standarts/decisions/0013-estate-hygiene-and-standards-adoption.md}
-  - paths: [module.yaml]
-    purpose: manifest
-    reason: NDS module descriptor owned by the product standards corpus.
-    decision: {state: approved, by: rldyourmnd, date: "2026-10-22", origin: document, reference: standarts/decisions/0013-estate-hygiene-and-standards-adoption.md}
-  - paths: [standarts.lock]
-    purpose: lock
-    reason: NDS contract lock pinning the standards corpus with the visual-source amendment.
-    decision: {state: approved, by: rldyourmnd, date: "2026-10-22", origin: document, reference: standarts/decisions/0013-estate-hygiene-and-standards-adoption.md}
-  - paths: [.python-version]
-    purpose: tool-config
-    reason: Pinned CPython toolchain feeding the token and icon generators.
-    decision: {state: approved, by: rldyourmnd, date: "2026-10-22", origin: document, reference: standarts/decisions/0013-estate-hygiene-and-standards-adoption.md}
-  - paths: [packages]
-    purpose: package
-    reason: Published Flutter package generated from the canonical tokens.
-    decision: {state: approved, by: rldyourmnd, date: "2026-10-22", origin: document, reference: standarts/decisions/0013-estate-hygiene-and-standards-adoption.md}
+    generated:
+    - tokens/tokens.css
+  adaptations:
+  - docs/decisions/0001-nds-contract-locations.md
+  extensions:
+    nddev.standards-system:
+      standards:
+      - std-0001
   adapters:
   - claude
   - cursor
