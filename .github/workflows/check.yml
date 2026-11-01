@@ -43,3 +43,33 @@ jobs:
         run: flutter pub get --enforce-lockfile
       - name: Analyze and test
         run: bash tools/with-renderer-zlib.sh just check
+
+  workflows:
+    # Workflow lint and audit plus the secret scan: new commits on pull requests,
+    # the full history on main (STD-0004 library tools, verified prebuilt binaries).
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: NDDev-Technocracy-Standarts/std-0004-ci-cd-workflows/.github/actions/tools@9cc44a5043ddd266f3e73fefacc52f5cf5a7d70f # nddev-cicd-v0.6.18
+        with:
+          capability: security
+      - name: Lint and audit workflows
+        run: |
+          actionlint
+          zizmor --offline --no-progress .github
+      - name: Scan new pull request commits, or the full history on main
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ -n "$BASE" ]; then
+            gitleaks git --no-banner --redact --log-opts="$BASE..$HEAD" .
+          else
+            gitleaks git --no-banner --redact .
+          fi

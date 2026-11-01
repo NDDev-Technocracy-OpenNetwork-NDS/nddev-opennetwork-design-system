@@ -1,0 +1,10 @@
+# Reviewed historical Gitleaks findings (2026-11-01, STD-0004 R-0015). Each fingerprint is a proven
+# non-credential; values are not reproduced here. New findings stay blocking.
+
+# tokens/tokens.json:8 @d2f98543562c [generic-api-key]: `$extensions.nddev.inputs_sha256` of the W3C design-token file maps
+# each source file path to its SHA-256 digest (the same provenance convention verified in the mobile launchers).
+d2f98543562c4fcf52dde2098ce0693bbd62a51e:tokens/tokens.json:generic-api-key:8
+
+# tokens/tokens.json:9 @d2f98543562c [generic-api-key]: `$extensions.nddev.inputs_sha256` of the W3C design-token file maps
+# each source file path to its SHA-256 digest (the same provenance convention verified in the mobile launchers).
+d2f98543562c4fcf52dde2098ce0693bbd62a51e:tokens/tokens.json:generic-api-key:9
