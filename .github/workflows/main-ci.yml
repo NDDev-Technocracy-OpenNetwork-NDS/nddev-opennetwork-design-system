@@ -33,7 +33,7 @@ jobs:
           echo "af7455f540df951184c7953fbe3cf884766e7541dacf8571f9f582db03dd6230  $flutter_archive" | sha256sum --check -
           tar -xf "$flutter_archive" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version-file: .python-version
       - name: Install pinned launcher renderer
