@@ -354,6 +354,7 @@ import 'dart:ui' show lerpDouble;
 import 'package:flutter/material.dart';
 
 import 'tokens.dart';
+import 'licenses.dart';
 
 /// The NDDev colours as a theme extension: Theme.of(context).extension<NDColorsExtension>().
 class NDColorsExtension extends ThemeExtension<NDColorsExtension> {
@@ -458,6 +459,7 @@ ThemeData ndThemeData({
   NDDensity density = NDDensity.comfortable,
   NDScript script = NDScript.latin,
 }) {
+  registerOpenNetworkFontLicenses();
   final colors = NDColors.resolve(theme, direction);
   final metrics = NDMetrics.resolve(platform, density);
   final scheme = ndColorScheme(colors, dark: theme.isDark);

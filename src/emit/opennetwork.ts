@@ -200,7 +200,7 @@ export function emitOpenNetwork(model: Model): Map<string, string> {
   end();
   out.set("packages/flutter/lib/src/tokens.dart", dart.join("\n"));
   out.set("tokens/tokens.json", stableJson(legacy));
-  for (const name of ["theme.dart", "brand.dart"])
+  for (const name of ["theme.dart", "brand.dart", "licenses.dart"])
     out.set(
       `packages/flutter/lib/src/${name}`,
       readFileSync(`${ROOT}adapters/flutter/${name}`, "utf8"),
