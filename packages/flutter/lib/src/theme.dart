@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 
 import 'tokens.dart';
+import 'nd_theme.dart';
+import 'nd_tokens.dart';
+import 'licenses.dart';
 
 /// Native controls using the platform OpenNetwork kit, without seed-derived hues.
 abstract final class OpenNetworkTheme {
-  static bool _fontLicenseRegistered = false;
   static ThemeData dark({
     double width = OpenNetworkTypography.viewportMin,
     bool reduceMotion = false,
@@ -41,18 +41,11 @@ abstract final class OpenNetworkTheme {
     bool contrast = false,
     bool reduceMotion = false,
   }) {
-    if (!_fontLicenseRegistered) {
-      _fontLicenseRegistered = true;
-      LicenseRegistry.addLicense(() async* {
-        yield LicenseEntryWithLineBreaks(
-          ['IBM Plex Sans', 'IBM Plex Sans Arabic'],
-          await rootBundle.loadString(
-            'packages/nddev_opennetwork_design_system/fonts/OFL-IBM-Plex.txt',
-          ),
-        );
-      });
-    }
+    registerOpenNetworkFontLicenses();
     final dark = brightness == Brightness.dark;
+    final contextTheme = dark
+        ? (contrast ? NDTheme.darkContrast : NDTheme.dark)
+        : (contrast ? NDTheme.lightContrast : NDTheme.light);
     final c = dark
         ? (contrast ? OpenNetworkColors.darkContrast : OpenNetworkColors.dark)
         : (contrast
@@ -200,6 +193,12 @@ abstract final class OpenNetworkTheme {
         );
     return ThemeData(
       useMaterial3: true,
+      extensions: [
+        NDColorsExtension(NDColors.resolve(contextTheme, NDDirection.on)),
+        NDMetricsExtension(
+          NDMetrics.resolve(NDPlatform.android, NDDensity.comfortable),
+        ),
+      ],
       colorScheme: scheme,
       scaffoldBackgroundColor: c.surfaceBase,
       canvasColor: c.surfaceBase,

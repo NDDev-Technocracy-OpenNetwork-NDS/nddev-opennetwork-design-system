@@ -50,6 +50,15 @@ void main() {
       _ => OpenNetworkColors.lightContrast,
     };
     test('$name keeps OpenNetwork roles and complete control states', () {
+      expect(
+        theme.extension<NDColorsExtension>()!.colors.textPrimary,
+        c.textPrimary,
+      );
+      expect(
+        theme.extension<NDColorsExtension>()!.colors.accentFill,
+        c.accentFill,
+      );
+      expect(theme.extension<NDMetricsExtension>(), isNotNull);
       expect(theme.colorScheme.primary, c.accentText);
       expect(theme.scaffoldBackgroundColor, c.surfaceBase);
       expect(theme.textTheme.bodyMedium!.fontFamily, contains('IBM Plex Sans'));
