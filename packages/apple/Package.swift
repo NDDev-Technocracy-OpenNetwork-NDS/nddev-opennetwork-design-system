@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "NDDevDesignSystem",
+    name: "OpenNetworkDesignSystem",
     platforms: [.iOS(.v16), .macOS(.v13)],
     products: [
         .library(name: "OpenNetworkDesignTokens", targets: ["OpenNetworkDesignTokens"]),

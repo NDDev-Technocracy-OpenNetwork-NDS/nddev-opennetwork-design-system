@@ -571,7 +571,7 @@ ${[...material].map(([m, role]) => `        ${m} = style(NDTypeRole.${enumName(r
     )
 }
 
-val LocalNDColors = staticCompositionLocalOf { NDColors.resolve(NDTheme.${pascal(t.themes[0]?.id ?? "light")}, NDDirection.Dev) }
+val LocalNDColors = staticCompositionLocalOf { NDColors.resolve(NDTheme.${pascal(t.themes[0]?.id ?? "light")}, NDDirection.${enumName(t.directions[0]?.id ?? "on")}) }
 val LocalNDMetrics = staticCompositionLocalOf { NDMetrics.resolve(NDPlatform.Android, NDDensity.Comfortable) }
 val LocalNDPlatform = staticCompositionLocalOf { NDPlatform.Android }
 val LocalNDScript = staticCompositionLocalOf { NDScript.Latin }

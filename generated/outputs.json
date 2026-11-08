@@ -100,7 +100,7 @@
       "src/emit/figma.ts": "07435b871d70b7b4809c12572c38c9bc1fa2586ebec9a1fb871bbf00964eed49",
       "src/emit/icons.ts": "e01e7851b025051b72ed8831af30b553e343fbb866296a99e9009e7e4e542f73",
       "src/emit/kit-css.ts": "417d5746777e41e7577ce8680387bc5d7abda1c75be61e8bffb13734aee27c77",
-      "src/emit/kotlin.ts": "cce1a01761dc14e07d9c2eb6972903f27dd2bd91ac24ca0b5b62ebfbd09812e3",
+      "src/emit/kotlin.ts": "b2791421d55e72024249bd4e923fc0d7e534ea96f6dda5f0201303d9064c5ddc",
       "src/emit/listing.ts": "ce8f7ee8eee7c9aeaf4f07356c8e346e0d591e3b8ca3411e04ec937c8aab6c37",
       "src/emit/llms.ts": "3db3ab00debd000c14bd385d6bf6d6ef3cdd851c446ecda43b57f17bdba4e8a7",
       "src/emit/native.ts": "5f5f1a3c0647b14137b9e22c78619bdbb143f636c8dd11619cce4b60d290664e",
@@ -108,7 +108,7 @@
       "src/emit/readmes.ts": "8aeaad54fd98f959c9e63300437a329a006dfb66c2899bf5038b38787ab52cd5",
       "src/emit/reference.ts": "4fe81bc74954645f6f61b7e82ec574ea5338ff766485c2d0e0e1ec0ebf74137b",
       "src/emit/rust.ts": "4931e318533c894ba700eb74f746fb7d2a223a19889df515ba94a710c309c9e6",
-      "src/emit/swift.ts": "9f2b5beb8cd2ed908c6a21879b10a015286c5db258555e846a55ee6ef40cf048",
+      "src/emit/swift.ts": "4b7842032f6a681f726a9c3ab7c08e640871621dd0542f64f5f90a0db699b95d",
       "src/emit/vectors.ts": "287d63832702222b9d2f678a6ff46c621fe56fa64ec8730d3ccffe56ea7cdd1b",
       "src/fonts.ts": "116ff5a769bbcd59c17641f6c7cfe25e89c1abbfba30c5287080c50de9e28d27",
       "src/generated-output.ts": "87d80e16998bbebc65672e3f821a6edc8cc31b12f89c1d31eb24c195b5a8b925",
@@ -272,7 +272,7 @@
       "src/emit/figma.ts": "07435b871d70b7b4809c12572c38c9bc1fa2586ebec9a1fb871bbf00964eed49",
       "src/emit/icons.ts": "e01e7851b025051b72ed8831af30b553e343fbb866296a99e9009e7e4e542f73",
       "src/emit/kit-css.ts": "417d5746777e41e7577ce8680387bc5d7abda1c75be61e8bffb13734aee27c77",
-      "src/emit/kotlin.ts": "cce1a01761dc14e07d9c2eb6972903f27dd2bd91ac24ca0b5b62ebfbd09812e3",
+      "src/emit/kotlin.ts": "b2791421d55e72024249bd4e923fc0d7e534ea96f6dda5f0201303d9064c5ddc",
       "src/emit/listing.ts": "ce8f7ee8eee7c9aeaf4f07356c8e346e0d591e3b8ca3411e04ec937c8aab6c37",
       "src/emit/llms.ts": "3db3ab00debd000c14bd385d6bf6d6ef3cdd851c446ecda43b57f17bdba4e8a7",
       "src/emit/native.ts": "5f5f1a3c0647b14137b9e22c78619bdbb143f636c8dd11619cce4b60d290664e",
@@ -280,7 +280,7 @@
       "src/emit/readmes.ts": "8aeaad54fd98f959c9e63300437a329a006dfb66c2899bf5038b38787ab52cd5",
       "src/emit/reference.ts": "4fe81bc74954645f6f61b7e82ec574ea5338ff766485c2d0e0e1ec0ebf74137b",
       "src/emit/rust.ts": "4931e318533c894ba700eb74f746fb7d2a223a19889df515ba94a710c309c9e6",
-      "src/emit/swift.ts": "9f2b5beb8cd2ed908c6a21879b10a015286c5db258555e846a55ee6ef40cf048",
+      "src/emit/swift.ts": "4b7842032f6a681f726a9c3ab7c08e640871621dd0542f64f5f90a0db699b95d",
       "src/emit/vectors.ts": "287d63832702222b9d2f678a6ff46c621fe56fa64ec8730d3ccffe56ea7cdd1b",
       "src/fonts.ts": "116ff5a769bbcd59c17641f6c7cfe25e89c1abbfba30c5287080c50de9e28d27",
       "src/generated-output.ts": "87d80e16998bbebc65672e3f821a6edc8cc31b12f89c1d31eb24c195b5a8b925",
@@ -366,7 +366,7 @@
       "executable": false
     },
     "packages/apple/Package.swift": {
-      "sha256": "40176c5e020f5906a279a9b4ff245cc4927b3ea74c836e80edae77da66b52bb2",
+      "sha256": "e9b1de3824e2df4cfc5055aece331ad09d875f2e7e4f9eca9b02ebfc92e58b15",
       "scope": "packages",
       "executable": false
     },
@@ -426,7 +426,7 @@
       "executable": false
     },
     "packages/apple/Sources/OpenNetworkDesignTokens/SwiftUI.swift": {
-      "sha256": "04b3925a7cf1a0ca31c06c730fc4cd20f4269f8820d693961f0e367bd64bdea0",
+      "sha256": "8df74c880ab89bf3db685b1038bbd93deba9e59ccef3581b8c25bf7140ae2779",
       "scope": "packages",
       "executable": false
     },
@@ -1511,7 +1511,7 @@
       "executable": false
     },
     "packages/kotlin/src/main/kotlin/ai/nddev/opennetwork/design/compose/NDCompose.kt": {
-      "sha256": "67465924950e1d9be20fb13e948e7696a266e7bddc9940b8431511e7d9addaee",
+      "sha256": "64222af789b3f2fd1a65f820c1ec902c50f84b99a328b65d92198c34c9d764b3",
       "scope": "packages",
       "executable": false
     },

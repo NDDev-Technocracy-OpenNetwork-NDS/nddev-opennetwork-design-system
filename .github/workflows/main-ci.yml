@@ -72,12 +72,20 @@ jobs:
           retention-days: 7
 
   platforms:
-    runs-on: ubuntu-26.04
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
-        target: [swift, kotlin, rust]
+        include:
+          - target: swift
+            os: ubuntu-26.04
+          - target: kotlin
+            os: ubuntu-26.04
+          - target: rust
+            os: ubuntu-26.04
+          - target: apple
+            os: macos-15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -90,9 +98,15 @@ jobs:
           components: rustfmt, clippy
           cache: false
       - name: Compile and test the source package
+        if: matrix.target != 'apple'
         env:
           TARGET: ${{ matrix.target }}
         run: bash scripts/check-platforms.sh "$TARGET"
+      - name: Compile and test SwiftUI bindings on Apple
+        if: matrix.target == 'apple'
+        run: |
+          swift build --package-path packages/apple -Xswiftc -warnings-as-errors
+          swift test --package-path packages/apple
 
   contract:
     if: ${{ !cancelled() }}

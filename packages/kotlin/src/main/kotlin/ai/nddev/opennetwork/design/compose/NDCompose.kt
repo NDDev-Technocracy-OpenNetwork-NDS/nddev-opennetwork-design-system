@@ -174,7 +174,7 @@ fun ndTypography(
     )
 }
 
-val LocalNDColors = staticCompositionLocalOf { NDColors.resolve(NDTheme.Light, NDDirection.Dev) }
+val LocalNDColors = staticCompositionLocalOf { NDColors.resolve(NDTheme.Light, NDDirection.On) }
 val LocalNDMetrics = staticCompositionLocalOf { NDMetrics.resolve(NDPlatform.Android, NDDensity.Comfortable) }
 val LocalNDPlatform = staticCompositionLocalOf { NDPlatform.Android }
 val LocalNDScript = staticCompositionLocalOf { NDScript.Latin }

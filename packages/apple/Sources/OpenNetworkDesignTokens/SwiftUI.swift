@@ -55,7 +55,7 @@ extension NDTextStyle {
 }
 
 private struct NDColorsKey: EnvironmentKey {
-    static let defaultValue = NDColors.resolve(theme: .light, direction: .dev)
+    static let defaultValue = NDColors.resolve(theme: .light, direction: .on)
 }
 
 private struct NDMetricsKey: EnvironmentKey {

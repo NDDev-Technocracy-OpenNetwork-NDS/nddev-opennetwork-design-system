@@ -444,7 +444,7 @@ extension NDTextStyle {
 }
 
 private struct NDColorsKey: EnvironmentKey {
-    static let defaultValue = NDColors.resolve(theme: .${caseName(t.themes[0]?.id ?? "light")}, direction: .dev)
+    static let defaultValue = NDColors.resolve(theme: .${caseName(t.themes[0]?.id ?? "light")}, direction: .${caseName(t.directions[0]?.id ?? "on")})
 }
 
 private struct NDMetricsKey: EnvironmentKey {
@@ -716,7 +716,7 @@ public struct NDVectorImage: View {
 ${HEADER}import PackageDescription
 
 let package = Package(
-    name: "NDDevDesignSystem",
+    name: "OpenNetworkDesignSystem",
     platforms: [.iOS(.v16), .macOS(.v13)],
     products: [
         .library(name: "OpenNetworkDesignTokens", targets: ["OpenNetworkDesignTokens"]),
