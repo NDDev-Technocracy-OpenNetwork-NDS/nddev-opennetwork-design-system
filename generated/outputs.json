@@ -106,7 +106,7 @@
       "src/emit/native.ts": "5f5f1a3c0647b14137b9e22c78619bdbb143f636c8dd11619cce4b60d290664e",
       "src/emit/opennetwork.ts": "384d8d9b91ccbbb98e3c4302870c56464efd9a0b3171283f125b8ae3c9c00931",
       "src/emit/readmes.ts": "8aeaad54fd98f959c9e63300437a329a006dfb66c2899bf5038b38787ab52cd5",
-      "src/emit/reference.ts": "4e1e719d18d60bf179129f5208632822b70f772ccacac4029c8ba6e420ff62d5",
+      "src/emit/reference.ts": "4fe81bc74954645f6f61b7e82ec574ea5338ff766485c2d0e0e1ec0ebf74137b",
       "src/emit/rust.ts": "4931e318533c894ba700eb74f746fb7d2a223a19889df515ba94a710c309c9e6",
       "src/emit/swift.ts": "9f2b5beb8cd2ed908c6a21879b10a015286c5db258555e846a55ee6ef40cf048",
       "src/emit/vectors.ts": "287d63832702222b9d2f678a6ff46c621fe56fa64ec8730d3ccffe56ea7cdd1b",
@@ -278,7 +278,7 @@
       "src/emit/native.ts": "5f5f1a3c0647b14137b9e22c78619bdbb143f636c8dd11619cce4b60d290664e",
       "src/emit/opennetwork.ts": "384d8d9b91ccbbb98e3c4302870c56464efd9a0b3171283f125b8ae3c9c00931",
       "src/emit/readmes.ts": "8aeaad54fd98f959c9e63300437a329a006dfb66c2899bf5038b38787ab52cd5",
-      "src/emit/reference.ts": "4e1e719d18d60bf179129f5208632822b70f772ccacac4029c8ba6e420ff62d5",
+      "src/emit/reference.ts": "4fe81bc74954645f6f61b7e82ec574ea5338ff766485c2d0e0e1ec0ebf74137b",
       "src/emit/rust.ts": "4931e318533c894ba700eb74f746fb7d2a223a19889df515ba94a710c309c9e6",
       "src/emit/swift.ts": "9f2b5beb8cd2ed908c6a21879b10a015286c5db258555e846a55ee6ef40cf048",
       "src/emit/vectors.ts": "287d63832702222b9d2f678a6ff46c621fe56fa64ec8730d3ccffe56ea7cdd1b",
@@ -2881,7 +2881,7 @@
       "executable": false
     },
     "packages/web/reference.html": {
-      "sha256": "2c0d9e79808eabb6280292ebc68788e8f65218c3e6e288d899e80e7b47faf78f",
+      "sha256": "ce5ca2ea7257b6d227c73bf22671ae33d143f86c318f29a2546e5a1ea207c505",
       "scope": "packages",
       "executable": false
     },

@@ -240,7 +240,7 @@ function select(
       (o) =>
         `<option value="${esc(o)}"${o === first ? " selected" : ""}>${esc(o)}</option>`,
     )
-    .join("")}</select></label>`;
+    .join("")}</select></div>`;
 }
 
 function spec(c: Component): string {
