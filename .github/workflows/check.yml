@@ -55,7 +55,7 @@ jobs:
         run: |
           mkdir -p .build/flutter-visual
           bash tools/with-renderer-zlib.sh just check test
-          bunx playwright install --with-deps chromium
+          bunx playwright install --with-deps chromium firefox webkit
           just test-browser
 
       - name: Retain reference UI renders
