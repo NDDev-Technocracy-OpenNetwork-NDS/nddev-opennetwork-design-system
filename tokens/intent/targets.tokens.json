@@ -1,0 +1,18 @@
+{
+  "$description": "WCAG 2.x contrast targets the generator enforces; passing them is not an accessibility certification.",
+  "contrast": {
+    "$type": "number",
+    "text": {
+      "$value": 4.5,
+      "$description": "WCAG 2.2 1.4.3: normal text"
+    },
+    "large-text": {
+      "$value": 3,
+      "$description": "WCAG 2.2 1.4.3: large text"
+    },
+    "ui": {
+      "$value": 3,
+      "$description": "WCAG 2.2 1.4.11: user-interface components"
+    }
+  }
+}

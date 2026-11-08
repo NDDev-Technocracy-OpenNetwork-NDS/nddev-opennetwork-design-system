@@ -1,0 +1,36 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "motion": {
+        "note": "prefers-reduced-motion or the visitor's own choice: nothing moves (WCAG 2.2 2.3.3)."
+      }
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "ui-fast": {
+      "$value": {
+        "value": 0,
+        "unit": "ms"
+      }
+    },
+    "ui": {
+      "$value": {
+        "value": 0,
+        "unit": "ms"
+      }
+    },
+    "scene": {
+      "$value": {
+        "value": 0,
+        "unit": "ms"
+      }
+    },
+    "scene-slow": {
+      "$value": {
+        "value": 0,
+        "unit": "ms"
+      }
+    }
+  }
+}

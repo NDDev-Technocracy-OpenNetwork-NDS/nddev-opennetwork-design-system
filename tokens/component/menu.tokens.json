@@ -1,0 +1,41 @@
+{
+  "menu": {
+    "$description": "Menu and listbox popup: items on an overlay surface; the active item is tinted and marked.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.overlay}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "item": {
+      "fill": {
+        "hover": {
+          "$type": "color",
+          "$value": "{surface.hover}"
+        },
+        "selected": {
+          "$type": "color",
+          "$value": "{surface.selected}"
+        }
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.lg}"
+    },
+    "elevation": {
+      "$type": "shadow",
+      "$value": "{elevation.2}"
+    },
+    "item-height": {
+      "$type": "dimension",
+      "$value": "{size.target-min}"
+    }
+  }
+}

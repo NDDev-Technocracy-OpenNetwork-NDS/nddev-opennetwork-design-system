@@ -1,0 +1,80 @@
+{
+  "notice": {
+    "$description": "Notice (alert): an icon, a word and a message on a status tint; never colour alone.",
+    "info": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.info.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.info.border}"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{status.info.text}"
+      }
+    },
+    "success": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.success.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.success.border}"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{status.success.text}"
+      }
+    },
+    "warning": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.warning.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.warning.border}"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{status.warning.text}"
+      }
+    },
+    "danger": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.danger.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.danger.border}"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{status.danger.text}"
+      }
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "edge-width": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      }
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    }
+  }
+}

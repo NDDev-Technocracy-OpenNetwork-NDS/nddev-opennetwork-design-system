@@ -1,0 +1,58 @@
+{
+  "name": "Icon",
+  "category": "data",
+  "status": "implemented",
+  "summary": "A drawn mark of the design; decorative, the control around it carries the meaning.",
+  "pattern": {
+    "html": "inline <svg aria-hidden=\"true\" focusable=\"false\">"
+  },
+  "anatomy": [
+    {
+      "part": "glyph",
+      "required": true,
+      "description": "Paths in currentColor; size.icon by default."
+    }
+  ],
+  "variants": [
+    {
+      "id": "forward",
+      "description": "The arrow turned to the reading direction."
+    },
+    {
+      "id": "back",
+      "description": ""
+    },
+    {
+      "id": "down",
+      "description": ""
+    },
+    {
+      "id": "external",
+      "description": "Out of the site: the arrow up and forward, mirrored right to left."
+    }
+  ],
+  "states": ["default"],
+  "cues": {},
+  "keyboard": [],
+  "a11y": {
+    "role": "none (aria-hidden)",
+    "name": "",
+    "notes": ["An icon-only control has its own accessible name."],
+    "wcag": ["1.1.1", "1.4.11"]
+  },
+  "platforms": {
+    "web": "svg.nd-icon (packages/web/icons.json)",
+    "ios": "NDVectorImage(icon)",
+    "android": "Icon(NDIcon.x.imageVector)",
+    "flutter": "NDVectorIcon.icon(icon)"
+  },
+  "web": {
+    "class": "nd-icon",
+    "modifiers": [
+      "nd-icon--forward",
+      "nd-icon--back",
+      "nd-icon--down",
+      "nd-icon--external"
+    ]
+  }
+}

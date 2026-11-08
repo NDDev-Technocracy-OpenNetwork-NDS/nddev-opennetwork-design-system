@@ -1,0 +1,49 @@
+{
+  "easing": {
+    "$type": "cubicBezier",
+    "$root": {
+      "$value": [0.2, 0.7, 0.2, 1],
+      "$description": "The standard easing of interface motion."
+    },
+    "enter": {
+      "$value": [0, 0, 0.2, 1],
+      "$description": "Decelerate: something arriving."
+    },
+    "exit": {
+      "$value": [0.4, 0, 1, 1],
+      "$description": "Accelerate: something leaving."
+    },
+    "emphasized": {
+      "$value": [0.2, 0, 0, 1],
+      "$description": "A larger, more noticeable change."
+    }
+  },
+  "spring": {
+    "$type": "number",
+    "$description": "Spring parameters for native motion (SwiftUI, Compose, Flutter): stiffness and damping ratio. Web uses durations and easings.",
+    "standard": {
+      "stiffness": {
+        "$value": 380
+      },
+      "damping-ratio": {
+        "$value": 0.8
+      }
+    },
+    "gentle": {
+      "stiffness": {
+        "$value": 200
+      },
+      "damping-ratio": {
+        "$value": 1
+      }
+    },
+    "snappy": {
+      "stiffness": {
+        "$value": 700
+      },
+      "damping-ratio": {
+        "$value": 0.9
+      }
+    }
+  }
+}

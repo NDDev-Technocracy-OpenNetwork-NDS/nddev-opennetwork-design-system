@@ -1,0 +1,24 @@
+{
+  "app-bar": {
+    "$description": "Top app bar and site header: brand, navigation, settings; sticky, never covering focus.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.base}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4,
+        "unit": "rem"
+      }
+    }
+  }
+}

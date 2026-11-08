@@ -1,0 +1,25 @@
+{
+  "toast": {
+    "$description": "Toast: a status message that does not take focus, announced politely, dismissible.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.inverse}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.inverse}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.lg}"
+    },
+    "elevation": {
+      "$type": "shadow",
+      "$value": "{elevation.2}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    }
+  }
+}

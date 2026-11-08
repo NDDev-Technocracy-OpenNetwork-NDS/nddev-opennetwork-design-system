@@ -1,0 +1,170 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "theme": {
+        "scheme": "light",
+        "extends": "light"
+      }
+    }
+  },
+  "contrast": {
+    "$type": "number",
+    "$description": "WCAG 2.2 AAA 1.4.6 for text; user-interface components held to 4.5:1 here.",
+    "text": {
+      "$value": 7
+    },
+    "large-text": {
+      "$value": 4.5
+    },
+    "ui": {
+      "$value": 4.5
+    }
+  },
+  "palette": {
+    "surface": {
+      "$type": "color",
+      "base": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1.0, 1.0, 1.0],
+          "hex": "#ffffff"
+        }
+      },
+      "raised": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1.0, 1.0, 1.0],
+          "hex": "#ffffff"
+        }
+      },
+      "sunken": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.949, 0.949, 0.949],
+          "hex": "#f2f2f2"
+        }
+      },
+      "overlay": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1.0, 1.0, 1.0],
+          "hex": "#ffffff"
+        }
+      }
+    },
+    "text": {
+      "$type": "color",
+      "primary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0, 0.0, 0.0],
+          "hex": "#000000"
+        }
+      },
+      "secondary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.149, 0.149, 0.149],
+          "hex": "#262626"
+        }
+      },
+      "tertiary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2392, 0.2392, 0.2392],
+          "hex": "#3d3d3d"
+        }
+      }
+    },
+    "border": {
+      "$type": "color",
+      "subtle": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.851, 0.851, 0.851],
+          "hex": "#d9d9d9"
+        }
+      },
+      "control": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2902, 0.2902, 0.2902],
+          "hex": "#4a4a4a"
+        }
+      },
+      "strong": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1216, 0.1216, 0.1216],
+          "hex": "#1f1f1f"
+        }
+      }
+    }
+  },
+  "component": {
+    "signal": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0, 0.3529, 0.4157],
+        "hex": "#005a6a"
+      },
+      "$description": "The light signal teal (#00788C) moved to 7:1 on every surface."
+    }
+  },
+  "chart": {
+    "$type": "color",
+    "$description": "Categorical data series: Okabe\u2013Ito hues whose lightness is spread per theme so every pair stays apart (CIEDE2000 \u2265 10) with normal vision and under simulated deuteranopia, protanopia and tritanopia, and each holds 3:1 (4.5:1 in contrast themes) on the page surfaces. Pair every series with a label, marker or dash; never colour alone.",
+    "series": {
+      "1": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0078, 0.451, 0.702],
+          "hex": "#0273b3"
+        },
+        "$description": "Okabe\u2013Ito blue hue family; lightness set for this theme."
+      },
+      "2": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5412, 0.3843, 0.1098],
+          "hex": "#8a621c"
+        },
+        "$description": "Okabe\u2013Ito orange hue family; lightness set for this theme."
+      },
+      "3": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0745, 0.4118, 0.302],
+          "hex": "#13694d"
+        },
+        "$description": "Okabe\u2013Ito bluish green hue family; lightness set for this theme."
+      },
+      "4": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4667, 0.2039, 0.0392],
+          "hex": "#77340a"
+        },
+        "$description": "Okabe\u2013Ito vermillion hue family; lightness set for this theme."
+      },
+      "5": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3255, 0.0275, 0.2275],
+          "hex": "#53073a"
+        },
+        "$description": "Okabe\u2013Ito reddish purple hue family; lightness set for this theme."
+      },
+      "6": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0431, 0.2667, 0.3725],
+          "hex": "#0b445f"
+        },
+        "$description": "Okabe\u2013Ito sky blue hue family; lightness set for this theme."
+      }
+    }
+  },
+  "seed": {}
+}

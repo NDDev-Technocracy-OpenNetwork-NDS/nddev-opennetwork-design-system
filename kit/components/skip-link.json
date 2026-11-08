@@ -1,0 +1,59 @@
+{
+  "name": "Skip link",
+  "category": "navigation",
+  "status": "implemented",
+  "summary": "The first focusable element: goes past the header to the main content.",
+  "pattern": {
+    "html": "<a href=\"#main\">"
+  },
+  "tokens": "skip-link",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "link",
+      "required": true,
+      "description": "Hidden until focused, then shown on top."
+    }
+  ],
+  "variants": [
+    {
+      "id": "default",
+      "description": "Skip to content."
+    }
+  ],
+  "states": ["focus-visible"],
+  "cues": {},
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "First stop on the page."
+    },
+    {
+      "keys": "Enter",
+      "action": "Moves focus to the main content."
+    }
+  ],
+  "a11y": {
+    "role": "link",
+    "name": "\"Skip to content\", localized.",
+    "notes": [],
+    "wcag": ["2.4.1", "2.4.7", "2.4.13"]
+  },
+  "platforms": {
+    "web": "a.nd-skip-link",
+    "ios": "not used (rotor headings)",
+    "android": "not used",
+    "flutter": "not used"
+  },
+  "web": {
+    "class": "nd-skip-link",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "skip-link.text",
+      "bg": "skip-link.fill",
+      "min": 4.5
+    }
+  ]
+}

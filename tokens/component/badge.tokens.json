@@ -1,0 +1,65 @@
+{
+  "badge": {
+    "$description": "Badge (tag): a short label; status badges add the status tint and border.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.sunken}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "info": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.info.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.info.border}"
+      }
+    },
+    "success": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.success.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.success.border}"
+      }
+    },
+    "warning": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.warning.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.warning.border}"
+      }
+    },
+    "danger": {
+      "fill": {
+        "$type": "color",
+        "$value": "{status.danger.subtle}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{status.danger.border}"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.pill}"
+    },
+    "padding-inline": {
+      "$type": "dimension",
+      "$value": "{space.2}"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "spinner": {
+    "$description": "Busy mark of pending work; a dotted static mark under reduced motion.",
+    "color": {
+      "$type": "color",
+      "$value": "{accent.text}"
+    },
+    "size": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1,
+        "unit": "rem"
+      }
+    }
+  }
+}

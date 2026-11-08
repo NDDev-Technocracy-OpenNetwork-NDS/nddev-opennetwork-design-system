@@ -1,0 +1,29 @@
+{
+  "list": {
+    "$description": "List and list item rows with a leading icon or avatar and trailing meta.",
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "meta": {
+      "$type": "color",
+      "$value": "{text.tertiary}"
+    },
+    "divider": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "item": {
+      "fill": {
+        "hover": {
+          "$type": "color",
+          "$value": "{surface.hover}"
+        }
+      }
+    },
+    "item-height": {
+      "$type": "dimension",
+      "$value": "{size.target-min}"
+    }
+  }
+}

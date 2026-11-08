@@ -1,0 +1,65 @@
+{
+  "$description": "OpenNetwork interface icons. SVG geometry is the source; each entry records its original icon set and license.",
+  "icons": {
+    "arrow": {
+      "source": "mingcute arrow-up-line",
+      "license": "Apache-2.0"
+    },
+    "theme": {
+      "source": "fluent dark-theme-24",
+      "license": "MIT"
+    },
+    "motion": {
+      "source": "mdi wand",
+      "license": "Apache-2.0"
+    },
+    "telegram": {
+      "source": "icon-park-outline telegram",
+      "license": "Apache-2.0"
+    },
+    "github": {
+      "source": "mdi github",
+      "license": "Apache-2.0"
+    },
+    "linkedin": {
+      "source": "mdi linkedin",
+      "license": "Apache-2.0"
+    },
+    "on": {
+      "source": "akar-icons network",
+      "license": "MIT"
+    },
+    "mail": {
+      "source": "tabler mail-filled",
+      "license": "MIT"
+    },
+    "calendar": {
+      "source": "gravity-ui calendar",
+      "license": "MIT"
+    },
+    "cube": {
+      "source": "carbon cube",
+      "license": "Apache-2.0"
+    },
+    "external": {
+      "source": "bootstrap arrow-up-right",
+      "license": "MIT"
+    },
+    "sun": {
+      "source": "akar-icons sun-fill",
+      "license": "MIT"
+    },
+    "chevron": {
+      "source": "akar-icons chevron-down-small",
+      "license": "MIT"
+    },
+    "clip": {
+      "source": "heroicons-outline paper-clip",
+      "license": "MIT"
+    },
+    "globe": {
+      "source": "material-symbols-light language",
+      "license": "Apache-2.0"
+    }
+  }
+}

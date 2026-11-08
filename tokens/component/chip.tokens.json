@@ -1,0 +1,51 @@
+{
+  "chip": {
+    "$description": "Chip: a filter toggle (aria-pressed) or a current marker; a pressed chip has a check and a thicker edge.",
+    "border": {
+      "$root": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      }
+    },
+    "fill": {
+      "hover": {
+        "$type": "color",
+        "$value": "{accent.subtle}"
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{accent.subtle}"
+      }
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "disabled": {
+      "text": {
+        "$type": "color",
+        "$value": "{text.tertiary}"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.pill}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.target-min}"
+    },
+    "padding-inline": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    }
+  }
+}

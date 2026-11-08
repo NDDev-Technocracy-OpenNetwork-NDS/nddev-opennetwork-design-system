@@ -1,0 +1,101 @@
+[
+  {
+    "set": "mingcute",
+    "repository": "mingcute-design/mingcute-icons",
+    "file": "LICENSE",
+    "license": "Apache-2.0",
+    "url": "https://github.com/mingcute-design/mingcute-icons/blob/main/LICENSE",
+    "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "set": "fluent",
+    "repository": "microsoft/fluentui-system-icons",
+    "file": "LICENSE",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-system-icons/blob/main/LICENSE",
+    "sha": "bc9c36b28f467f7006c4e5f1be4ca0a1a0b895f3",
+    "file_sha256": "69bc45dc42b9acb96a69823adbc6ae538374e3c0bde169b855b32c48eaaef52f"
+  },
+  {
+    "set": "mdi",
+    "repository": "Templarian/MaterialDesign",
+    "file": "LICENSE",
+    "license": "NOASSERTION",
+    "url": "https://github.com/Templarian/MaterialDesign/blob/master/LICENSE",
+    "sha": "382f8a138afaaefe9ca2cfa80d33317f7814d997",
+    "file_sha256": "3bae6305bcaa6d10219b999f65c342034c2d40b1c0e8567fa08605e73ccba829"
+  },
+  {
+    "set": "icon-park-outline",
+    "repository": "bytedance/IconPark",
+    "file": "LICENSE",
+    "license": "Apache-2.0",
+    "url": "https://github.com/bytedance/IconPark/blob/master/LICENSE",
+    "sha": "a77b915b0dba6e5210f977262522e8736a054487",
+    "file_sha256": "81268f00802b1a9cffae4df43f78c3a0809845e03fef3da68f26ad2e4c49681e"
+  },
+  {
+    "set": "akar-icons",
+    "repository": "artcoholic/akar-icons",
+    "file": "LICENSE",
+    "license": "MIT",
+    "url": "https://github.com/artcoholic/akar-icons/blob/master/LICENSE",
+    "sha": "442aaed9ace149f0f0fbcdf014f31003053a2392",
+    "file_sha256": "87500dbc60dd758dc91c72927a647ed4fdb162effc6dbc2073a2c9f51ba695c0"
+  },
+  {
+    "set": "tabler",
+    "repository": "tabler/tabler-icons",
+    "file": "LICENSE",
+    "license": "MIT",
+    "url": "https://github.com/tabler/tabler-icons/blob/main/LICENSE",
+    "sha": "3e82379dab3fe93d9ee22251949604ed63ddea39",
+    "file_sha256": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db"
+  },
+  {
+    "set": "gravity-ui",
+    "repository": "gravity-ui/icons",
+    "file": "LICENSE",
+    "license": "MIT",
+    "url": "https://github.com/gravity-ui/icons/blob/main/LICENSE",
+    "sha": "d993644b8c83379c662c288aa48e5800d5c37a6f",
+    "file_sha256": "6c509237a13194071fcd99cfaae017e514204ba9493291ab6f87dec58dc2662b"
+  },
+  {
+    "set": "carbon",
+    "repository": "carbon-design-system/carbon",
+    "file": "LICENSE",
+    "license": "Apache-2.0",
+    "url": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+    "sha": "78e09cfabfb31eb9b611863e66732e80bd172fd4",
+    "file_sha256": "037b3e9eaff51477b270e9082f54b99175e4dd893548654f00995045b68294b8"
+  },
+  {
+    "set": "bootstrap",
+    "repository": "twbs/icons",
+    "file": "LICENSE",
+    "license": "MIT",
+    "url": "https://github.com/twbs/icons/blob/main/LICENSE",
+    "sha": "f95243911022df8e34bb8c73c87ef491ee1696cf",
+    "file_sha256": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969"
+  },
+  {
+    "set": "heroicons-outline",
+    "repository": "tailwindlabs/heroicons",
+    "file": "LICENSE",
+    "license": "MIT",
+    "url": "https://github.com/tailwindlabs/heroicons/blob/master/LICENSE",
+    "sha": "d6a82290738a9f78946cbcb4594535d6984086dd",
+    "file_sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+  },
+  {
+    "set": "material-symbols-light",
+    "repository": "google/material-design-icons",
+    "file": "LICENSE",
+    "license": "Apache-2.0",
+    "url": "https://github.com/google/material-design-icons/blob/master/LICENSE",
+    "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+    "file_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "name": "Toast",
+  "category": "feedback",
+  "status": "implemented",
+  "summary": "A brief confirmation that does not take focus.",
+  "pattern": {
+    "html": "a role=\"status\" region"
+  },
+  "tokens": "toast",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "surface",
+      "required": true,
+      "description": "Inverse surface, elevation 2."
+    },
+    {
+      "part": "message",
+      "required": true,
+      "description": "One sentence."
+    },
+    {
+      "part": "action",
+      "required": false,
+      "description": "Undo or view."
+    },
+    {
+      "part": "close",
+      "required": false,
+      "description": "Dismiss button."
+    }
+  ],
+  "variants": [
+    {
+      "id": "default",
+      "description": ""
+    }
+  ],
+  "states": ["shown", "hidden"],
+  "cues": {},
+  "keyboard": [
+    {
+      "keys": "Escape",
+      "action": "Dismisses when focus is inside."
+    }
+  ],
+  "a11y": {
+    "role": "status",
+    "name": "",
+    "notes": [
+      "Stays until dismissed when it has an action (2.2.1).",
+      "Never the only record of an outcome."
+    ],
+    "wcag": ["2.2.1", "4.1.3"]
+  },
+  "platforms": {
+    "web": ".nd-toast in a status region",
+    "ios": "an overlay banner",
+    "android": "Snackbar",
+    "flutter": "SnackBar"
+  },
+  "web": {
+    "class": "nd-toast",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "toast.text",
+      "bg": "toast.fill",
+      "min": 4.5
+    }
+  ]
+}

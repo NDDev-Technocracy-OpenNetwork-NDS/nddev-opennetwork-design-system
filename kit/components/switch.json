@@ -1,0 +1,83 @@
+{
+  "name": "Switch",
+  "category": "input",
+  "status": "implemented",
+  "summary": "A setting that applies at once, on or off.",
+  "pattern": {
+    "apg": "switch",
+    "html": "<button role=\"switch\" aria-checked>"
+  },
+  "tokens": "switch",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "track",
+      "required": true,
+      "description": "Fills with the accent when on."
+    },
+    {
+      "part": "thumb",
+      "required": true,
+      "description": "Moves to the end; the movement is instant under reduced motion."
+    },
+    {
+      "part": "label",
+      "required": true,
+      "description": "States the setting, not the state."
+    }
+  ],
+  "variants": [
+    {
+      "id": "default",
+      "description": "Label before the switch."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible", "checked", "disabled"],
+  "cues": {
+    "checked": "The thumb's position and a filled track; never colour alone."
+  },
+  "keyboard": [
+    {
+      "keys": "Space, Enter",
+      "action": "Toggles."
+    }
+  ],
+  "a11y": {
+    "role": "switch",
+    "name": "Its label.",
+    "notes": ["Use a checkbox when the choice is submitted with a form."],
+    "wcag": ["1.4.11", "2.4.7", "2.4.13", "2.5.8", "4.1.2"]
+  },
+  "platforms": {
+    "web": "button.nd-switch[role=switch]",
+    "ios": "Toggle",
+    "android": "Switch",
+    "flutter": "Switch.adaptive / SwitchListTile"
+  },
+  "web": {
+    "class": "nd-switch",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "switch.border",
+      "bg": "surface.base",
+      "min": 3
+    },
+    {
+      "fg": "switch.border.checked",
+      "bg": "surface.base",
+      "min": 3
+    },
+    {
+      "fg": "switch.thumb.checked",
+      "bg": "switch.track.checked",
+      "min": 3
+    },
+    {
+      "fg": "switch.thumb",
+      "bg": "switch.track",
+      "min": 3
+    }
+  ]
+}

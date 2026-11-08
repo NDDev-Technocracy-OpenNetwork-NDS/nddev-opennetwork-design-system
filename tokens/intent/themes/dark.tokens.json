@@ -1,0 +1,649 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "theme": {
+        "scheme": "dark"
+      }
+    }
+  },
+  "palette": {
+    "surface": {
+      "$type": "color",
+      "base": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "hex": "#000000"
+        }
+      },
+      "raised": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0196, 0.0196, 0.0235],
+          "hex": "#050506"
+        }
+      },
+      "sunken": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0314, 0.0353, 0.0431],
+          "hex": "#08090b"
+        }
+      },
+      "overlay": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0627, 0.0706, 0.0902],
+          "hex": "#101217"
+        }
+      }
+    },
+    "text": {
+      "$type": "color",
+      "primary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        }
+      },
+      "secondary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6353, 0.651, 0.6863],
+          "hex": "#a2a6af"
+        }
+      },
+      "tertiary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.549, 0.5686, 0.6078],
+          "hex": "#8c919b"
+        }
+      }
+    },
+    "border": {
+      "$type": "color",
+      "subtle": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0784, 0.0784, 0.0784],
+          "hex": "#141414"
+        }
+      },
+      "control": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4314, 0.4314, 0.4314],
+          "hex": "#6e6e6e"
+        }
+      },
+      "strong": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6353, 0.651, 0.6863],
+          "hex": "#a2a6af"
+        }
+      }
+    },
+    "focus": {
+      "$type": "color",
+      "ring": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        }
+      }
+    },
+    "subtle-mix": {
+      "$type": "number",
+      "$value": 0.16,
+      "$description": "Share of the brand in the accent subtle tint over surface.base."
+    },
+    "lit-mix": {
+      "$type": "number",
+      "$value": 0.06
+    }
+  },
+  "seed": {
+    "$type": "color",
+    "fill": {
+      "$type": "color",
+      "on": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7216, 0.5804, 0.0549],
+          "hex": "#b8940e"
+        }
+      }
+    },
+    "role": {
+      "closing": {
+        "$type": "color"
+      },
+      "crosslink": {
+        "$type": "color"
+      }
+    },
+    "heading": {
+      "$type": "color",
+      "on": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7216, 0.5804, 0.0549],
+          "hex": "#b8940e"
+        }
+      }
+    },
+    "outline": {
+      "$type": "color"
+    },
+    "edge": {
+      "$type": "color"
+    }
+  },
+  "component": {
+    "direction-card": {
+      "border": {
+        "$type": "color",
+        "$value": "{border.subtle}"
+      }
+    },
+    "pair": {
+      "border": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "{surface.base}"
+      }
+    },
+    "map-card": {
+      "surface": {
+        "$type": "color",
+        "$value": "{surface.sunken}"
+      }
+    },
+    "compare": {
+      "border": {
+        "$type": "color",
+        "$value": "{accent.brand}"
+      },
+      "surface": {
+        "$type": "gradient",
+        "$value": [
+          {
+            "color": "{accent.brand}",
+            "position": 0
+          },
+          {
+            "color": {
+              "colorSpace": "srgb",
+              "components": [0, 0, 0],
+              "alpha": 0,
+              "hex": "#000000"
+            },
+            "position": 1
+          }
+        ],
+        "$extensions": {
+          "ai.nddev": {
+            "css": "linear-gradient(110deg, color-mix(in srgb, var(--accent-brand) 6%, transparent), transparent)"
+          }
+        },
+        "$description": "Wash across a comparison block: on the web a 110 degree gradient from the first stop at low alpha to transparent (ai.nddev.css)."
+      }
+    },
+    "signal": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.2471, 0.902, 1],
+        "hex": "#3fe6ff"
+      }
+    },
+    "person": {
+      "surface": {
+        "$type": "gradient",
+        "$value": [
+          {
+            "color": {
+              "colorSpace": "srgb",
+              "components": [0, 0, 0],
+              "alpha": 0,
+              "hex": "#000000"
+            },
+            "position": 0
+          },
+          {
+            "color": "{surface.base}",
+            "position": 0.76
+          }
+        ],
+        "$extensions": {
+          "ai.nddev": {
+            "css": "linear-gradient(180deg, transparent, var(--surface-base) 76%), color-mix(in srgb, #B7B7B7 20%, var(--surface-base))"
+          }
+        },
+        "$description": "A person card: a fade to the surface over a grey tint on the web (ai.nddev.css); the stops are its top layer."
+      },
+      "place": {
+        "$type": "color",
+        "$value": "{surface.overlay}"
+      }
+    },
+    "art": {
+      "glow": {
+        "$type": "number",
+        "$value": 1
+      },
+      "tint": {
+        "$type": "color",
+        "$value": "{accent.text}"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{accent.text}"
+      },
+      "solid": {
+        "$type": "color",
+        "$value": "{accent.text}"
+      },
+      "shade": {
+        "$type": "color",
+        "$value": "{surface.base}"
+      },
+      "specular": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        },
+        "$description": "The light the art's solids are lifted towards in their highlights (the tone ladder's lightest steps): white in either scheme, a theme's own where it sets one."
+      },
+      "on": {
+        "$type": "color",
+        "contour": {
+          "from": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0, 0.0],
+              "hex": "#000000"
+            }
+          },
+          "to": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.4, 0.4, 0.4],
+              "hex": "#666666"
+            }
+          },
+          "spark": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [1.0, 0.8471, 0.2471],
+              "hex": "#ffd83f"
+            }
+          },
+          "deep": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0588, 0.0471, 0.0039],
+              "hex": "#0f0c01"
+            }
+          }
+        }
+      },
+      "closing": {
+        "$type": "color",
+        "ink": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.3255, 0.2196, 0.7373],
+            "hex": "#5338bc"
+          }
+        }
+      },
+      "diagram": {
+        "$type": "color",
+        "$description": "The section diagrams: Dev's and RnD's figures and points, and AI's mass with its rim.",
+        "dev": {
+          "point": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0627, 0.1412, 0.8157],
+              "hex": "#1024d0"
+            }
+          },
+          "ring": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0471, 0.3216],
+              "hex": "#000c52"
+            }
+          },
+          "turning": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0471, 0.3216],
+              "hex": "#000c52"
+            }
+          },
+          "fill": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0, 0.0],
+              "hex": "#000000"
+            }
+          },
+          "grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0627, 0.1412, 0.8157],
+              "alpha": 0.65,
+              "hex": "#1024d0"
+            }
+          },
+          "deep-grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0471, 0.3216],
+              "alpha": 0.7,
+              "hex": "#000c52"
+            }
+          }
+        },
+        "rnd": {
+          "point": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.6275, 0.0667, 0.4],
+              "hex": "#a01166"
+            }
+          },
+          "ring": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.2902, 0.0196, 0.149],
+              "hex": "#4a0526"
+            }
+          },
+          "turning": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.2902, 0.0196, 0.149],
+              "hex": "#4a0526"
+            }
+          },
+          "fill": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0, 0.0],
+              "hex": "#000000"
+            }
+          },
+          "grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [1.0, 0.2471, 0.6588],
+              "alpha": 0.63,
+              "hex": "#ff3fa8"
+            }
+          },
+          "deep-grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.2902, 0.0196, 0.149],
+              "alpha": 0.7,
+              "hex": "#4a0526"
+            }
+          }
+        },
+        "ai": {
+          "clear": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0, 0.0],
+              "hex": "#000000"
+            }
+          },
+          "deep": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0196, 0.2902, 0.0784],
+              "hex": "#054a14"
+            }
+          },
+          "lit": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.098, 0.6314, 0.2627],
+              "hex": "#19a143"
+            }
+          },
+          "grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.2471, 1.0, 0.4745],
+              "alpha": 0.8,
+              "hex": "#3fff79"
+            }
+          },
+          "deep-grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0196, 0.2902, 0.1569],
+              "hex": "#054a28"
+            }
+          },
+          "rim": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0118, 0.1451, 0.1451],
+              "hex": "#032525"
+            }
+          }
+        }
+      }
+    },
+    "tile": {
+      "surface": {
+        "$type": "color",
+        "$value": "{surface.raised}"
+      }
+    },
+    "tag": {
+      "border": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{text.secondary}"
+      }
+    },
+    "work-tag": {
+      "$type": "color",
+      "$value": "{signal}"
+    },
+    "featured": {
+      "surface": {
+        "$type": "color",
+        "$value": "{surface.raised}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "open-fill": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0,
+          "hex": "#000000"
+        }
+      },
+      "open-text": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      },
+      "open-border": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      }
+    },
+    "cells": {
+      "rule": {
+        "$type": "color",
+        "$value": "{accent.fill}",
+        "$extensions": {
+          "ai.nddev": {
+            "css": "color-mix(in srgb, var(--accent-fill) 50%, transparent)",
+            "modify": {
+              "alpha": 0.5
+            }
+          }
+        }
+      }
+    }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "1": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.6,
+          "hex": "#000000"
+        },
+        "offsetX": {
+          "value": 0.0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 1.0,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 2.0,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "2": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.7,
+          "hex": "#000000"
+        },
+        "offsetX": {
+          "value": 0.0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 4.0,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 12.0,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "3": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.8,
+          "hex": "#000000"
+        },
+        "offsetX": {
+          "value": 0.0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 12.0,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 32.0,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    }
+  },
+  "chart": {
+    "$type": "color",
+    "$description": "Categorical data series: Okabe\u2013Ito hues whose lightness is spread per theme so every pair stays apart (CIEDE2000 \u2265 10) with normal vision and under simulated deuteranopia, protanopia and tritanopia, and each holds 3:1 (4.5:1 in contrast themes) on the page surfaces. Pair every series with a label, marker or dash; never colour alone.",
+    "series": {
+      "1": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5255, 0.7843, 1.0],
+          "hex": "#86c8ff"
+        },
+        "$description": "Okabe\u2013Ito blue hue family; lightness set for this theme."
+      },
+      "2": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9843, 0.8078, 0.5451],
+          "hex": "#fbce8b"
+        },
+        "$description": "Okabe\u2013Ito orange hue family; lightness set for this theme."
+      },
+      "3": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0235, 0.6275, 0.4588],
+          "hex": "#06a075"
+        },
+        "$description": "Okabe\u2013Ito bluish green hue family; lightness set for this theme."
+      },
+      "4": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6314, 0.2863, 0.0588],
+          "hex": "#a1490f"
+        },
+        "$description": "Okabe\u2013Ito vermillion hue family; lightness set for this theme."
+      },
+      "5": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8353, 0.5059, 0.6863],
+          "hex": "#d581af"
+        },
+        "$description": "Okabe\u2013Ito reddish purple hue family; lightness set for this theme."
+      },
+      "6": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0784, 0.4118, 0.5765],
+          "hex": "#146993"
+        },
+        "$description": "Okabe\u2013Ito sky blue hue family; lightness set for this theme."
+      }
+    }
+  }
+}

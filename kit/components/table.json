@@ -1,0 +1,88 @@
+{
+  "name": "Table",
+  "category": "data",
+  "status": "implemented",
+  "summary": "Data in rows and columns with header cells.",
+  "pattern": {
+    "apg": "table",
+    "html": "<table> with <caption>, <th scope>"
+  },
+  "tokens": "table",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "caption",
+      "required": true,
+      "description": "Names the table."
+    },
+    {
+      "part": "header",
+      "required": true,
+      "description": "Header cells with scope."
+    },
+    {
+      "part": "row",
+      "required": true,
+      "description": "Lines between rows; a hover tint."
+    },
+    {
+      "part": "state",
+      "required": false,
+      "description": "A row spanning every column for loading, empty or error: a .nd-state with a sentence, a hint and, for an error, a way to try again."
+    }
+  ],
+  "variants": [
+    {
+      "id": "default",
+      "description": "Scrolls horizontally inside its own region on narrow screens."
+    }
+  ],
+  "states": ["default", "row-hover", "loading", "empty", "error"],
+  "cues": {
+    "loading": "Placeholder rows (skeleton, aria-hidden) keep the layout; the region is aria-busy and a status message says what is loading.",
+    "empty": "A sentence that says nothing matches or nothing exists yet, and what to do next; not an empty frame.",
+    "error": "The error glyph and a sentence that says what failed, with a way to try again; data already shown stays."
+  },
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "To the scroll region when it overflows."
+    }
+  ],
+  "a11y": {
+    "role": "table",
+    "name": "Its caption.",
+    "notes": [
+      "An overflowing table sits in a focusable region with a label (1.4.10).",
+      "Loading, empty and error are announced through a status region (role=status); the placeholder rows are hidden from assistive technology."
+    ],
+    "wcag": ["1.3.1", "1.4.10", "2.1.1", "4.1.3"]
+  },
+  "platforms": {
+    "web": "table.nd-table",
+    "ios": "Table (macOS, iPad) or a List of rows",
+    "android": "a LazyColumn of rows",
+    "flutter": "DataTable"
+  },
+  "web": {
+    "class": "nd-table",
+    "modifiers": ["nd-state", "nd-table__state"]
+  },
+  "contrast": [
+    {
+      "fg": "table.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "table.header",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "table.text",
+      "bg": "table.row.fill.hover",
+      "min": 4.5
+    }
+  ]
+}

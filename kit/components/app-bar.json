@@ -1,0 +1,73 @@
+{
+  "name": "App bar",
+  "category": "navigation",
+  "status": "implemented",
+  "summary": "The top of a product: brand, navigation and settings; sticky without covering focus.",
+  "pattern": {
+    "apg": "landmarks",
+    "html": "<header> banner"
+  },
+  "tokens": "app-bar",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "brand",
+      "required": true,
+      "description": "The mark and the wordmark, a link home."
+    },
+    {
+      "part": "navigation",
+      "required": false,
+      "description": "Primary destinations."
+    },
+    {
+      "part": "actions",
+      "required": false,
+      "description": "Theme, language, motion settings."
+    }
+  ],
+  "variants": [
+    {
+      "id": "site",
+      "description": "The site header."
+    },
+    {
+      "id": "app",
+      "description": "A desktop or mobile app's top bar."
+    }
+  ],
+  "states": ["default", "scrolled"],
+  "cues": {},
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "Through its controls."
+    }
+  ],
+  "a11y": {
+    "role": "banner",
+    "name": "",
+    "notes": [
+      "A sticky bar sets scroll-padding so a focused element is never hidden under it (2.4.11).",
+      "Sticky positioning is opt-in; the product sets --sticky-offset to the actual bar height, including reflow."
+    ],
+    "wcag": ["1.3.1", "2.4.1", "2.4.11", "1.4.10"]
+  },
+  "platforms": {
+    "web": "header.nd-app-bar",
+    "ios": "toolbar / navigationTitle",
+    "android": "TopAppBar",
+    "flutter": "AppBar"
+  },
+  "contrast": [
+    {
+      "fg": "app-bar.text",
+      "bg": "app-bar.fill",
+      "min": 4.5
+    }
+  ],
+  "web": {
+    "class": "nd-app-bar",
+    "modifiers": ["app", "sticky"]
+  }
+}

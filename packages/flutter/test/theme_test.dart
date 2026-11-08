@@ -14,14 +14,41 @@ void main() {
       'packages/nddev_opennetwork_design_system/IBM Plex Sans',
     );
     for (final weight in ['Regular', 'Medium', 'SemiBold']) {
-      loader.addFont(rootBundle.load('assets/fonts/IBMPlexSans-$weight.ttf'));
+      loader.addFont(rootBundle.load('fonts/IBMPlexSans-$weight.ttf'));
     }
     await loader.load();
   });
-  for (final dark in [true, false]) {
-    final name = dark ? 'dark' : 'light';
-    final theme = dark ? OpenNetworkTheme.dark() : OpenNetworkTheme.light();
-    final c = dark ? OpenNetworkColors.dark : OpenNetworkColors.light;
+  test('reduced motion and script-aware platform bindings', () {
+    expect(
+      OpenNetworkTheme.darkContrast(reduceMotion: true)
+          .filledButtonTheme
+          .style!
+          .animationDuration,
+      Duration.zero,
+    );
+    expect(NDDurations.durationUi(NDMotion.reduced), Duration.zero);
+    final arabic = NDTextStyle.resolve(
+      NDTypeRole.body,
+      NDPlatform.android,
+      NDScript.arabic,
+    );
+    expect(arabic.tracking, 0);
+    expect(arabic.uppercase, isFalse);
+    expect(arabic.family, NDFontFamily.sansAr);
+  });
+  for (final name in ['dark', 'light', 'dark-contrast', 'light-contrast']) {
+    final theme = switch (name) {
+      'dark' => OpenNetworkTheme.dark(),
+      'light' => OpenNetworkTheme.light(),
+      'dark-contrast' => OpenNetworkTheme.darkContrast(),
+      _ => OpenNetworkTheme.lightContrast(),
+    };
+    final c = switch (name) {
+      'dark' => OpenNetworkColors.dark,
+      'light' => OpenNetworkColors.light,
+      'dark-contrast' => OpenNetworkColors.darkContrast,
+      _ => OpenNetworkColors.lightContrast,
+    };
     test('$name keeps OpenNetwork roles and complete control states', () {
       expect(theme.colorScheme.primary, c.accentText);
       expect(theme.scaffoldBackgroundColor, c.surfaceBase);

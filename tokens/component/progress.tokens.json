@@ -1,0 +1,24 @@
+{
+  "progress": {
+    "$description": "Progress bar and meter: an indicator on a track, with its value in text.",
+    "track": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "indicator": {
+      "$type": "color",
+      "$value": "{accent.border}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.5,
+        "unit": "rem"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.pill}"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "dialog": {
+    "$description": "Modal dialog and sheet: a surface over a scrim; focus moves in, is held, and returns.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.overlay}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "scrim": {
+      "$type": "color",
+      "$value": "{overlay.scrim}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.xl}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.8}"
+    },
+    "elevation": {
+      "$type": "shadow",
+      "$value": "{elevation.3}"
+    }
+  }
+}

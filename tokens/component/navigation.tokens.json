@@ -1,0 +1,27 @@
+{
+  "navigation": {
+    "$description": "Navigation list and bar: the current destination is marked with aria-current and an indicator.",
+    "text": {
+      "$root": {
+        "$type": "color",
+        "$value": "{text.secondary}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      },
+      "current": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      }
+    },
+    "indicator": {
+      "$type": "color",
+      "$value": "{accent.border}"
+    },
+    "item-height": {
+      "$type": "dimension",
+      "$value": "{size.target-min}"
+    }
+  }
+}

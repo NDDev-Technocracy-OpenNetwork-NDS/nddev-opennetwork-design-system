@@ -1,0 +1,55 @@
+{
+  "checkbox": {
+    "border": {
+      "$root": {
+        "$type": "color",
+        "$value": "{accent.outline}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{accent.outline}"
+      },
+      "invalid": {
+        "$type": "color",
+        "$value": "{status.danger.border}"
+      }
+    },
+    "fill": {
+      "checked": {
+        "$type": "color",
+        "$value": "{accent.fill}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{accent.subtle}"
+      }
+    },
+    "mark": {
+      "$type": "color",
+      "$value": "{accent.on-fill}"
+    },
+    "label": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "size": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.1875,
+        "unit": "rem"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.sm}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.875,
+        "unit": "rem"
+      },
+      "$description": "30 px from the box to its label (501:3726)."
+    }
+  }
+}

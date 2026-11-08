@@ -1,0 +1,46 @@
+{
+  "name": "Skeleton",
+  "category": "feedback",
+  "status": "implemented",
+  "summary": "The shape of content that is loading.",
+  "pattern": {
+    "html": "aria-hidden placeholders; the container is aria-busy"
+  },
+  "tokens": "skeleton",
+  "anatomy": [
+    {
+      "part": "block",
+      "required": true,
+      "description": "Sunken surface blocks."
+    }
+  ],
+  "variants": [
+    {
+      "id": "text",
+      "description": ""
+    },
+    {
+      "id": "media",
+      "description": ""
+    }
+  ],
+  "states": ["default"],
+  "cues": {},
+  "keyboard": [],
+  "a11y": {
+    "role": "none (aria-hidden)",
+    "name": "",
+    "notes": ["No shimmer under reduced motion."],
+    "wcag": ["2.2.2", "2.3.3"]
+  },
+  "platforms": {
+    "web": ".nd-skeleton",
+    "ios": ".redacted(reason: .placeholder)",
+    "android": "placeholder Boxes",
+    "flutter": "placeholder Containers"
+  },
+  "web": {
+    "class": "nd-skeleton",
+    "modifiers": []
+  }
+}

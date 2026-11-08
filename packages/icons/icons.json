@@ -1,0 +1,80 @@
+{
+  "$description": "The NDDev icons: geometry only (paths, currentColor; the root has fill=\"none\"), each with its origin set, licence and the Figma frame it comes from.",
+  "icons": {
+    "arrow": {
+      "viewBox": "0 0 24 24",
+      "source": "mingcute arrow-up-line",
+      "license": "Apache-2.0"
+    },
+    "theme": {
+      "viewBox": "0 0 24 24",
+      "source": "fluent dark-theme-24",
+      "license": "MIT"
+    },
+    "motion": {
+      "viewBox": "0 0 24 24",
+      "source": "mdi wand",
+      "license": "Apache-2.0"
+    },
+    "telegram": {
+      "viewBox": "0 0 30 30",
+      "source": "icon-park-outline telegram",
+      "license": "Apache-2.0"
+    },
+    "github": {
+      "viewBox": "0 0 30 30",
+      "source": "mdi github",
+      "license": "Apache-2.0"
+    },
+    "linkedin": {
+      "viewBox": "0 0 30 30",
+      "source": "mdi linkedin",
+      "license": "Apache-2.0"
+    },
+    "on": {
+      "viewBox": "0 0 41 45.1667",
+      "source": "akar-icons network",
+      "license": "MIT"
+    },
+    "mail": {
+      "viewBox": "0 0 33.3333 26.6667",
+      "source": "tabler mail-filled",
+      "license": "MIT"
+    },
+    "calendar": {
+      "viewBox": "0 0 40 40",
+      "source": "gravity-ui calendar",
+      "license": "MIT"
+    },
+    "cube": {
+      "viewBox": "0 0 50 50",
+      "source": "carbon cube",
+      "license": "Apache-2.0"
+    },
+    "external": {
+      "viewBox": "0 0 16 16",
+      "source": "bootstrap arrow-up-right",
+      "license": "MIT"
+    },
+    "sun": {
+      "viewBox": "0 0 30 30",
+      "source": "akar-icons sun-fill",
+      "license": "MIT"
+    },
+    "chevron": {
+      "viewBox": "0 0 30 30",
+      "source": "akar-icons chevron-down-small",
+      "license": "MIT"
+    },
+    "clip": {
+      "viewBox": "0 0 40 40",
+      "source": "heroicons-outline paper-clip",
+      "license": "MIT"
+    },
+    "globe": {
+      "viewBox": "0 0 30 30",
+      "source": "material-symbols-light language",
+      "license": "Apache-2.0"
+    }
+  }
+}

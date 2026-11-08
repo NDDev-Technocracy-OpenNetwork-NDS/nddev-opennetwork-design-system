@@ -1,0 +1,21 @@
+{
+  "tooltip": {
+    "$description": "Tooltip: a short description on hover and focus, inverse surface, dismissible with Escape.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.inverse}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.inverse}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.2}"
+    }
+  }
+}

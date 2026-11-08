@@ -1,0 +1,50 @@
+{
+  "tabs": {
+    "$description": "Tabs: a tab list over panels; the selected tab carries an indicator line, not colour alone.",
+    "text": {
+      "$root": {
+        "$type": "color",
+        "$value": "{text.secondary}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      }
+    },
+    "indicator": {
+      "$type": "color",
+      "$value": "{accent.border}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "indicator-width": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3,
+        "unit": "px"
+      }
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.target-min}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.6}"
+    },
+    "focus-width": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3,
+        "unit": "px"
+      },
+      "$description": "The tab ring is inset because the scrolling list clips outside it; an inset ring needs more than 2 px to cover a 2 px perimeter (WCAG 2.4.13 Understanding)."
+    }
+  }
+}

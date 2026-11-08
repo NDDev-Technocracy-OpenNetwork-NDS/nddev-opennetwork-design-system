@@ -1,0 +1,202 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "platform": {
+        "unit": "dp (sizes of text in sp)",
+        "note": "Android: Material 3 type roles in sp, which follow the system font scale; 48 dp touch targets."
+      }
+    }
+  },
+  "text-size": {
+    "$type": "dimension",
+    "$description": "Material 3 type scale; ai.nddev.material names the role each maps to.",
+    "display": {
+      "$value": {
+        "value": 36,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "displaySmall"
+        }
+      }
+    },
+    "h1": {
+      "$value": {
+        "value": 32,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "headlineLarge"
+        }
+      }
+    },
+    "h2": {
+      "$value": {
+        "value": 28,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "headlineMedium"
+        }
+      }
+    },
+    "h3": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "headlineSmall"
+        }
+      }
+    },
+    "h4": {
+      "$value": {
+        "value": 22,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "titleLarge"
+        }
+      }
+    },
+    "body-lg": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "bodyLarge"
+        }
+      }
+    },
+    "body": {
+      "$value": {
+        "value": 14,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "bodyMedium"
+        }
+      }
+    },
+    "label": {
+      "$value": {
+        "value": 14,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "labelLarge"
+        }
+      }
+    },
+    "caption": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "material": "bodySmall"
+        }
+      }
+    }
+  },
+  "font": {
+    "$type": "fontFamily",
+    "sans": {
+      "$value": ["IBM Plex Sans", "Roboto"]
+    },
+    "sans-ar": {
+      "$value": ["IBM Plex Sans Arabic", "Noto Sans Arabic"]
+    },
+    "sans-zh": {
+      "$value": ["Noto Sans CJK SC"]
+    },
+    "mono": {
+      "$value": ["monospace"]
+    },
+    "$description": "Bundled families first (the Kotlin and Flutter packages carry the TTF files); Chinese and monospace are the system faces."
+  },
+  "control": {
+    "$type": "dimension",
+    "$description": "Control and target sizes per density; the density modifier aliases size.* to one of them.",
+    "$extensions": {
+      "ai.nddev": {
+        "private": true
+      }
+    },
+    "comfortable": {
+      "sm": {
+        "$value": {
+          "value": 40,
+          "unit": "px"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 56,
+          "unit": "px"
+        }
+      },
+      "field": {
+        "$value": {
+          "value": 56,
+          "unit": "px"
+        }
+      },
+      "target-min": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      }
+    },
+    "compact": {
+      "sm": {
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 40,
+          "unit": "px"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      },
+      "field": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      },
+      "target-min": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      }
+    }
+  }
+}

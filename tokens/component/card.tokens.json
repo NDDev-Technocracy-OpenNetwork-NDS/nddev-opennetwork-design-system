@@ -1,0 +1,85 @@
+{
+  "card": {
+    "$description": "Card: one primary link stretched over the card, nothing else interactive inside.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.raised}"
+    },
+    "border": {
+      "$root": {
+        "$type": "color",
+        "$value": "{border.subtle}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      }
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "body": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "meta": {
+      "$type": "color",
+      "$value": "{text.tertiary}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.xl}"
+    },
+    "padding": {
+      "min": {
+        "$type": "dimension",
+        "$value": "{space.6}"
+      },
+      "max": {
+        "$type": "dimension",
+        "$value": "{space.12}"
+      }
+    },
+    "min": {
+      "$type": "dimension",
+      "$description": "A card's least block size, one scale for every block.",
+      "xs": {
+        "$value": {
+          "value": 14,
+          "unit": "rem"
+        }
+      },
+      "sm": {
+        "$value": {
+          "value": 15.625,
+          "unit": "rem"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 18.75,
+          "unit": "rem"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 22,
+          "unit": "rem"
+        }
+      },
+      "xl": {
+        "$value": {
+          "value": 25,
+          "unit": "rem"
+        }
+      },
+      "2xl": {
+        "$value": {
+          "value": 31.25,
+          "unit": "rem"
+        }
+      }
+    }
+  }
+}

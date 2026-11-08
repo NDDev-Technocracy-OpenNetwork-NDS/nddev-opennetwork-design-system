@@ -1,0 +1,88 @@
+{
+  "name": "Chip",
+  "category": "selection",
+  "status": "implemented",
+  "summary": "A filter that toggles (aria-pressed), or a marker of the current item.",
+  "pattern": {
+    "apg": "button",
+    "html": "<button aria-pressed> or <a aria-current>"
+  },
+  "tokens": "chip",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "container",
+      "required": true,
+      "description": "Pill, minimum target height."
+    },
+    {
+      "part": "check",
+      "required": false,
+      "description": "Shown when pressed or current."
+    },
+    {
+      "part": "label",
+      "required": true,
+      "description": "Short."
+    }
+  ],
+  "variants": [
+    {
+      "id": "filter",
+      "description": "Toggles a filter."
+    },
+    {
+      "id": "current",
+      "description": "Marks the current item in a set of links."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible", "selected", "disabled"],
+  "cues": {
+    "selected": "A check and a 2 px edge; not colour alone.",
+    "disabled": "Dashed edge."
+  },
+  "keyboard": [
+    {
+      "keys": "Enter, Space",
+      "action": "Toggles a filter."
+    }
+  ],
+  "a11y": {
+    "role": "button with aria-pressed, or link with aria-current",
+    "name": "Its label.",
+    "notes": ["A group of filters sits in a group with a label."],
+    "wcag": ["1.4.1", "1.4.11", "2.4.7", "2.4.13", "2.5.8", "4.1.2"]
+  },
+  "platforms": {
+    "web": ".nd-chip",
+    "ios": "Toggle with a button style",
+    "android": "FilterChip",
+    "flutter": "FilterChip"
+  },
+  "web": {
+    "class": "nd-chip",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "chip.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "chip.text",
+      "bg": "chip.fill.selected",
+      "min": 4.5
+    },
+    {
+      "fg": "chip.border",
+      "bg": "surface.base",
+      "min": 3
+    },
+    {
+      "fg": "chip.border.selected",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

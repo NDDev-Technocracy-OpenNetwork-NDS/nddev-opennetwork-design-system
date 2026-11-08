@@ -1,0 +1,102 @@
+{
+  "$description": "The font families NDDev ships: which token each serves, the scripts it covers, the web files (exact @fontsource packages, installed and checked by digest) and the native files (TTF from the type designer's release, committed under fonts/files/ and copied into each native package). Chinese on native platforms uses the system CJK face (PingFang SC, Noto Sans CJK): bundling Noto Sans SC would add some 17 MB to an app.",
+  "families": [
+    {
+      "family": "IBM Plex Sans",
+      "token": "font.sans",
+      "scripts": ["latin", "cyrillic"],
+      "license": "OFL-1.1",
+      "covers": "Latin, Cyrillic including Kazakh (Ә Ғ Қ Ң Ө Ұ Ү Һ І), used for ru, en, kk",
+      "web": {
+        "package": "@fontsource/ibm-plex-sans",
+        "weights": [400, 500, 600],
+        "subsets": ["latin", "latin-ext", "cyrillic", "cyrillic-ext"],
+        "preload": { "arabic": { "weights": [400], "subsets": ["latin"] } },
+        "fallback": "IBM Plex Sans Fallback"
+      },
+      "native": {
+        "release": "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans%401.1.0/ibm-plex-sans.zip",
+        "releaseSha256": "fb365d910566e6d199cc2c15579a7dd9a267128e18431a394ed81f1970c69200",
+        "license": {
+          "path": "ibm-plex-sans/LICENSE.txt",
+          "file": "OFL-IBM-Plex.txt",
+          "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+        },
+        "files": [
+          {
+            "file": "IBMPlexSans-Regular.ttf",
+            "path": "ibm-plex-sans/fonts/complete/ttf/IBMPlexSans-Regular.ttf",
+            "weight": 400,
+            "sha256": "975dcda37d80f038dcd143c22e33ca2d97a0cc5a929aace1c749153b0fe1afa5"
+          },
+          {
+            "file": "IBMPlexSans-Medium.ttf",
+            "path": "ibm-plex-sans/fonts/complete/ttf/IBMPlexSans-Medium.ttf",
+            "weight": 500,
+            "sha256": "331c8639d7598b2cde62a911a71db195e30cb655cd6bdf2e324a7e984955f907"
+          },
+          {
+            "file": "IBMPlexSans-SemiBold.ttf",
+            "path": "ibm-plex-sans/fonts/complete/ttf/IBMPlexSans-SemiBold.ttf",
+            "weight": 600,
+            "sha256": "a20caf8286023a6a7a85e40b1d2a4ae9fc3e3b1f9eda8f4c542dd4986af67bb1"
+          }
+        ]
+      }
+    },
+    {
+      "family": "IBM Plex Sans Arabic",
+      "token": "font.sans-ar",
+      "scripts": ["arabic"],
+      "license": "OFL-1.1",
+      "covers": "Arabic script with contextual shaping (init/medi/fina), used for ar",
+      "web": {
+        "package": "@fontsource/ibm-plex-sans-arabic",
+        "weights": [400, 500, 600],
+        "subsets": ["arabic"],
+        "preload": { "arabic": { "weights": [400], "subsets": ["arabic"] } }
+      },
+      "native": {
+        "release": "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-arabic%401.1.0/ibm-plex-sans-arabic.zip",
+        "releaseSha256": "f03915581aea37d82792c188b08064023a73494d679b8e19f85f5971db714013",
+        "license": {
+          "path": "ibm-plex-sans-arabic/LICENSE.txt",
+          "file": "OFL-IBM-Plex.txt",
+          "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+        },
+        "files": [
+          {
+            "file": "IBMPlexSansArabic-Regular.ttf",
+            "path": "ibm-plex-sans-arabic/fonts/complete/ttf/IBMPlexSansArabic-Regular.ttf",
+            "weight": 400,
+            "sha256": "8e0f1046c736bf939d4939ee3ae0116acf61cbcd6592deae7656761627080981"
+          },
+          {
+            "file": "IBMPlexSansArabic-Medium.ttf",
+            "path": "ibm-plex-sans-arabic/fonts/complete/ttf/IBMPlexSansArabic-Medium.ttf",
+            "weight": 500,
+            "sha256": "eef162792cf2a6ba5af7943af9f86843b1286ab67aaf615c18c07fd8e97a4a90"
+          },
+          {
+            "file": "IBMPlexSansArabic-SemiBold.ttf",
+            "path": "ibm-plex-sans-arabic/fonts/complete/ttf/IBMPlexSansArabic-SemiBold.ttf",
+            "weight": 600,
+            "sha256": "1d4ab8b6ebadbb9d85f2ecdcb7cb0bb672420a8ff3388ab4f69d7b98056562aa"
+          }
+        ]
+      }
+    },
+    {
+      "family": "Noto Sans SC",
+      "token": "font.sans-zh",
+      "scripts": ["han"],
+      "license": "OFL-1.1",
+      "covers": "Simplified Chinese (Han, CJK punctuation, full-width forms), used for zh-Hans",
+      "web": {
+        "package": "@fontsource/noto-sans-sc",
+        "weights": [400, 500],
+        "slices": true
+      }
+    }
+  ]
+}

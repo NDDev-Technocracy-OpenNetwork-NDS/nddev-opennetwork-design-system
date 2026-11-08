@@ -1,0 +1,49 @@
+{
+  "name": "nddev-opennetwork-design-system",
+  "version": "0.0.1-alpha.9",
+  "private": true,
+  "type": "module",
+  "description": "OpenNetwork design system: DTCG 2025.10 tokens, web components and native packages",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "packageManager": "bun@1.4.3",
+  "scripts": {
+    "derive": "node src/cli.ts derive",
+    "build": "node src/cli.ts build",
+    "check": "node src/cli.ts check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "bun run check && bun run format:check && bun run lint && bun run typecheck && bun run test",
+    "generate": "node src/cli.ts generate",
+    "test:browser": "playwright test"
+  },
+  "overrides": {
+    "minimatch": "11.0.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/ibm-plex-sans-arabic": "5.3.0",
+    "@fontsource/noto-sans-sc": "5.3.1",
+    "@playwright/test": "1.64.1",
+    "@terrazzo/parser": "2.9.0",
+    "@types/fontkit": "2.0.9",
+    "@types/node": "24.19.2",
+    "@typescript/native": "npm:typescript@7.0.2",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "eslint": "10.13.0",
+    "fontkit": "2.0.4",
+    "globals": "17.13.0",
+    "prettier": "3.9.10",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "typescript-eslint": "8.71.2",
+    "vitest": "5.0.5"
+  },
+  "license": "Apache-2.0"
+}

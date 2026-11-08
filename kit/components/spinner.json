@@ -1,0 +1,58 @@
+{
+  "name": "Spinner",
+  "category": "feedback",
+  "status": "implemented",
+  "summary": "Pending work in place: a turning mark with a status text.",
+  "pattern": {
+    "html": "a mark with role=\"status\" text"
+  },
+  "tokens": "spinner",
+  "anatomy": [
+    {
+      "part": "mark",
+      "required": true,
+      "description": "Turning ring; dotted and still under reduced motion."
+    },
+    {
+      "part": "text",
+      "required": true,
+      "description": "Visible or visually hidden status."
+    }
+  ],
+  "variants": [
+    {
+      "id": "inline",
+      "description": "Inside a button (aria-busy)."
+    },
+    {
+      "id": "block",
+      "description": "In place of content."
+    }
+  ],
+  "states": ["default"],
+  "cues": {},
+  "keyboard": [],
+  "a11y": {
+    "role": "status",
+    "name": "",
+    "notes": [],
+    "wcag": ["2.2.2", "2.3.3", "4.1.3"]
+  },
+  "platforms": {
+    "web": ".nd-spinner",
+    "ios": "ProgressView()",
+    "android": "CircularProgressIndicator",
+    "flutter": "CircularProgressIndicator.adaptive"
+  },
+  "web": {
+    "class": "nd-spinner",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "spinner.color",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

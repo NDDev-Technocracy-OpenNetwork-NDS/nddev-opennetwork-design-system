@@ -1,0 +1,27 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "density": {
+        "note": "Comfortable is the default; compact suits dense desktop and data views."
+      }
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "control-sm": {
+      "$value": "{control.comfortable.sm}"
+    },
+    "control-md": {
+      "$value": "{control.comfortable.md}"
+    },
+    "control-lg": {
+      "$value": "{control.comfortable.lg}"
+    },
+    "field": {
+      "$value": "{control.comfortable.field}"
+    },
+    "target-min": {
+      "$value": "{control.comfortable.target-min}"
+    }
+  }
+}

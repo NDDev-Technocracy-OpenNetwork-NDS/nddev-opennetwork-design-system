@@ -1,0 +1,17 @@
+{
+  "skeleton": {
+    "$description": "Skeleton placeholder while content loads; still under reduced motion.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.sunken}"
+    },
+    "highlight": {
+      "$type": "color",
+      "$value": "{surface.hover}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    }
+  }
+}

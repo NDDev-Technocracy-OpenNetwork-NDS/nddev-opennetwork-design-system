@@ -1,0 +1,21 @@
+{
+  "error-summary": {
+    "$description": "Error summary: the form's errors as links to their fields, focused when the form is refused.",
+    "border": {
+      "$type": "color",
+      "$value": "{status.danger.border}"
+    },
+    "fill": {
+      "$type": "color",
+      "$value": "{status.danger.subtle}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.lg}"
+    }
+  }
+}
