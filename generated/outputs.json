@@ -96,7 +96,7 @@
       "src/dtcg.ts": "f7cfbe55d6999cc899a4ba8cefacb3df3ea142d8006caf1344dbc040bdbb068e",
       "src/emit/components-native.ts": "ec60a17c11f4629e84fa834bcba4125b0082833fe50f50488ace8036a8a216de",
       "src/emit/css.ts": "62f2182253d8133812b1fa8ddbc246592c327b00a5409efcefcabbb2557eedc1",
-      "src/emit/dart.ts": "dd5637e7c0d6c87a7ac30322e4d0c345a371d990b00b344e1f45e44a25095bd8",
+      "src/emit/dart.ts": "c35892b90fad3902759b890a7461af3168ec7e0f3721602f2aa90f658f57b823",
       "src/emit/figma.ts": "07435b871d70b7b4809c12572c38c9bc1fa2586ebec9a1fb871bbf00964eed49",
       "src/emit/icons.ts": "e01e7851b025051b72ed8831af30b553e343fbb866296a99e9009e7e4e542f73",
       "src/emit/kit-css.ts": "417d5746777e41e7577ce8680387bc5d7abda1c75be61e8bffb13734aee27c77",
@@ -268,7 +268,7 @@
       "src/dtcg.ts": "f7cfbe55d6999cc899a4ba8cefacb3df3ea142d8006caf1344dbc040bdbb068e",
       "src/emit/components-native.ts": "ec60a17c11f4629e84fa834bcba4125b0082833fe50f50488ace8036a8a216de",
       "src/emit/css.ts": "62f2182253d8133812b1fa8ddbc246592c327b00a5409efcefcabbb2557eedc1",
-      "src/emit/dart.ts": "dd5637e7c0d6c87a7ac30322e4d0c345a371d990b00b344e1f45e44a25095bd8",
+      "src/emit/dart.ts": "c35892b90fad3902759b890a7461af3168ec7e0f3721602f2aa90f658f57b823",
       "src/emit/figma.ts": "07435b871d70b7b4809c12572c38c9bc1fa2586ebec9a1fb871bbf00964eed49",
       "src/emit/icons.ts": "e01e7851b025051b72ed8831af30b553e343fbb866296a99e9009e7e4e542f73",
       "src/emit/kit-css.ts": "417d5746777e41e7577ce8680387bc5d7abda1c75be61e8bffb13734aee27c77",
@@ -1091,7 +1091,7 @@
       "executable": false
     },
     "packages/flutter/test/tokens_test.dart": {
-      "sha256": "b9b536aa84a444472d431aa3ba0d83333de5c955e30e2e5bb2975e52a4b8f484",
+      "sha256": "ecc3de4471bec54d6a7fe2d70912b93f1a246232027649400587264aecb1ef68",
       "scope": "packages",
       "executable": false
     },

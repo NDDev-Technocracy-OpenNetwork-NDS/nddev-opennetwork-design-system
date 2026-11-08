@@ -757,7 +757,7 @@ void main() {
   });
 
   testWidgets('the theme carries the colours and type', (tester) async {
-    final data = ndThemeData(theme: NDTheme.light, direction: NDDirection.ai);
+    final data = ndThemeData(theme: NDTheme.light, direction: NDDirection.${id(firstDir)});
     late BuildContext captured;
     await tester.pumpWidget(MaterialApp(
       theme: data,
@@ -766,8 +766,8 @@ void main() {
         return const SizedBox();
       }),
     ));
-    expect(captured.ndColors, NDColors.resolve(NDTheme.light, NDDirection.ai));
-    expect(Theme.of(captured).colorScheme.primary, NDColors.resolve(NDTheme.light, NDDirection.ai).accentText);
+    expect(captured.ndColors, NDColors.resolve(NDTheme.light, NDDirection.${id(firstDir)}));
+    expect(Theme.of(captured).colorScheme.primary, NDColors.resolve(NDTheme.light, NDDirection.${id(firstDir)}).accentText);
     expect(Theme.of(captured).textTheme.bodyMedium?.fontSize, NDTextStyle.resolve(NDTypeRole.body, NDPlatform.android).size);
   });
 }
