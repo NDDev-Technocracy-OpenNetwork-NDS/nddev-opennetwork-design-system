@@ -3,7 +3,7 @@ name: nddev-opennetwork-design-system
 version: 0.0.1-alpha.9
 channel: alpha
 license: Apache-2.0
-repository: NDDev-Technocracy-OpenNetwork-NDS/nddev-opennetwork-design-system
+repository: NDDev-Technocracy-OpenNetwork/nddev-opennetwork-design-system
 contracts_lock: contracts.lock
 platforms:
   - desktop
