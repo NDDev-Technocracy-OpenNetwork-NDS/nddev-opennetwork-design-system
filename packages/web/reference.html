@@ -12,7 +12,8 @@
 <style>
   .ref { max-inline-size: 72rem; margin-inline: auto; padding: var(--space-6) min(var(--gutter), 5vi); }
   .ref-bar { position: sticky; inset-block-start: 0; z-index: var(--z-sticky); display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: end; padding: var(--space-4) var(--gutter); background: var(--surface-base); border-block-end: 1px solid var(--border-subtle); }
-  .ref-bar label { min-inline-size: 0; max-inline-size: 100%; display: grid; gap: var(--space-1); color: var(--text-secondary); font-size: var(--text-size-caption); }
+  .ref-bar .ref-setting { min-inline-size: 0; max-inline-size: 100%; display: grid; gap: var(--space-1); }
+  .ref-bar label { color: var(--text-secondary); font-size: var(--text-size-caption); }
   .ref-bar select { min-inline-size: 0; max-inline-size: 100%; min-block-size: var(--size-target-min); padding-inline: var(--space-3); border: 1px solid var(--border-control); border-radius: var(--radius-md); background: var(--surface-raised); color: var(--text-primary); font: inherit; }
   .ref h2 { margin-block: var(--space-12) var(--space-4); }
   .ref-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr)); gap: var(--space-3); padding: 0; list-style: none; }
@@ -38,11 +39,11 @@
 <header class="ref-bar">
 <a class="nd-skip-link" href="#main">Skip to content</a>
 <strong>OpenNetwork design system</strong>
-<label>Theme<select data-attr="theme"><option value="light" selected>light</option><option value="dark">dark</option><option value="light-contrast">light-contrast</option><option value="dark-contrast">dark-contrast</option></select></label>
-<label>Direction<select data-attr="direction"><option value="on" selected>on</option></select></label>
-<label>Platform<select data-attr="platform"><option value="web" selected>web</option><option value="desktop">desktop</option></select></label>
-<label>Density<select data-attr="density"><option value="comfortable" selected>comfortable</option><option value="compact">compact</option></select></label>
-<label>Motion<select data-attr="motion"><option value="standard" selected>standard</option><option value="reduced">reduced</option></select></label>
+<div class="ref-setting"><label for="context-theme">Theme</label><select id="context-theme" data-attr="theme"><option value="light" selected>light</option><option value="dark">dark</option><option value="light-contrast">light-contrast</option><option value="dark-contrast">dark-contrast</option></select></label>
+<div class="ref-setting"><label for="context-direction">Direction</label><select id="context-direction" data-attr="direction"><option value="on" selected>on</option></select></label>
+<div class="ref-setting"><label for="context-platform">Platform</label><select id="context-platform" data-attr="platform"><option value="web" selected>web</option><option value="desktop">desktop</option></select></label>
+<div class="ref-setting"><label for="context-density">Density</label><select id="context-density" data-attr="density"><option value="comfortable" selected>comfortable</option><option value="compact">compact</option></select></label>
+<div class="ref-setting"><label for="context-motion">Motion</label><select id="context-motion" data-attr="motion"><option value="standard" selected>standard</option><option value="reduced">reduced</option></select></label>
 </header>
 <main class="ref" id="main">
 <h1 class="nd-text-h1">Reference</h1>

@@ -50,7 +50,8 @@ export function readExamples(): Map<string, string> {
 const STYLE = `
   .ref { max-inline-size: 72rem; margin-inline: auto; padding: var(--space-6) min(var(--gutter), 5vi); }
   .ref-bar { position: sticky; inset-block-start: 0; z-index: var(--z-sticky); display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: end; padding: var(--space-4) var(--gutter); background: var(--surface-base); border-block-end: 1px solid var(--border-subtle); }
-  .ref-bar label { min-inline-size: 0; max-inline-size: 100%; display: grid; gap: var(--space-1); color: var(--text-secondary); font-size: var(--text-size-caption); }
+  .ref-bar .ref-setting { min-inline-size: 0; max-inline-size: 100%; display: grid; gap: var(--space-1); }
+  .ref-bar label { color: var(--text-secondary); font-size: var(--text-size-caption); }
   .ref-bar select { min-inline-size: 0; max-inline-size: 100%; min-block-size: var(--size-target-min); padding-inline: var(--space-3); border: 1px solid var(--border-control); border-radius: var(--radius-md); background: var(--surface-raised); color: var(--text-primary); font: inherit; }
   .ref h2 { margin-block: var(--space-12) var(--space-4); }
   .ref-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr)); gap: var(--space-3); padding: 0; list-style: none; }
@@ -234,7 +235,7 @@ function select(
   options: string[],
   first: string,
 ): string {
-  return `<label>${esc(label)}<select data-attr="${attr}">${options
+  return `<div class="ref-setting"><label for="context-${attr}">${esc(label)}</label><select id="context-${attr}" data-attr="${attr}">${options
     .map(
       (o) =>
         `<option value="${esc(o)}"${o === first ? " selected" : ""}>${esc(o)}</option>`,

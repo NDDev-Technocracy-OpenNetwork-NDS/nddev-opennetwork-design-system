@@ -4,7 +4,11 @@ export default defineConfig({
   outputDir: ".build/browser-results",
   workers: 2,
   timeout: 60000,
-  use: { baseURL: "http://127.0.0.1:4870", trace: "retain-on-failure" },
+  use: {
+    baseURL: "http://127.0.0.1:4870",
+    actionTimeout: 10000,
+    trace: "retain-on-failure",
+  },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
     command: "node scripts/serve.ts",

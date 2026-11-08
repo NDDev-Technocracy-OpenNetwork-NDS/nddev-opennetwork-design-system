@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  quality:
+  reference:
     runs-on: ubuntu-26.04
     timeout-minutes: 40
     steps:
@@ -57,16 +57,53 @@ jobs:
           bash tools/with-renderer-zlib.sh just check test
           bunx playwright install --with-deps chromium
           just test-browser
-          just platforms swift kotlin rust
 
       - name: Retain reference UI renders
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: opennetwork-design-${{ github.sha }}
-          path: .build/
+          path: |
+            .build/visual/
+            .build/flutter-visual/
+            .build/browser-results/
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 7
+
+  platforms:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [swift, kotlin, rust]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install pinned Rust toolchain
+        if: matrix.target == 'rust'
+        uses: actions-rust-lang/setup-rust-toolchain@ecabd13d1c56bd1345c230e542e9144811ad706f # v2.0.0
+        with:
+          toolchain: "1.99.1"
+          components: rustfmt, clippy
+          cache: false
+      - name: Compile and test the source package
+        env:
+          TARGET: ${{ matrix.target }}
+        run: bash scripts/check-platforms.sh "$TARGET"
+
+  quality:
+    if: ${{ !cancelled() }}
+    needs: [reference, platforms]
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Require every package and reference check
+        env:
+          REFERENCE: ${{ needs.reference.result }}
+          PLATFORMS: ${{ needs.platforms.result }}
+        run: test "$REFERENCE" = success && test "$PLATFORMS" = success
 
   workflows:
     # Workflow lint and audit plus the secret scan: new commits on pull requests,
