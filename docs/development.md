@@ -1,6 +1,6 @@
 # Development
 
-Install the locked public dependencies with `just install`. The generator uses the DTCG 2025.10
+Generate sources in a Linux Git checkout with `flock` (util-linux) available. Install the locked public dependencies with `just install`. The generator uses the DTCG 2025.10
 community format and resolver with the Terrazzo parser. No private repository is a build input.
 
 Edit canonical tokens and component definitions, then run `just generate`. The generator constructs
