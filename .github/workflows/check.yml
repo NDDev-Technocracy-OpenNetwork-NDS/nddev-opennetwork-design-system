@@ -15,14 +15,14 @@ concurrency:
 jobs:
   quality:
     runs-on: ubuntu-26.04
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
       - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3
         with:
-          just-version: '1.59.0'
+          just-version: "1.59.0"
       - name: Install verified Flutter SDK
         shell: bash
         run: |
@@ -33,6 +33,14 @@ jobs:
           echo "af7455f540df951184c7953fbe3cf884766e7541dacf8571f9f582db03dd6230  $flutter_archive" | sha256sum --check -
           tar -xf "$flutter_archive" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24.22.1"
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: "1.4.3"
+      - name: Install locked generator dependencies
+        run: just install
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version-file: .python-version
@@ -42,7 +50,23 @@ jobs:
         working-directory: packages/flutter
         run: flutter pub get --enforce-lockfile
       - name: Analyze and test
-        run: bash tools/with-renderer-zlib.sh just check
+        env:
+          NDS_REVIEW_SHOTS: ${{ github.workspace }}/.build/flutter-visual
+        run: |
+          mkdir -p .build/flutter-visual
+          bash tools/with-renderer-zlib.sh just check test
+          bunx playwright install --with-deps chromium
+          just test-browser
+          just platforms swift kotlin rust
+
+      - name: Retain reference UI renders
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: opennetwork-design-${{ github.sha }}
+          path: .build/
+          if-no-files-found: error
+          retention-days: 7
 
   workflows:
     # Workflow lint and audit plus the secret scan: new commits on pull requests,

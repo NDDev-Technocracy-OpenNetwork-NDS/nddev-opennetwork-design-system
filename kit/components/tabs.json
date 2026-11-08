@@ -1,0 +1,91 @@
+{
+  "name": "Tabs",
+  "category": "navigation",
+  "status": "implemented",
+  "summary": "Panels of one view, one shown at a time.",
+  "pattern": {
+    "apg": "tabs",
+    "html": "role=tablist / tab / tabpanel"
+  },
+  "tokens": "tabs",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "tablist",
+      "required": true,
+      "description": "A row over the panels, with a line under it."
+    },
+    {
+      "part": "tab",
+      "required": true,
+      "description": "Text; the selected one has an indicator line."
+    },
+    {
+      "part": "panel",
+      "required": true,
+      "description": "The content, focusable when it has no focusable content."
+    }
+  ],
+  "variants": [
+    {
+      "id": "automatic",
+      "description": "Arrow keys select (panels are quick)."
+    },
+    {
+      "id": "manual",
+      "description": "Arrow keys move focus, Enter selects (panels load)."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible", "selected", "disabled"],
+  "cues": {
+    "selected": "An indicator line of 3 px on the divider and primary text; not colour alone.",
+    "focus-visible": "An inset ring, thicker than 2 px and clear of the indicator line, so focus and selection read as two cues."
+  },
+  "keyboard": [
+    {
+      "keys": "Left, Right",
+      "action": "Previous or next tab (reversed right to left)."
+    },
+    {
+      "keys": "Home, End",
+      "action": "First or last tab."
+    },
+    {
+      "keys": "Tab",
+      "action": "From the tab list to the panel."
+    }
+  ],
+  "a11y": {
+    "role": "tablist, tab, tabpanel",
+    "name": "The tab list has a label; each panel is labelled by its tab.",
+    "notes": ["Tabs that navigate between pages are a navigation, not tabs."],
+    "wcag": ["1.3.1", "1.4.11", "2.1.1", "2.4.7", "2.4.13", "4.1.2"]
+  },
+  "platforms": {
+    "web": ".nd-tabs",
+    "ios": "Picker (segmented) or TabView",
+    "android": "PrimaryTabRow / SecondaryTabRow",
+    "flutter": "TabBar"
+  },
+  "web": {
+    "class": "nd-tabs",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "tabs.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "tabs.text.selected",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "tabs.indicator",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

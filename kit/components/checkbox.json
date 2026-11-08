@@ -1,0 +1,91 @@
+{
+  "name": "Checkbox",
+  "category": "input",
+  "status": "implemented",
+  "summary": "One independent yes/no choice, such as an agreement; the label is part of the target.",
+  "pattern": {
+    "apg": "checkbox",
+    "html": "<input type=\"checkbox\"> inside its <label>"
+  },
+  "tokens": "checkbox",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "box",
+      "required": true,
+      "description": "The native control in the accent colour."
+    },
+    {
+      "part": "label",
+      "required": true,
+      "description": "Clickable text beside the box."
+    }
+  ],
+  "variants": [
+    {
+      "id": "single",
+      "description": "One agreement."
+    },
+    {
+      "id": "group",
+      "description": "Several in a fieldset with a legend."
+    }
+  ],
+  "states": [
+    "default",
+    "hover",
+    "focus-visible",
+    "checked",
+    "indeterminate",
+    "disabled",
+    "invalid"
+  ],
+  "cues": {
+    "checked": "A check mark drawn in the on-fill colour on the direction's fill.",
+    "invalid": "A 2 px danger border and a written error; keyboard focus keeps its own ring.",
+    "indeterminate": "A dash.",
+    "disabled": "A dashed outline and no fill; not colour alone."
+  },
+  "keyboard": [
+    {
+      "keys": "Space",
+      "action": "Toggles."
+    }
+  ],
+  "a11y": {
+    "role": "checkbox",
+    "name": "Its label.",
+    "notes": [
+      "A required agreement says so in text.",
+      "Forced colours show the native control in system colours."
+    ],
+    "wcag": ["1.3.1", "1.4.11", "2.4.7", "2.4.13", "2.5.8", "3.3.2", "4.1.2"]
+  },
+  "platforms": {
+    "web": ".nd-agree / input[type=checkbox]",
+    "ios": "Toggle with a checkbox style (macOS) or a row with a check",
+    "android": "Checkbox with a clickable Row",
+    "flutter": "CheckboxListTile"
+  },
+  "web": {
+    "class": "nd-agree",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "checkbox.border",
+      "bg": "surface.base",
+      "min": 3
+    },
+    {
+      "fg": "checkbox.label",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "checkbox.mark",
+      "bg": "checkbox.fill.checked",
+      "min": 3
+    }
+  ]
+}

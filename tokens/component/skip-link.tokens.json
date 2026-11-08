@@ -1,0 +1,21 @@
+{
+  "skip-link": {
+    "$description": "Skip link: the first focusable element, shown on focus on the overlay surface with a strong edge (the site's).",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.overlay}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.strong}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    }
+  }
+}

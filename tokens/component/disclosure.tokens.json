@@ -1,0 +1,27 @@
+{
+  "disclosure": {
+    "$description": "Disclosure (show/hide) and accordion: a real button with aria-expanded and a turning chevron.",
+    "text": {
+      "$root": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{accent.text}"
+      }
+    },
+    "mark": {
+      "$type": "color",
+      "$value": "{accent.text}"
+    },
+    "underline": {
+      "$type": "color",
+      "$value": "{accent.border}"
+    },
+    "note": {
+      "$type": "color",
+      "$value": "{text.tertiary}"
+    }
+  }
+}

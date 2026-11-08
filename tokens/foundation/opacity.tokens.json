@@ -1,0 +1,19 @@
+{
+  "opacity": {
+    "$type": "number",
+    "disabled": {
+      "$value": 0.4,
+      "$description": "A disabled control (WCAG exempts it from contrast)."
+    },
+    "muted": {
+      "$value": 0.6
+    },
+    "subtle": {
+      "$value": 0.16
+    },
+    "overlay": {
+      "$value": 0.55,
+      "$description": "Scrim behind a dialog."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "z": {
+    "$type": "number",
+    "base": {
+      "$value": 0
+    },
+    "raised": {
+      "$value": 10
+    },
+    "sticky": {
+      "$value": 100
+    },
+    "overlay": {
+      "$value": 200
+    },
+    "dialog": {
+      "$value": 300
+    },
+    "toast": {
+      "$value": 400
+    },
+    "skip": {
+      "$value": 1000
+    }
+  },
+  "overlay": {
+    "$type": "color",
+    "scrim": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0, 0, 0],
+        "alpha": 0.55,
+        "hex": "#000000"
+      }
+    }
+  }
+}

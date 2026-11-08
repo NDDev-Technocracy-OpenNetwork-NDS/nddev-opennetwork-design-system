@@ -1,0 +1,68 @@
+{
+  "name": "Avatar",
+  "category": "data",
+  "status": "implemented",
+  "summary": "A person's photo or initials next to their name.",
+  "pattern": {
+    "html": "<img alt=\"\"> or initials, decorative beside the name"
+  },
+  "tokens": "avatar",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "container",
+      "required": true,
+      "description": "A circle in avatar.fill with a subtle edge; holds the photo or the initials."
+    },
+    {
+      "part": "image",
+      "required": false,
+      "description": "The photo."
+    },
+    {
+      "part": "initials",
+      "required": false,
+      "description": "When there is no photo."
+    }
+  ],
+  "variants": [
+    {
+      "id": "sm",
+      "description": "2 rem"
+    },
+    {
+      "id": "md",
+      "description": "3 rem"
+    },
+    {
+      "id": "lg",
+      "description": "4.5 rem"
+    }
+  ],
+  "states": ["default"],
+  "cues": {},
+  "keyboard": [],
+  "a11y": {
+    "role": "img or none",
+    "name": "Empty alt when the name is beside it.",
+    "notes": [],
+    "wcag": ["1.1.1"]
+  },
+  "platforms": {
+    "web": ".nd-avatar",
+    "ios": "AsyncImage in a Circle",
+    "android": "AsyncImage clipped to CircleShape",
+    "flutter": "CircleAvatar"
+  },
+  "web": {
+    "class": "nd-avatar",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "avatar.text",
+      "bg": "avatar.fill",
+      "min": 4.5
+    }
+  ]
+}

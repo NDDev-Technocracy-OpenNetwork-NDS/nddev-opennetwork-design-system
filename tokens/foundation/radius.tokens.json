@@ -1,0 +1,41 @@
+{
+  "radius": {
+    "$type": "dimension",
+    "sm": {
+      "$value": {
+        "value": 0.375,
+        "unit": "rem"
+      }
+    },
+    "md": {
+      "$value": {
+        "value": 0.5,
+        "unit": "rem"
+      }
+    },
+    "lg": {
+      "$value": {
+        "value": 0.75,
+        "unit": "rem"
+      }
+    },
+    "xl": {
+      "$value": {
+        "value": 1.25,
+        "unit": "rem"
+      }
+    },
+    "2xl": {
+      "$value": {
+        "value": 1.5625,
+        "unit": "rem"
+      }
+    },
+    "pill": {
+      "$value": {
+        "value": 9999,
+        "unit": "px"
+      }
+    }
+  }
+}

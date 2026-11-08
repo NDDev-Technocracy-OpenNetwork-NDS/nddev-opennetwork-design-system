@@ -1,0 +1,17 @@
+{
+  "breadcrumb": {
+    "$description": "Breadcrumb: the path to the current page; the current page is text with aria-current.",
+    "text": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "current": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "separator": {
+      "$type": "color",
+      "$value": "{text.tertiary}"
+    }
+  }
+}

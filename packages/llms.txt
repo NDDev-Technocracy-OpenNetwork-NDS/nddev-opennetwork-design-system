@@ -1,0 +1,59 @@
+# OpenNetwork Design System
+
+> Design tokens, text styles, fonts, icons and a UI kit of 33 accessible components for OpenNetwork (`on`) in the themes `light`, `dark`, `light-contrast`, `dark-contrast`, for the web, Apple platforms, Android, Flutter and Rust. Light is the default theme.
+
+Products consume a release by copying a package directory from the tag `vX.Y.Z` and recording the tag and the directory digest; the copy is never edited. The generator verifies the declared WCAG 2.2 contrast pairs in every theme, and each component names its keyboard behaviour, accessibility contract and platform equivalents.
+
+## Packages
+
+- [Web](web/README.md): tokens.css, kit.css, text-styles.css, tokens.json, icons.json, reference.html
+- [Swift (iOS, iPadOS, macOS)](apple/README.md): a Swift package with tokens, text styles and fonts
+- [Kotlin (Android, Compose)](kotlin/README.md): a Gradle module with tokens, text styles and fonts
+- [Flutter](flutter/README.md): a Dart package with tokens, text styles and fonts
+- [Rust](rust/README.md): a crate with tokens and fonts
+- [Fonts](fonts/README.md): the font manifest (files, digests, preloads, fallback face) and TTF files
+- [Icons](icons/README.md): the icon set as SVG and JSON
+- [Brand](brand/README.md): the mark and the direction icons, light and dark
+- [Figma](figma/README.md): the variables payload for the Figma library
+
+## Components
+
+- [App bar](components/app-bar.md): The top of a product: brand, navigation and settings; sticky without covering focus.
+- [Avatar](components/avatar.md): A person's photo or initials next to their name.
+- [Badge](components/badge.md): A short label on an item: a category, a count or a status.
+- [Breadcrumb](components/breadcrumb.md): The path from the top to the current page.
+- [Button](components/button.md): Starts an action or, as a button-link, goes to a page that continues the task.
+- [Card](components/card.md): A summary of one item with one primary link stretched over it.
+- [Checkbox](components/checkbox.md): One independent yes/no choice, such as an agreement; the label is part of the target.
+- [Chip](components/chip.md): A filter that toggles (aria-pressed), or a marker of the current item.
+- [Dialog](components/dialog.md): A modal window for a short task or a decision; a sheet on phones.
+- [Disclosure](components/disclosure.md): Shows or hides a section; an accordion is a list of them.
+- [Divider](components/divider.md): A thin line between groups of content.
+- [Error summary](components/error-summary.md): The errors of a refused form, as links to their fields, focused on submit.
+- [File input](components/file-input.md): Attaches one file: the paperclip square, the label and the chosen name beside it.
+- [Icon](components/icon.md): A drawn mark of the design; decorative, the control around it carries the meaning.
+- [Link](components/link.md): Goes to another page or place; inline in text or standing alone.
+- [List](components/list.md): Rows of items with a leading icon or avatar and trailing meta.
+- [Menu](components/menu.md): A popup list of actions or choices opened by a button.
+- [Navigation](components/navigation.md): The destinations of a product: a list or bar where the current one is marked.
+- [Notice](components/notice.md): A message about the page or a result: an icon, a word and a sentence on a status tint.
+- [Pagination](components/pagination.md): Pages of a long list: previous, next and page links.
+- [Progress](components/progress.md): How far a task has gone (progress) or a measured value (meter).
+- [Radio group](components/radio-group.md): One choice of a few shown at once.
+- [Select](components/select.md): One choice from a list, drawn as a filled field with a chevron; the native control.
+- [Skeleton](components/skeleton.md): The shape of content that is loading.
+- [Skip link](components/skip-link.md): The first focusable element: goes past the header to the main content.
+- [Slider](components/slider.md): A value in a range, with the value shown in text.
+- [Spinner](components/spinner.md): Pending work in place: a turning mark with a status text.
+- [Switch](components/switch.md): A setting that applies at once, on or off.
+- [Table](components/table.md): Data in rows and columns with header cells.
+- [Tabs](components/tabs.md): Panels of one view, one shown at a time.
+- [Text field](components/text-field.md): One line or several lines of text, with a label inside the filled box, a hint and an error.
+- [Toast](components/toast.md): A brief confirmation that does not take focus.
+- [Tooltip](components/tooltip.md): A short description of a control, on hover and on focus.
+
+## Optional
+
+- [Token listing](web/tokens.json): the registry, breakpoints, text styles and every public token with its description and default value, and the value in every theme of each theme token
+- [Font manifest](fonts/manifest.json): font files with digests, unicode ranges, preloads and the fallback face
+- [Figma variables](figma/variables.json): the Figma library payload

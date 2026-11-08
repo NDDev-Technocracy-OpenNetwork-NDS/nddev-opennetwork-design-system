@@ -1,0 +1,899 @@
+<!-- Every implemented component of the kit in its variants and states, one <section> per
+     component (data-component = the spec's id). The reference page (packages/web/reference.html)
+     is built from these, and the browser suite checks them with axe in every theme and direction.
+     Example text is neutral placeholder wording, never site copy. -->
+
+<section data-component="button">
+  <div class="nd-cluster">
+    <button type="button" class="nd-button">Primary</button>
+    <button type="button" class="nd-button nd-button--secondary">
+      Secondary
+    </button>
+    <button type="button" class="nd-button nd-button--quiet">Quiet</button>
+    <button type="button" class="nd-button nd-button--large">
+      Large
+      <svg
+        class="nd-icon nd-icon--forward"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M12 4.5 6.3 10.2l1.2 1.2 3.6-3.6v12h1.8v-12l3.6 3.6 1.2-1.2z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <button type="button" class="nd-button" disabled>Disabled</button>
+    <button type="button" class="nd-button" aria-disabled="true">
+      Unavailable
+    </button>
+    <button type="button" class="nd-button" aria-busy="true">Sending</button>
+    <a class="nd-button nd-button--secondary" href="#button">Button link</a>
+  </div>
+</section>
+
+<section data-component="link">
+  <p>
+    Running text with <a class="nd-link" href="#link">an inline link</a> and
+    <a class="nd-link" href="https://example.org" data-external
+      >an external one</a
+    >.
+  </p>
+</section>
+
+<section data-component="text-field">
+  <div class="nd-stack">
+    <form class="nd-form nd-stack">
+      <div class="nd-form__row">
+        <div class="nd-field">
+          <label class="nd-field__label" for="ex-name"
+            >Name<span class="nd-field__required" aria-hidden="true"
+              >*</span
+            ></label
+          >
+          <input
+            class="nd-field__control"
+            id="ex-name"
+            name="name"
+            autocomplete="name"
+            required
+          />
+        </div>
+        <div class="nd-field">
+          <label class="nd-field__label" for="ex-email">Email</label>
+          <input
+            class="nd-field__control"
+            id="ex-email"
+            type="email"
+            autocomplete="email"
+            aria-invalid="true"
+            aria-describedby="ex-email-hint ex-email-error"
+            value="name@"
+          />
+          <p class="nd-field__hint" id="ex-email-hint">
+            We reply to this address.
+          </p>
+          <p class="nd-field__error" id="ex-email-error">
+            Enter an address like name@example.org.
+          </p>
+        </div>
+      </div>
+      <div class="nd-field">
+        <label class="nd-field__label" for="ex-message">Message</label>
+        <textarea class="nd-field__control" id="ex-message"></textarea>
+      </div>
+      <div class="nd-field">
+        <label class="nd-field__label" for="ex-disabled">Disabled</label>
+        <input
+          class="nd-field__control"
+          id="ex-disabled"
+          disabled
+          value="Not editable"
+        />
+      </div>
+    </form>
+    <form class="nd-field nd-field--search" role="search">
+      <label class="nd-visually-hidden" for="ex-search"
+        >Search the examples</label
+      >
+      <input
+        class="nd-field__control"
+        id="ex-search"
+        type="search"
+        placeholder="Search"
+      />
+    </form>
+  </div>
+</section>
+
+<section data-component="select">
+  <div class="nd-field nd-field--select">
+    <label class="nd-field__label" for="ex-select">Topic</label>
+    <select class="nd-field__control" id="ex-select">
+      <option>Development</option>
+      <option>Research</option>
+    </select>
+    <span class="nd-field__chevron" aria-hidden="true"
+      ><svg
+        class="nd-icon nd-icon--down"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M12 4.5 6.3 10.2l1.2 1.2 3.6-3.6v12h1.8v-12l3.6 3.6 1.2-1.2z"
+          fill="currentColor"
+        /></svg
+    ></span>
+  </div>
+</section>
+
+<section data-component="checkbox">
+  <div class="nd-agree">
+    <label class="nd-agree__label"
+      ><input class="nd-agree__control" type="checkbox" checked /> I agree to
+      the processing of the data in this form.</label
+    >
+    <label class="nd-agree__label"
+      ><input
+        class="nd-agree__control"
+        type="checkbox"
+        aria-invalid="true"
+        aria-describedby="ex-agree-error"
+      />
+      A required agreement</label
+    >
+    <p class="nd-field__error" id="ex-agree-error">Agree to continue.</p>
+  </div>
+</section>
+
+<section data-component="radio-group">
+  <fieldset class="nd-radio">
+    <legend>Preferred contact</legend>
+    <label class="nd-radio__option"
+      ><input
+        class="nd-radio__control"
+        type="radio"
+        name="ex-contact"
+        checked
+      />
+      <span>Email</span></label
+    >
+    <label class="nd-radio__option"
+      ><input class="nd-radio__control" type="radio" name="ex-contact" />
+      <span>Telegram</span></label
+    >
+    <label class="nd-radio__option"
+      ><input
+        class="nd-radio__control"
+        type="radio"
+        name="ex-contact"
+        disabled
+      />
+      <span>Phone</span></label
+    >
+  </fieldset>
+</section>
+
+<section data-component="switch">
+  <div class="nd-stack">
+    <button type="button" class="nd-switch" role="switch" aria-checked="true">
+      <span class="nd-switch__track" aria-hidden="true"></span> Reduce motion
+    </button>
+    <button type="button" class="nd-switch" role="switch" aria-checked="false">
+      <span class="nd-switch__track" aria-hidden="true"></span> Send a copy
+    </button>
+    <button
+      type="button"
+      class="nd-switch"
+      role="switch"
+      aria-checked="false"
+      disabled
+    >
+      <span class="nd-switch__track" aria-hidden="true"></span> Unavailable
+      setting
+    </button>
+  </div>
+</section>
+
+<section data-component="file-input">
+  <div class="nd-file">
+    <div class="nd-file__row">
+      <input
+        class="nd-file__input"
+        id="ex-file"
+        type="file"
+        aria-describedby="ex-file-hint"
+      />
+      <span class="nd-file__button" aria-hidden="true"
+        ><svg
+          class="nd-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M8 13l5-5a2 2 0 1 1 3 3l-6 6a3.5 3.5 0 0 1-5-5l6-6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          /></svg
+      ></span>
+      <span class="nd-file__text">
+        <label class="nd-file__label" for="ex-file">Attach a file</label>
+        <span class="nd-file__hint" id="ex-file-hint"
+          >PDF or image, up to 10 MB.</span
+        >
+      </span>
+    </div>
+  </div>
+</section>
+
+<section data-component="chip">
+  <div class="nd-cluster" role="group" aria-label="Filters">
+    <button type="button" class="nd-chip" aria-pressed="true">Selected</button>
+    <button type="button" class="nd-chip" aria-pressed="false">Filter</button>
+    <button type="button" class="nd-chip" disabled>Disabled</button>
+  </div>
+</section>
+
+<section data-component="tabs">
+  <div class="nd-tabs">
+    <div class="nd-tabs__list" role="tablist" aria-label="Example tabs">
+      <button
+        type="button"
+        class="nd-tabs__tab"
+        role="tab"
+        id="ex-tab-1"
+        aria-selected="true"
+        aria-controls="ex-panel-1"
+      >
+        Overview
+      </button>
+      <button
+        type="button"
+        class="nd-tabs__tab"
+        role="tab"
+        id="ex-tab-2"
+        aria-selected="false"
+        aria-controls="ex-panel-2"
+        tabindex="-1"
+      >
+        Details
+      </button>
+    </div>
+    <div
+      class="nd-tabs__panel"
+      role="tabpanel"
+      id="ex-panel-1"
+      aria-labelledby="ex-tab-1"
+      tabindex="0"
+    >
+      The first panel.
+    </div>
+    <div
+      class="nd-tabs__panel"
+      role="tabpanel"
+      id="ex-panel-2"
+      aria-labelledby="ex-tab-2"
+      tabindex="0"
+      hidden
+    >
+      The second panel.
+    </div>
+  </div>
+</section>
+
+<section data-component="breadcrumb">
+  <nav class="nd-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="#breadcrumb">Home</a></li>
+      <li><a href="#breadcrumb">Section</a></li>
+      <li><span aria-current="page">Current page</span></li>
+    </ol>
+  </nav>
+</section>
+
+<section data-component="skip-link">
+  <a class="nd-skip-link" href="#main">Skip to content</a>
+  <p>The skip link above is shown when it is focused.</p>
+</section>
+
+<section data-component="card">
+  <div>
+    <article class="nd-card">
+      <p class="nd-card__meta">Category</p>
+      <h3><a class="nd-card__link" href="#card">A card heading</a></h3>
+      <p class="nd-card__body">One primary link stretched over the card.</p>
+    </article>
+  </div>
+</section>
+
+<section data-component="disclosure">
+  <div class="nd-details">
+    <button
+      type="button"
+      class="nd-details__toggle"
+      aria-expanded="false"
+      aria-controls="ex-details"
+    >
+      <span class="nd-details__label">More options</span>
+      <span class="nd-details__mark" aria-hidden="true"
+        ><svg
+          class="nd-icon nd-icon--down"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M12 4.5 6.3 10.2l1.2 1.2 3.6-3.6v12h1.8v-12l3.6 3.6 1.2-1.2z"
+            fill="currentColor"
+          /></svg
+      ></span>
+      <span class="nd-details__note">optional</span>
+    </button>
+    <div class="nd-details__body" id="ex-details" hidden>
+      The hidden section.
+    </div>
+  </div>
+</section>
+
+<section data-component="dialog">
+  <button
+    type="button"
+    class="nd-button nd-button--secondary"
+    data-open-dialog="ex-dialog"
+  >
+    Open a dialog
+  </button>
+  <dialog class="nd-dialog" id="ex-dialog" aria-labelledby="ex-dialog-title">
+    <h2 class="nd-dialog__title" id="ex-dialog-title">Leave the form?</h2>
+    <p>What you typed is not sent.</p>
+    <div class="nd-dialog__actions">
+      <button
+        type="button"
+        class="nd-button nd-button--secondary"
+        data-close-dialog
+      >
+        Stay
+      </button>
+      <button type="button" class="nd-button" data-close-dialog>Leave</button>
+    </div>
+  </dialog>
+</section>
+
+<section data-component="tooltip">
+  <span class="nd-cluster" style="position: relative">
+    <button
+      type="button"
+      class="nd-button nd-button--quiet"
+      aria-describedby="ex-tooltip"
+    >
+      Theme
+    </button>
+    <span
+      class="nd-tooltip"
+      role="tooltip"
+      id="ex-tooltip"
+      style="position: static"
+      >Dark, light or high contrast</span
+    >
+  </span>
+</section>
+
+<section data-component="table">
+  <div class="nd-stack">
+    <div
+      class="nd-table-region"
+      role="region"
+      aria-label="Example table"
+      tabindex="0"
+    >
+      <table class="nd-table">
+        <caption>
+          Release checks
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Check</th>
+            <th scope="col">State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Contrast pairs</td>
+            <td><span class="nd-badge" data-status="success">Passed</span></td>
+          </tr>
+          <tr>
+            <td>Platforms</td>
+            <td><span class="nd-badge" data-status="warning">Running</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="nd-table-region"
+      role="region"
+      aria-label="Loading table"
+      aria-busy="true"
+      tabindex="0"
+    >
+      <table class="nd-table">
+        <caption>
+          Release history
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Release</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr aria-hidden="true">
+            <td><span class="nd-skeleton"></span></td>
+            <td><span class="nd-skeleton"></span></td>
+          </tr>
+          <tr aria-hidden="true">
+            <td><span class="nd-skeleton"></span></td>
+            <td><span class="nd-skeleton"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="nd-visually-hidden" role="status">
+        Loading the release history
+      </p>
+    </div>
+    <div
+      class="nd-table-region"
+      role="region"
+      aria-label="Empty table"
+      tabindex="0"
+    >
+      <table class="nd-table">
+        <caption>
+          Open inquiries
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Inquiry</th>
+            <th scope="col">Received</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nd-table__state" colspan="2">
+              <div class="nd-state" data-state="empty" role="status">
+                <p class="nd-state__title">No open inquiries</p>
+                <p class="nd-state__body">
+                  New inquiries from the contact form appear here.
+                </p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="nd-table-region"
+      role="region"
+      aria-label="Failed table"
+      tabindex="0"
+    >
+      <table class="nd-table">
+        <caption>
+          Deployments
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nd-table__state" colspan="2">
+              <div class="nd-state" data-state="error" role="status">
+                <p class="nd-state__title">The deployments could not load</p>
+                <p class="nd-state__body">
+                  The server did not answer. Your filters are kept.
+                </p>
+                <button type="button" class="nd-button nd-button--secondary">
+                  Try again
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section data-component="divider">
+  <p>Above the line.</p>
+  <hr class="nd-divider" />
+  <p>Below the line.</p>
+  <div class="nd-cluster">
+    <span>Summary</span>
+    <span class="nd-divider nd-divider--vertical" aria-hidden="true"></span>
+    <span>Details</span>
+  </div>
+</section>
+
+<section data-component="notice">
+  <div class="nd-stack">
+    <div class="nd-notice" role="status">
+      <span class="nd-notice__icon" aria-hidden="true">i</span>
+      <div>
+        <span class="nd-notice__label">Note</span> An informational message.
+      </div>
+    </div>
+    <div class="nd-notice" data-status="success" role="status">
+      <span class="nd-notice__icon" aria-hidden="true">✓</span>
+      <div>
+        <span class="nd-notice__label">Saved</span> The inquiry is saved.
+      </div>
+    </div>
+    <div class="nd-notice" data-status="warning" role="status">
+      <span class="nd-notice__icon" aria-hidden="true">!</span>
+      <div>
+        <span class="nd-notice__label">Check</span> Some fields are optional.
+        <button type="button" class="nd-button nd-button--secondary">
+          Review
+        </button>
+      </div>
+    </div>
+    <div class="nd-notice" data-status="danger" role="alert">
+      <span class="nd-notice__icon" aria-hidden="true">×</span>
+      <div>
+        <span class="nd-notice__label">Error</span> The form was not sent.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-component="error-summary">
+  <div class="nd-error-summary" role="alert" tabindex="-1">
+    <p class="nd-error-summary__title">Two fields need attention</p>
+    <ul>
+      <li><a href="#ex-email">Enter an email address</a></li>
+      <li><a href="#ex-name">Enter your name</a></li>
+    </ul>
+  </div>
+</section>
+
+<section data-component="toast">
+  <div role="status">
+    <div class="nd-toast">
+      <span>Copied to the clipboard.</span>
+      <button type="button" class="nd-button nd-button--quiet">Undo</button>
+    </div>
+  </div>
+</section>
+
+<section data-component="progress">
+  <div class="nd-stack">
+    <label for="ex-progress">Upload</label>
+    <progress class="nd-progress" id="ex-progress" max="100" value="60">
+      60%
+    </progress>
+  </div>
+</section>
+
+<section data-component="spinner">
+  <p class="nd-cluster" role="status">
+    <span class="nd-spinner" aria-hidden="true"></span> Loading
+  </p>
+</section>
+
+<section data-component="skeleton">
+  <div class="nd-stack" aria-busy="true">
+    <span class="nd-visually-hidden">Loading content</span>
+    <span
+      class="nd-skeleton"
+      aria-hidden="true"
+      style="inline-size: 60%"
+    ></span>
+    <span class="nd-skeleton" aria-hidden="true"></span>
+  </div>
+</section>
+
+<section data-component="badge">
+  <div class="nd-cluster">
+    <span class="nd-badge">Neutral</span>
+    <span class="nd-badge" data-status="info">Info</span>
+    <span class="nd-badge" data-status="success">Success</span>
+    <span class="nd-badge" data-status="warning">Warning</span>
+    <span class="nd-badge" data-status="danger">Danger</span>
+  </div>
+</section>
+
+<section data-component="avatar">
+  <div class="nd-cluster">
+    <span class="nd-avatar nd-avatar--sm" aria-hidden="true">AB</span>
+    <span class="nd-avatar" aria-hidden="true">CD</span>
+    <span class="nd-avatar nd-avatar--lg" aria-hidden="true">EF</span>
+    <span>A person's name</span>
+  </div>
+</section>
+
+<section data-component="icon">
+  <div class="nd-cluster" data-icons></div>
+</section>
+
+<section data-component="slider">
+  <div class="nd-stack">
+    <label for="ex-range"
+      >Volume
+      <output class="nd-slider__value" id="ex-range-value" for="ex-range"
+        >40</output
+      ></label
+    >
+    <input
+      class="nd-slider"
+      id="ex-range"
+      type="range"
+      min="0"
+      max="100"
+      step="1"
+      value="40"
+      data-range-output="ex-range-value"
+    />
+    <label for="ex-range-stepped"
+      >Rating
+      <output
+        class="nd-slider__value"
+        id="ex-range-stepped-value"
+        for="ex-range-stepped"
+        >3</output
+      ></label
+    >
+    <input
+      class="nd-slider"
+      id="ex-range-stepped"
+      type="range"
+      min="1"
+      max="5"
+      step="1"
+      value="3"
+      data-range-output="ex-range-stepped-value"
+    />
+    <label for="ex-range-disabled">Unavailable volume</label>
+    <input
+      class="nd-slider"
+      id="ex-range-disabled"
+      type="range"
+      min="0"
+      max="100"
+      value="40"
+      disabled
+    />
+  </div>
+</section>
+<section data-component="navigation">
+  <div class="nd-stack">
+    <nav class="nd-navigation" aria-label="Example bar">
+      <ul role="list">
+        <li>
+          <a href="#component-navigation" aria-current="page">Overview</a>
+        </li>
+        <li><a href="#component-list">Library</a></li>
+        <li><a href="#component-menu">Settings</a></li>
+      </ul>
+    </nav>
+    <nav class="nd-navigation nd-navigation--rail" aria-label="Example rail">
+      <ul role="list">
+        <li>
+          <a href="#component-navigation" aria-current="page">Overview</a>
+        </li>
+        <li><a href="#component-list">Library</a></li>
+      </ul>
+    </nav>
+    <nav class="nd-navigation nd-navigation--dock" aria-label="Example dock">
+      <ul role="list">
+        <li>
+          <a href="#component-navigation" aria-current="page"
+            ><span aria-hidden="true">◇</span>Overview</a
+          >
+        </li>
+        <li>
+          <a href="#component-list"><span aria-hidden="true">▤</span>Library</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<section data-component="list">
+  <div class="nd-stack">
+    <ul class="nd-list" role="list" aria-label="Example search results">
+      <li class="nd-list__state">
+        <div class="nd-state" data-state="empty" role="status">
+          <p class="nd-state__title">
+            No documents match “accessibility audit”
+          </p>
+          <p class="nd-state__body">Check the spelling or remove a filter.</p>
+        </div>
+      </li>
+    </ul>
+    <ul
+      class="nd-list nd-list--divided"
+      role="list"
+      aria-label="Example documents"
+    >
+      <li class="nd-list__row">
+        <span class="nd-list__body">Design foundations</span
+        ><span class="nd-list__meta">Updated today</span>
+      </li>
+      <li class="nd-list__row">
+        <span class="nd-list__body">Component reference</span
+        ><span class="nd-list__meta">33 families</span>
+      </li>
+    </ul>
+    <ul class="nd-list" role="list" aria-label="Example destinations">
+      <li>
+        <a class="nd-list__row" href="#component-button"
+          ><span class="nd-list__body">Actions</span
+          ><span class="nd-list__meta">View buttons</span></a
+        >
+      </li>
+      <li>
+        <a class="nd-list__row" href="#component-slider"
+          ><span class="nd-list__body">Inputs</span
+          ><span class="nd-list__meta">View sliders</span></a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+<section data-component="pagination">
+  <div class="nd-stack">
+    <nav class="nd-pagination" aria-label="Example pages">
+      <ul role="list">
+        <li>
+          <span class="nd-chip" role="link" aria-disabled="true">Previous</span>
+        </li>
+        <li>
+          <a
+            class="nd-chip"
+            href="#component-pagination"
+            aria-label="Page 1"
+            aria-current="page"
+            >1</a
+          >
+        </li>
+        <li>
+          <a class="nd-chip" href="#component-list" aria-label="Page 2">2</a>
+        </li>
+        <li><a class="nd-chip" href="#component-list">Next</a></li>
+      </ul>
+    </nav>
+    <div class="nd-pagination nd-pagination--more">
+      <ul class="nd-list" id="ex-more-list" role="list">
+        <li class="nd-list__row">Example item 1</li>
+        <li class="nd-list__row">Example item 2</li>
+      </ul>
+      <button
+        class="nd-button nd-button--quiet"
+        type="button"
+        data-more="ex-more-list"
+      >
+        Show more examples
+      </button>
+      <p class="nd-text-caption" id="ex-more-status" role="status"></p>
+    </div>
+  </div>
+</section>
+<section data-component="app-bar">
+  <div class="nd-stack">
+    <header class="nd-app-bar">
+      <a class="nd-app-bar__brand" href="#main">NDDev</a>
+      <nav class="nd-navigation" aria-label="Example app destinations">
+        <ul role="list">
+          <li>
+            <a href="#component-app-bar" aria-current="page">Workspace</a>
+          </li>
+          <li><a href="#component-list">Library</a></li>
+        </ul>
+      </nav>
+      <div class="nd-app-bar__actions">
+        <button class="nd-button nd-button--quiet" type="button">
+          Settings
+        </button>
+      </div>
+    </header>
+    <header class="nd-app-bar nd-app-bar--app" data-scrolled="true">
+      <a class="nd-app-bar__brand" href="#main">Project</a>
+      <div class="nd-app-bar__actions">
+        <button class="nd-button nd-button--quiet" type="button">Search</button>
+      </div>
+    </header>
+  </div>
+</section>
+<section data-component="menu">
+  <div class="nd-cluster">
+    <button
+      class="nd-button nd-button--quiet"
+      type="button"
+      id="ex-actions-trigger"
+      popovertarget="ex-actions"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-controls="ex-actions"
+    >
+      Document actions
+    </button>
+    <div
+      class="nd-menu"
+      popover
+      id="ex-actions"
+      role="menu"
+      aria-labelledby="ex-actions-trigger"
+    >
+      <button class="nd-menu__item" type="button" role="menuitem" tabindex="-1">
+        Duplicate
+      </button>
+      <button
+        class="nd-menu__item"
+        type="button"
+        role="menuitem"
+        tabindex="-1"
+        aria-disabled="true"
+      >
+        Archive (unavailable)
+      </button>
+      <button class="nd-menu__item" type="button" role="menuitem" tabindex="-1">
+        Export
+      </button>
+    </div>
+    <button
+      class="nd-button nd-button--quiet"
+      type="button"
+      id="ex-choice-trigger"
+      popovertarget="ex-choice"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-controls="ex-choice"
+    >
+      Reading density
+    </button>
+    <div
+      class="nd-menu"
+      popover
+      id="ex-choice"
+      role="listbox"
+      aria-labelledby="ex-choice-trigger"
+    >
+      <div
+        class="nd-menu__item"
+        role="option"
+        tabindex="-1"
+        aria-selected="true"
+      >
+        Comfortable
+      </div>
+      <div
+        class="nd-menu__item"
+        role="option"
+        tabindex="-1"
+        aria-selected="false"
+      >
+        Compact
+      </div>
+      <div
+        class="nd-menu__item"
+        role="option"
+        tabindex="-1"
+        aria-selected="false"
+        aria-disabled="true"
+      >
+        Custom (unavailable)
+      </div>
+    </div>
+  </div>
+  <p class="nd-text-caption" id="ex-menu-status" role="status"></p>
+</section>

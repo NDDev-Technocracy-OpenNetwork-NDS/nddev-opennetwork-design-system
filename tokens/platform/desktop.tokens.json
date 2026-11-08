@@ -1,0 +1,191 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "platform": {
+        "unit": "device-independent px",
+        "note": "Desktop apps (webview or native): fixed, denser type and pointer-sized controls; targets keep the WCAG 2.2 24 px minimum."
+      }
+    }
+  },
+  "text-size": {
+    "$type": "dimension",
+    "$description": "Fixed sizes for desktop windows.",
+    "display": {
+      "$value": {
+        "value": 40,
+        "unit": "px"
+      }
+    },
+    "h1": {
+      "$value": {
+        "value": 32,
+        "unit": "px"
+      }
+    },
+    "h2": {
+      "$value": {
+        "value": 28,
+        "unit": "px"
+      }
+    },
+    "h3": {
+      "$value": {
+        "value": 22,
+        "unit": "px"
+      }
+    },
+    "h4": {
+      "$value": {
+        "value": 18,
+        "unit": "px"
+      }
+    },
+    "body-lg": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
+    },
+    "body": {
+      "$value": {
+        "value": 14,
+        "unit": "px"
+      }
+    },
+    "label": {
+      "$value": {
+        "value": 13,
+        "unit": "px"
+      }
+    },
+    "caption": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      }
+    }
+  },
+  "font": {
+    "$type": "fontFamily",
+    "$description": "One stack per script; the platform names its own fallbacks.",
+    "sans": {
+      "$value": [
+        "IBM Plex Sans",
+        "IBM Plex Sans Fallback",
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "sans-ar": {
+      "$value": [
+        "IBM Plex Sans Arabic",
+        "IBM Plex Sans",
+        "IBM Plex Sans Fallback",
+        "system-ui",
+        "Segoe UI",
+        "Tahoma",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "sans-zh": {
+      "$value": [
+        "IBM Plex Sans",
+        "Noto Sans SC",
+        "IBM Plex Sans Fallback",
+        "system-ui",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    "mono": {
+      "$value": [
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Consolas",
+        "Liberation Mono",
+        "monospace"
+      ]
+    }
+  },
+  "control": {
+    "$type": "dimension",
+    "$description": "Control and target sizes per density; the density modifier aliases size.* to one of them.",
+    "$extensions": {
+      "ai.nddev": {
+        "private": true
+      }
+    },
+    "comfortable": {
+      "sm": {
+        "$value": {
+          "value": 28,
+          "unit": "px"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 36,
+          "unit": "px"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 44,
+          "unit": "px"
+        }
+      },
+      "field": {
+        "$value": {
+          "value": 40,
+          "unit": "px"
+        }
+      },
+      "target-min": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      }
+    },
+    "compact": {
+      "sm": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 28,
+          "unit": "px"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 36,
+          "unit": "px"
+        }
+      },
+      "field": {
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        }
+      },
+      "target-min": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      }
+    }
+  }
+}

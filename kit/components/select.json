@@ -1,0 +1,78 @@
+{
+  "name": "Select",
+  "category": "input",
+  "status": "implemented",
+  "summary": "One choice from a list, drawn as a filled field with a chevron; the native control.",
+  "pattern": {
+    "html": "<select> with <label>"
+  },
+  "tokens": "field",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "label",
+      "required": true,
+      "description": "As a text field."
+    },
+    {
+      "part": "control",
+      "required": true,
+      "description": "The native select, appearance removed."
+    },
+    {
+      "part": "chevron",
+      "required": true,
+      "description": "Decorative, not focusable."
+    }
+  ],
+  "variants": [
+    {
+      "id": "native",
+      "description": "The platform's own picker (preferred on touch)."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible", "disabled", "invalid"],
+  "cues": {
+    "invalid": "As a text field."
+  },
+  "keyboard": [
+    {
+      "keys": "Arrow keys",
+      "action": "Change the choice."
+    },
+    {
+      "keys": "Space, Alt+Down",
+      "action": "Open the list."
+    }
+  ],
+  "a11y": {
+    "role": "combobox (native select)",
+    "name": "The label element.",
+    "notes": [
+      "A custom listbox is used only where the native control cannot work (multi-select with search)."
+    ],
+    "wcag": ["1.3.1", "1.4.3", "1.4.11", "2.4.7", "2.4.13", "3.3.2", "4.1.2"]
+  },
+  "platforms": {
+    "web": ".nd-field--select",
+    "ios": "Picker (menu style)",
+    "android": "ExposedDropdownMenuBox",
+    "flutter": "DropdownMenu"
+  },
+  "web": {
+    "class": "nd-field--select",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "field.text",
+      "bg": "field.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "field.border",
+      "bg": "field.fill",
+      "min": 3
+    }
+  ]
+}

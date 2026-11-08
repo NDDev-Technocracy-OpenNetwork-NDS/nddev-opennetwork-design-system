@@ -1,0 +1,11 @@
+[extend]
+useDefault = true
+
+# The producer records SHA-256 values of public token source files. Only these
+# exact checksum lines in its ledger are excluded; token values and other files are scanned.
+[[allowlists]]
+description = "Public token-source SHA-256 ledger entries"
+condition = "AND"
+paths = ['''^generated/outputs\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"tokens/(?:[A-Za-z0-9_.-]+/)*[A-Za-z0-9_.-]+\.(?:json|css)": "[a-f0-9]{64}",?\s*$''']

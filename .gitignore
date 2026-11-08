@@ -4,3 +4,14 @@ build/
 .flutter-plugins-dependencies
 .DS_Store
 .nddev-reports/
+
+node_modules
+.build/
+test-results/
+playwright-report/
+packages/apple/.build/
+packages/apple/.swiftpm/
+packages/kotlin/.gradle/
+packages/kotlin/.kotlin/
+packages/kotlin/build/
+packages/rust/target/

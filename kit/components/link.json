@@ -1,0 +1,85 @@
+{
+  "name": "Link",
+  "category": "action",
+  "status": "implemented",
+  "summary": "Goes to another page or place; inline in text or standing alone.",
+  "pattern": {
+    "apg": "link",
+    "html": "<a href>"
+  },
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "text",
+      "required": true,
+      "description": "Underlined, in link.default; on hover the underline thickens and the colour stays at text contrast (link.hover)."
+    },
+    {
+      "part": "external-mark",
+      "required": false,
+      "description": "A drawn arrow after links that leave the site, out of the accessible name."
+    }
+  ],
+  "variants": [
+    {
+      "id": "inline",
+      "description": "Inside running text."
+    },
+    {
+      "id": "external",
+      "description": "Leaves the site: the arrow mark."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible", "visited"],
+  "cues": {
+    "default": "Underline, not colour alone.",
+    "hover": "A thicker underline; link.hover keeps text contrast, so hover is never a contrast drop.",
+    "focus-visible": "The global ring."
+  },
+  "keyboard": [
+    {
+      "keys": "Enter",
+      "action": "Follows the link."
+    }
+  ],
+  "a11y": {
+    "role": "link",
+    "name": "Its text, meaningful out of context.",
+    "notes": [
+      "Isolated with dir=auto so an address keeps its direction in a right-to-left sentence."
+    ],
+    "wcag": ["1.4.1", "1.4.3", "2.4.4", "2.4.7", "2.4.13", "4.1.2"]
+  },
+  "platforms": {
+    "web": "a, a.nd-link",
+    "ios": "Link",
+    "android": "Text with LinkAnnotation",
+    "flutter": "Text with a TapGestureRecognizer in a Link widget"
+  },
+  "web": {
+    "class": "nd-link",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "link.default",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "link.hover",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "link.default",
+      "bg": "surface.raised",
+      "min": 4.5
+    },
+    {
+      "fg": "link.hover",
+      "bg": "surface.raised",
+      "min": 4.5
+    }
+  ]
+}

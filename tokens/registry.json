@@ -1,0 +1,35 @@
+{
+  "$comment": "OpenNetwork contexts and defaults.",
+  "directions": [
+    {
+      "id": "on",
+      "name": "OpenNetwork"
+    }
+  ],
+  "themes": {
+    "default": "light",
+    "defaultChoice": "system",
+    "system": {
+      "dark": "dark",
+      "light": "light"
+    },
+    "contrast": {
+      "dark": "dark-contrast",
+      "light": "light-contrast"
+    },
+    "order": ["light", "dark", "light-contrast", "dark-contrast"]
+  },
+  "platforms": {
+    "default": "web",
+    "order": ["web", "desktop", "ios", "android"],
+    "css": ["web", "desktop"]
+  },
+  "densities": {
+    "default": "comfortable",
+    "order": ["comfortable", "compact"]
+  },
+  "motions": {
+    "default": "standard",
+    "order": ["standard", "reduced"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "divider": {
+    "$description": "Divider between groups.",
+    "color": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "width": {
+      "$type": "dimension",
+      "$value": "{border-width.thin}"
+    }
+  }
+}

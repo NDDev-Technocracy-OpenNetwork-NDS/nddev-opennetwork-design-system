@@ -1,0 +1,91 @@
+{
+  "name": "Card",
+  "category": "container",
+  "status": "implemented",
+  "summary": "A summary of one item with one primary link stretched over it.",
+  "pattern": {
+    "html": "<article> with a heading link"
+  },
+  "tokens": "card",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "container",
+      "required": true,
+      "description": "Raised surface, subtle edge; the edge takes the accent on hover."
+    },
+    {
+      "part": "link",
+      "required": true,
+      "description": "The heading's link, stretched over the card."
+    },
+    {
+      "part": "meta",
+      "required": false,
+      "description": "Tertiary label line."
+    },
+    {
+      "part": "body",
+      "required": false,
+      "description": "Secondary text."
+    },
+    {
+      "part": "media",
+      "required": false,
+      "description": "An image with its renditions."
+    }
+  ],
+  "variants": [
+    {
+      "id": "link",
+      "description": "The whole card follows its link."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible"],
+  "cues": {
+    "focus-visible": "The ring around the whole card."
+  },
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "To the card's link."
+    },
+    {
+      "keys": "Enter",
+      "action": "Follows it."
+    }
+  ],
+  "a11y": {
+    "role": "article",
+    "name": "Its heading.",
+    "notes": ["Nothing else interactive inside a stretched link."],
+    "wcag": ["1.3.1", "1.4.11", "2.4.4", "2.4.7", "2.4.13"]
+  },
+  "platforms": {
+    "web": ".nd-card",
+    "ios": "NavigationLink with a card background",
+    "android": "Card(onClick)",
+    "flutter": "Card with InkWell"
+  },
+  "web": {
+    "class": "nd-card",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "card.text",
+      "bg": "card.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "card.body",
+      "bg": "card.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "card.meta",
+      "bg": "card.fill",
+      "min": 4.5
+    }
+  ]
+}

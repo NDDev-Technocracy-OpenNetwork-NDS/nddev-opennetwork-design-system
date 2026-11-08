@@ -1,0 +1,91 @@
+{
+  "name": "Slider",
+  "category": "input",
+  "status": "implemented",
+  "summary": "A value in a range, with the value shown in text.",
+  "pattern": {
+    "apg": "slider",
+    "html": "<input type=\"range\">"
+  },
+  "tokens": "slider",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "track",
+      "required": true,
+      "description": "The range."
+    },
+    {
+      "part": "fill",
+      "required": true,
+      "description": "From the start to the value."
+    },
+    {
+      "part": "thumb",
+      "required": true,
+      "description": "The target, at least the minimum size."
+    },
+    {
+      "part": "value",
+      "required": true,
+      "description": "The value in text."
+    }
+  ],
+  "variants": [
+    {
+      "id": "continuous",
+      "description": "Any value."
+    },
+    {
+      "id": "stepped",
+      "description": "Steps."
+    }
+  ],
+  "states": ["default", "hover", "active", "focus-visible", "disabled"],
+  "cues": {},
+  "keyboard": [
+    {
+      "keys": "Arrow keys",
+      "action": "Step."
+    },
+    {
+      "keys": "Home, End",
+      "action": "Minimum, maximum."
+    },
+    {
+      "keys": "Page Up, Page Down",
+      "action": "Large steps."
+    }
+  ],
+  "a11y": {
+    "role": "slider",
+    "name": "Its label; aria-valuetext when the number needs words.",
+    "notes": [
+      "The native track accepts a click/tap without dragging (2.5.7). Keyboard support alone is not a single-pointer alternative.",
+      "The input retains native keyboard, touch and accessibility behavior; show its current value in text."
+    ],
+    "wcag": ["1.4.11", "2.1.1", "2.4.7", "2.4.13", "2.5.7", "2.5.8", "4.1.2"]
+  },
+  "platforms": {
+    "web": "input[type=range].nd-slider",
+    "ios": "Slider",
+    "android": "Slider",
+    "flutter": "Slider.adaptive"
+  },
+  "contrast": [
+    {
+      "fg": "slider.fill",
+      "bg": "surface.base",
+      "min": 3
+    },
+    {
+      "fg": "slider.thumb",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ],
+  "web": {
+    "class": "nd-slider",
+    "modifiers": []
+  }
+}

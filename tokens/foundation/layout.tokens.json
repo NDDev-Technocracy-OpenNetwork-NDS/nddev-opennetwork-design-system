@@ -1,0 +1,247 @@
+{
+  "container-max": {
+    "$type": "dimension",
+    "$value": {
+      "value": 107.5,
+      "unit": "rem"
+    }
+  },
+  "measure": {
+    "$description": "Text measures: the reading measure (characters), then one measure per role of the site's first views and blocks, shared by every direction (the owner asked on 2026-11-05 for sizes standardized across the directions), and one scale for every other text.",
+    "$root": {
+      "$type": "number",
+      "$value": 68,
+      "$description": "Reading measure in characters.",
+      "$extensions": {
+        "ai.nddev": {
+          "css": "68ch"
+        }
+      }
+    },
+    "hero-title": {
+      "$type": "dimension",
+      "$value": {
+        "value": 44.375,
+        "unit": "rem"
+      }
+    },
+    "hero-title-split": {
+      "$type": "dimension",
+      "$value": {
+        "value": 39.75,
+        "unit": "rem"
+      }
+    },
+    "hero-title-centered": {
+      "$type": "dimension",
+      "$value": {
+        "value": 64.875,
+        "unit": "rem"
+      }
+    },
+    "hero-lead": {
+      "$type": "dimension",
+      "$value": {
+        "value": 41.25,
+        "unit": "rem"
+      },
+      "$description": "A first view's intro beside its art (660 px)."
+    },
+    "hero-lead-split": {
+      "$type": "dimension",
+      "$value": {
+        "value": 37.625,
+        "unit": "rem"
+      },
+      "$description": "A first view's intro beside its headline (602 px)."
+    },
+    "hero-lead-centered": {
+      "$type": "dimension",
+      "$value": {
+        "value": 39.8125,
+        "unit": "rem"
+      },
+      "$description": "A first view's intro centred (637 px)."
+    },
+    "section-title": {
+      "$type": "dimension",
+      "$value": {
+        "value": 56.875,
+        "unit": "rem"
+      },
+      "$description": "A block's heading on a home (910 px)."
+    },
+    "section-lead": {
+      "$type": "dimension",
+      "$value": {
+        "value": 53.125,
+        "unit": "rem"
+      },
+      "$description": "A block's description on a home (850 px)."
+    },
+    "note": {
+      "$type": "dimension",
+      "$value": {
+        "value": 16,
+        "unit": "rem"
+      },
+      "$description": "A note under a step or a date (256 px)."
+    },
+    "narrow": {
+      "$type": "dimension",
+      "$value": {
+        "value": 22,
+        "unit": "rem"
+      },
+      "$description": "A narrow box: a menu, a portrait (352 px)."
+    },
+    "short": {
+      "$type": "dimension",
+      "$value": {
+        "value": 28,
+        "unit": "rem"
+      },
+      "$description": "A short paragraph (448 px)."
+    },
+    "text": {
+      "$type": "dimension",
+      "$value": {
+        "value": 37.5,
+        "unit": "rem"
+      },
+      "$description": "A card's or a page's text (600 px)."
+    },
+    "lead": {
+      "$type": "dimension",
+      "$value": {
+        "value": 40,
+        "unit": "rem"
+      },
+      "$description": "A lead or a short heading (640 px)."
+    },
+    "wide": {
+      "$type": "dimension",
+      "$value": {
+        "value": 44,
+        "unit": "rem"
+      },
+      "$description": "A wide text (704 px)."
+    },
+    "head": {
+      "$type": "dimension",
+      "$value": {
+        "value": 48,
+        "unit": "rem"
+      },
+      "$description": "A statement's head (768 px)."
+    }
+  },
+  "gutter": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1,
+      "unit": "rem"
+    },
+    "$description": "Page gutter: 1 rem on a phone, growing to 6.25 rem.",
+    "$extensions": {
+      "ai.nddev": {
+        "css": "clamp(1rem, 5.2vw - 0.5rem, 6.25rem)",
+        "fluid": {
+          "max": {
+            "value": 6.25,
+            "unit": "rem"
+          }
+        }
+      }
+    }
+  },
+  "section-space": {
+    "$type": "dimension",
+    "$value": {
+      "value": 4,
+      "unit": "rem"
+    },
+    "$description": "Space between page sections: 4 rem on a phone, growing to 9.5 rem.",
+    "$extensions": {
+      "ai.nddev": {
+        "css": "clamp(4rem, 2.5rem + 6vw, 9.5rem)",
+        "fluid": {
+          "max": {
+            "value": 9.5,
+            "unit": "rem"
+          }
+        }
+      }
+    }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Media queries cannot read custom properties: queries write these as literals and the checks hold them to this list.",
+    "2xs": {
+      "$value": {
+        "value": 20,
+        "unit": "rem"
+      }
+    },
+    "narrow": {
+      "$value": {
+        "value": 22.5,
+        "unit": "rem"
+      }
+    },
+    "xs": {
+      "$value": {
+        "value": 30,
+        "unit": "rem"
+      }
+    },
+    "sm": {
+      "$value": {
+        "value": 40,
+        "unit": "rem"
+      }
+    },
+    "md": {
+      "$value": {
+        "value": 48,
+        "unit": "rem"
+      }
+    },
+    "ml": {
+      "$value": {
+        "value": 56,
+        "unit": "rem"
+      }
+    },
+    "lg": {
+      "$value": {
+        "value": 64,
+        "unit": "rem"
+      }
+    },
+    "xl": {
+      "$value": {
+        "value": 72,
+        "unit": "rem"
+      }
+    },
+    "2xl": {
+      "$value": {
+        "value": 90,
+        "unit": "rem"
+      }
+    },
+    "3xl": {
+      "$value": {
+        "value": 110,
+        "unit": "rem"
+      }
+    },
+    "grown": {
+      "$value": {
+        "value": 120,
+        "unit": "rem"
+      }
+    }
+  }
+}

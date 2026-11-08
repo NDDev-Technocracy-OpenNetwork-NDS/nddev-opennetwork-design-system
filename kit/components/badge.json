@@ -1,0 +1,93 @@
+{
+  "name": "Badge",
+  "category": "feedback",
+  "status": "implemented",
+  "summary": "A short label on an item: a category, a count or a status.",
+  "pattern": {
+    "html": "<span>"
+  },
+  "tokens": "badge",
+  "textStyle": "caption",
+  "anatomy": [
+    {
+      "part": "container",
+      "required": true,
+      "description": "Pill."
+    },
+    {
+      "part": "label",
+      "required": true,
+      "description": "One or two words."
+    }
+  ],
+  "variants": [
+    {
+      "id": "neutral",
+      "description": ""
+    },
+    {
+      "id": "info",
+      "description": ""
+    },
+    {
+      "id": "success",
+      "description": ""
+    },
+    {
+      "id": "warning",
+      "description": ""
+    },
+    {
+      "id": "danger",
+      "description": ""
+    }
+  ],
+  "states": ["default"],
+  "cues": {
+    "default": "Status badges carry a word, not colour alone."
+  },
+  "keyboard": [],
+  "a11y": {
+    "role": "none",
+    "name": "",
+    "notes": ["A count badge has visually hidden context (\"3 unread\")."],
+    "wcag": ["1.4.1", "1.4.3"]
+  },
+  "platforms": {
+    "web": ".nd-badge[data-status]",
+    "ios": ".badge / a capsule label",
+    "android": "Badge / AssistChip",
+    "flutter": "Badge / Chip"
+  },
+  "web": {
+    "class": "nd-badge",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "badge.text",
+      "bg": "badge.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "text.primary",
+      "bg": "badge.info.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "text.primary",
+      "bg": "badge.success.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "text.primary",
+      "bg": "badge.warning.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "text.primary",
+      "bg": "badge.danger.fill",
+      "min": 4.5
+    }
+  ]
+}

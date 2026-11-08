@@ -1,0 +1,46 @@
+{
+  "border-width": {
+    "$type": "dimension",
+    "none": {
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      }
+    },
+    "thin": {
+      "$value": {
+        "value": 1,
+        "unit": "px"
+      }
+    },
+    "medium": {
+      "$value": {
+        "value": 2,
+        "unit": "px"
+      }
+    },
+    "thick": {
+      "$value": {
+        "value": 0.1875,
+        "unit": "rem"
+      }
+    }
+  },
+  "focus": {
+    "$type": "dimension",
+    "width": {
+      "$value": {
+        "value": 2,
+        "unit": "px"
+      },
+      "$description": "Focus outline width (WCAG 2.2 2.4.13: at least a 2 px perimeter)."
+    },
+    "gap": {
+      "$value": {
+        "value": 2,
+        "unit": "px"
+      },
+      "$description": "Space between a control and its focus outline, filled with surface.base."
+    }
+  }
+}

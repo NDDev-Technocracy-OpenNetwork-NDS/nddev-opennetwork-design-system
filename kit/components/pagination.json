@@ -1,0 +1,66 @@
+{
+  "name": "Pagination",
+  "category": "navigation",
+  "status": "implemented",
+  "summary": "Pages of a long list: previous, next and page links.",
+  "pattern": {
+    "html": "<nav aria-label> with links, aria-current=page"
+  },
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "previous",
+      "required": true,
+      "description": "Button-link with the back arrow."
+    },
+    {
+      "part": "pages",
+      "required": false,
+      "description": "Chips as links; the current one marked."
+    },
+    {
+      "part": "next",
+      "required": true,
+      "description": "Button-link with the forward arrow."
+    }
+  ],
+  "variants": [
+    {
+      "id": "numbered",
+      "description": "Page numbers."
+    },
+    {
+      "id": "more",
+      "description": "A \"show more\" button that appends."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible", "current", "disabled"],
+  "cues": {
+    "current": "Chip current marker."
+  },
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "Through the links."
+    }
+  ],
+  "a11y": {
+    "role": "navigation",
+    "name": "aria-label (\"Pages\").",
+    "notes": [
+      "A disabled previous/next control is a non-link or a disabled button, never a live href with aria-disabled alone.",
+      "Loading more keeps the trigger stable; announce the count and offer a way to reach new items. Do not move focus unexpectedly."
+    ],
+    "wcag": ["1.3.1", "2.4.4", "2.4.7", "2.4.13", "2.5.8"]
+  },
+  "platforms": {
+    "web": "nav.nd-pagination with .nd-chip links, or .nd-pagination--more with a button",
+    "ios": "infinite List with a progress row",
+    "android": "LazyColumn paging",
+    "flutter": "ListView with paging"
+  },
+  "web": {
+    "class": "nd-pagination",
+    "modifiers": ["more"]
+  }
+}

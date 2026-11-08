@@ -1,0 +1,31 @@
+{
+  "slider": {
+    "$description": "Slider: a thumb on a track with the value in text.",
+    "track": {
+      "$type": "color",
+      "$value": "{border.control}"
+    },
+    "fill": {
+      "$type": "color",
+      "$value": "{accent.border}"
+    },
+    "thumb": {
+      "$type": "color",
+      "$value": "{accent.border}"
+    },
+    "thumb-size": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.25,
+        "unit": "rem"
+      }
+    },
+    "track-height": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.25,
+        "unit": "rem"
+      }
+    }
+  }
+}

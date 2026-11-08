@@ -1,0 +1,108 @@
+{
+  "button": {
+    "primary": {
+      "fill": {
+        "$root": {
+          "$type": "color",
+          "$value": "{accent.fill}"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{accent.fill-hover}"
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{accent.fill-active}"
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{accent.on-fill}"
+      }
+    },
+    "secondary": {
+      "border": {
+        "$type": "color",
+        "$value": "{accent.outline}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      },
+      "fill": {
+        "hover": {
+          "$type": "color",
+          "$value": "{accent.subtle}"
+        }
+      }
+    },
+    "quiet": {
+      "text": {
+        "$type": "color",
+        "$value": "{accent.text}"
+      },
+      "fill": {
+        "hover": {
+          "$type": "color",
+          "$value": "{accent.subtle}"
+        }
+      }
+    },
+    "disabled": {
+      "border": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{text.tertiary}"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.625,
+        "unit": "rem"
+      }
+    },
+    "md": {
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.target-min}"
+      },
+      "padding-inline": {
+        "$type": "dimension",
+        "$value": "{space.6}"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "{space.2}"
+      }
+    },
+    "lg": {
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.field}"
+      },
+      "min-width": {
+        "$type": "dimension",
+        "$value": {
+          "value": 19.625,
+          "unit": "rem"
+        }
+      },
+      "padding-inline": {
+        "$type": "dimension",
+        "$value": "{space.12}"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": {
+          "value": 1.25,
+          "unit": "rem"
+        },
+        "$description": "20 px between the label and its 24 px arrow (501:3720, 488:3367)."
+      }
+    }
+  }
+}

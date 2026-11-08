@@ -1,0 +1,65 @@
+{
+  "name": "Progress",
+  "category": "feedback",
+  "status": "implemented",
+  "summary": "How far a task has gone (progress) or a measured value (meter).",
+  "pattern": {
+    "apg": "meter",
+    "html": "<progress> / <meter> with a label"
+  },
+  "tokens": "progress",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "track",
+      "required": true,
+      "description": ""
+    },
+    {
+      "part": "indicator",
+      "required": true,
+      "description": "OpenNetwork progress."
+    },
+    {
+      "part": "value",
+      "required": true,
+      "description": "In text."
+    }
+  ],
+  "variants": [
+    {
+      "id": "determinate",
+      "description": ""
+    },
+    {
+      "id": "indeterminate",
+      "description": "Still under reduced motion."
+    }
+  ],
+  "states": ["default"],
+  "cues": {},
+  "keyboard": [],
+  "a11y": {
+    "role": "progressbar / meter",
+    "name": "Its label.",
+    "notes": [],
+    "wcag": ["1.4.11", "4.1.2"]
+  },
+  "platforms": {
+    "web": "progress.nd-progress",
+    "ios": "ProgressView / Gauge",
+    "android": "LinearProgressIndicator",
+    "flutter": "LinearProgressIndicator"
+  },
+  "web": {
+    "class": "nd-progress",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "progress.indicator",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

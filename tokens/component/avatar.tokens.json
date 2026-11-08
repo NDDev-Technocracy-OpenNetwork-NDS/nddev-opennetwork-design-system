@@ -1,0 +1,42 @@
+{
+  "avatar": {
+    "$description": "Avatar: a person's photo or initials; decorative next to the name.",
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.sunken}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.pill}"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2,
+        "unit": "rem"
+      }
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3,
+        "unit": "rem"
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4.5,
+        "unit": "rem"
+      }
+    }
+  }
+}

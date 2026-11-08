@@ -3,28 +3,41 @@ set shell := ["bash", "-euo", "pipefail", "-c"]
 default:
     @just --list
 
-tokens:
-    python3 tools/generate_tokens.py
-    python3 tools/generate_brand.py
+install:
+    bun install --frozen-lockfile --ignore-scripts
 
-tokens-check:
-    python3 tools/generate_tokens.py --check
-    python3 tools/generate_brand.py --check
-    python3 -B -m unittest discover -s tools
+generate:
+    node src/cli.ts generate
+
+# Public compatibility alias used by existing consumers.
+tokens: generate
+
+# Source checks only; builds, applications and tests run on runners.
+check:
+    python3 scripts/check-public-source.py
+    node src/cli.ts check
+    bun run typecheck
+    bun run lint
+    bun run format:check
+    dart format --output=none --set-exit-if-changed adapters/flutter tests/flutter
 
 dependencies:
     cd packages/flutter && flutter pub get --enforce-lockfile
 
 format:
-    dart format packages/flutter/lib packages/flutter/test
-
-fmt-check:
-    dart format --output=none --set-exit-if-changed packages/flutter/lib packages/flutter/test
-
-analyze:
-    cd packages/flutter && flutter analyze
+    bun run format
+    dart format adapters/flutter tests/flutter
 
 test:
-    cd packages/flutter && flutter test
+    bun run test
+    python3 -B -m unittest discover -s tools
+    cd packages/flutter && flutter analyze --fatal-infos && flutter test
 
-check: tokens-check fmt-check analyze test
+test-browser:
+    bun run test:browser
+
+platforms *targets:
+    bash scripts/check-platforms.sh {{targets}}
+
+serve:
+    node scripts/serve.ts

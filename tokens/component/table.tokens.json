@@ -1,0 +1,29 @@
+{
+  "table": {
+    "$description": "Data table: header row, row lines, a hovered row tint.",
+    "header": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.subtle}"
+    },
+    "row": {
+      "fill": {
+        "hover": {
+          "$type": "color",
+          "$value": "{surface.hover}"
+        }
+      }
+    },
+    "cell-padding": {
+      "$type": "dimension",
+      "$value": "{space.3}"
+    }
+  }
+}

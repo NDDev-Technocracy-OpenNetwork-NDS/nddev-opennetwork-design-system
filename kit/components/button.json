@@ -1,0 +1,143 @@
+{
+  "name": "Button",
+  "category": "action",
+  "status": "implemented",
+  "summary": "Starts an action or, as a button-link, goes to a page that continues the task.",
+  "pattern": {
+    "apg": "button",
+    "html": "<button type=\"button\"> or <a> for navigation"
+  },
+  "tokens": "button",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "container",
+      "required": true,
+      "description": "The target: at least the minimum target size, padding from the size."
+    },
+    {
+      "part": "label",
+      "required": true,
+      "description": "A verb or a destination; never only an icon unless it has an accessible name."
+    },
+    {
+      "part": "icon",
+      "required": false,
+      "description": "Leading or trailing; the forward arrow turns with the reading direction."
+    }
+  ],
+  "variants": [
+    {
+      "id": "primary",
+      "description": "The direction's fill: the one main action of a view."
+    },
+    {
+      "id": "secondary",
+      "description": "Outline in the direction's colour, text in the page colour ."
+    },
+    {
+      "id": "quiet",
+      "description": "Underlined text action for minor actions."
+    }
+  ],
+  "sizes": ["md", "lg"],
+  "states": [
+    "default",
+    "hover",
+    "active",
+    "focus-visible",
+    "disabled",
+    "pending"
+  ],
+  "cues": {
+    "disabled": "Dashed hollow outline and tertiary text; not colour alone.",
+    "pending": "Keeps its label, adds a turning mark (dotted and still under reduced motion) and aria-busy; a status region announces the outcome.",
+    "focus-visible": "The global ring: 2 px outline, 2 px gap, focus.ring colour."
+  },
+  "keyboard": [
+    {
+      "keys": "Enter, Space",
+      "action": "Activates the button."
+    },
+    {
+      "keys": "Enter",
+      "action": "Follows a button-link."
+    }
+  ],
+  "a11y": {
+    "role": "button (link for a button-link)",
+    "name": "Its text; an icon-only button has aria-label.",
+    "notes": [
+      "Prefer aria-disabled with an explanation over removing a control from the tab order.",
+      "A destructive action names what it destroys."
+    ],
+    "wcag": [
+      "1.4.3",
+      "1.4.11",
+      "2.1.1",
+      "2.4.7",
+      "2.4.13",
+      "2.4.11",
+      "2.5.3",
+      "2.5.8",
+      "4.1.2"
+    ]
+  },
+  "platforms": {
+    "web": "button.nd-button / a.nd-button",
+    "ios": "Button with a ButtonStyle drawing button.* colours",
+    "android": "Button, OutlinedButton, TextButton (Material 3 mapped by NDDevTheme)",
+    "flutter": "FilledButton, OutlinedButton, TextButton"
+  },
+  "web": {
+    "class": "nd-button",
+    "modifiers": [
+      "nd-button--secondary",
+      "nd-button--quiet",
+      "nd-button--large",
+      "nd-button--block"
+    ]
+  },
+  "contrast": [
+    {
+      "fg": "button.primary.text",
+      "bg": "button.primary.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "button.primary.text",
+      "bg": "button.primary.fill.hover",
+      "min": 4.5
+    },
+    {
+      "fg": "button.primary.text",
+      "bg": "button.primary.fill.active",
+      "min": 4.5
+    },
+    {
+      "fg": "button.secondary.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "button.secondary.text",
+      "bg": "button.secondary.fill.hover",
+      "min": 4.5
+    },
+    {
+      "fg": "button.quiet.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "button.quiet.text",
+      "bg": "button.quiet.fill.hover",
+      "min": 4.5
+    },
+    {
+      "fg": "button.secondary.border",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

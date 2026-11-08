@@ -1,0 +1,70 @@
+{
+  "name": "File input",
+  "category": "input",
+  "status": "implemented",
+  "summary": "Attaches one file: the paperclip square, the label and the chosen name beside it.",
+  "pattern": {
+    "html": "<input type=\"file\"> over the drawn square"
+  },
+  "tokens": "field",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "square",
+      "required": true,
+      "description": "The native input, transparent over a drawn square with the paperclip."
+    },
+    {
+      "part": "label",
+      "required": true,
+      "description": "Upper-case label (kicker)."
+    },
+    {
+      "part": "name",
+      "required": false,
+      "description": "The chosen file, truncated."
+    },
+    {
+      "part": "hint",
+      "required": false,
+      "description": "Allowed types and size."
+    },
+    {
+      "part": "remove",
+      "required": false,
+      "description": "A button that clears the file."
+    }
+  ],
+  "variants": [
+    {
+      "id": "single",
+      "description": "One file."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible", "invalid", "filled"],
+  "cues": {
+    "invalid": "Danger border on the square and a written error."
+  },
+  "keyboard": [
+    {
+      "keys": "Enter, Space",
+      "action": "Opens the file chooser."
+    }
+  ],
+  "a11y": {
+    "role": "button (native file input)",
+    "name": "Its label.",
+    "notes": [],
+    "wcag": ["1.3.1", "1.4.11", "2.4.7", "2.4.13", "3.3.1", "3.3.2", "4.1.2"]
+  },
+  "platforms": {
+    "web": ".nd-file",
+    "ios": "fileImporter / PhotosPicker",
+    "android": "ActivityResultContracts.GetContent",
+    "flutter": "a platform file picker"
+  },
+  "web": {
+    "class": "nd-file",
+    "modifiers": []
+  }
+}

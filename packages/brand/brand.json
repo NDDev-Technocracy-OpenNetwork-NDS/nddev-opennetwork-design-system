@@ -1,0 +1,40 @@
+{
+  "$description": "The NDDev brand: the owner's mark (mark.svg, never redrawn), each direction's seed colour and its icon in one style for every direction: light by default (the main theme), dark under prefers-color-scheme: dark; the mark is the seed where it holds 3:1 on the tile, otherwise that theme's accent.heading. Rasters (touch icons, ICO, cards) are drawn from the light icon.",
+  "mark": {
+    "file": "mark.svg",
+    "viewBox": "0 0 165.36 165.19"
+  },
+  "directions": {
+    "on": {
+      "color": "#FFD83F",
+      "background": "#F6F7FA",
+      "icon": "icons/on.svg",
+      "light": {
+        "background": "#F6F7FA",
+        "mark": "#A48300",
+        "icon": "icons/on-light.svg"
+      },
+      "dark": {
+        "background": "#000000",
+        "mark": "#FFD83F",
+        "icon": "icons/on-dark.svg"
+      }
+    }
+  },
+  "rasters": {
+    "icon": [
+      192,
+      180
+    ],
+    "favicon": [
+      16,
+      32,
+      48
+    ],
+    "card": {
+      "width": 1200,
+      "height": 630,
+      "mark": 300
+    }
+  }
+}

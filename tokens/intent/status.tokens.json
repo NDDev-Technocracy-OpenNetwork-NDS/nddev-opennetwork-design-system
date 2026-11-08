@@ -1,0 +1,34 @@
+{
+  "$description": "Status seeds; text, fill and border are derived per theme like the accents.",
+  "status-seed": {
+    "$type": "color",
+    "success": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.1843, 0.749, 0.4431],
+        "hex": "#2fbf71"
+      }
+    },
+    "warning": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.8784, 0.6314, 0],
+        "hex": "#e0a100"
+      }
+    },
+    "danger": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.9373, 0.2667, 0.2667],
+        "hex": "#ef4444"
+      }
+    },
+    "info": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.2314, 0.5098, 0.9647],
+        "hex": "#3b82f6"
+      }
+    }
+  }
+}

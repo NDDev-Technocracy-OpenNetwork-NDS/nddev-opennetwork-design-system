@@ -1,0 +1,150 @@
+{
+  "name": "Text field",
+  "category": "input",
+  "status": "implemented",
+  "summary": "One line or several lines of text, with a label inside the filled box, a hint and an error.",
+  "pattern": {
+    "html": "<input>, <textarea> with <label>"
+  },
+  "tokens": "field",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "label",
+      "required": true,
+      "description": "Always visible: inside the box, top left, while typing too."
+    },
+    {
+      "part": "control",
+      "required": true,
+      "description": "OpenNetwork text field."
+    },
+    {
+      "part": "hint",
+      "required": false,
+      "description": "Format or purpose, linked with aria-describedby."
+    },
+    {
+      "part": "error",
+      "required": false,
+      "description": "An icon and a sentence after the hint; the box border turns danger and thickens."
+    },
+    {
+      "part": "required-mark",
+      "required": false,
+      "description": "Visible and in the label text."
+    }
+  ],
+  "variants": [
+    {
+      "id": "single-line",
+      "description": "input of type text, email, tel, url, search."
+    },
+    {
+      "id": "multi-line",
+      "description": "textarea, resizable vertically."
+    },
+    {
+      "id": "search",
+      "description": "A search box in a list's toolbar : the control height, the smaller radius, no fill; the label may be visually hidden inside a search landmark."
+    }
+  ],
+  "states": [
+    "default",
+    "hover",
+    "focus-visible",
+    "disabled",
+    "readonly",
+    "invalid"
+  ],
+  "cues": {
+    "invalid": "Thicker danger border, an icon and a written error; aria-invalid. The border also follows :user-invalid, after the person edits a field with a native constraint or tries to submit.",
+    "disabled": "Dashed border, tertiary text.",
+    "readonly": "Dashed border, text stays primary."
+  },
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "Moves to and from the field."
+    }
+  ],
+  "a11y": {
+    "role": "textbox",
+    "name": "The label element.",
+    "notes": [
+      "autocomplete names personal data (1.3.5).",
+      "Errors are announced through the error summary and linked to their field.",
+      "A text area grows with its content up to twenty lines (field-sizing), then scrolls; it can still be resized."
+    ],
+    "wcag": [
+      "1.3.1",
+      "1.3.5",
+      "1.4.3",
+      "1.4.11",
+      "2.4.6",
+      "2.4.7",
+      "2.4.13",
+      "3.3.1",
+      "3.3.2",
+      "3.3.3",
+      "4.1.2"
+    ]
+  },
+  "platforms": {
+    "web": ".nd-field > label.nd-field__label + .nd-field__control",
+    "ios": "TextField / TextEditor with a label above",
+    "android": "TextField (Material 3) with label and supportingText",
+    "flutter": "TextFormField with InputDecoration"
+  },
+  "web": {
+    "class": "nd-field",
+    "modifiers": ["nd-form", "nd-field--search"]
+  },
+  "contrast": [
+    {
+      "fg": "field.text",
+      "bg": "field.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "field.label",
+      "bg": "field.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "field.hint",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "field.border",
+      "bg": "field.fill",
+      "min": 3
+    },
+    {
+      "fg": "field.border.invalid",
+      "bg": "field.fill",
+      "min": 3
+    },
+    {
+      "fg": "field.error",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "field.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "field.placeholder",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "field.border",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

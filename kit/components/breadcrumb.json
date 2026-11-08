@@ -1,0 +1,71 @@
+{
+  "name": "Breadcrumb",
+  "category": "navigation",
+  "status": "implemented",
+  "summary": "The path from the top to the current page.",
+  "pattern": {
+    "apg": "breadcrumb",
+    "html": "<nav aria-label> with an ordered list"
+  },
+  "tokens": "breadcrumb",
+  "textStyle": "label",
+  "anatomy": [
+    {
+      "part": "list",
+      "required": true,
+      "description": "Ordered list of links."
+    },
+    {
+      "part": "separator",
+      "required": true,
+      "description": "Drawn, out of the accessible name; turns with the reading direction."
+    },
+    {
+      "part": "current",
+      "required": true,
+      "description": "The last item, aria-current=page, not a link."
+    }
+  ],
+  "variants": [
+    {
+      "id": "default",
+      "description": "Full path; middle items fold on a phone."
+    }
+  ],
+  "states": ["default", "hover", "focus-visible"],
+  "cues": {},
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "Through the links."
+    }
+  ],
+  "a11y": {
+    "role": "navigation with a list",
+    "name": "aria-label (\"Breadcrumb\", localized).",
+    "notes": [],
+    "wcag": ["1.3.1", "2.4.4", "2.4.7", "2.4.13", "2.4.8"]
+  },
+  "platforms": {
+    "web": ".nd-breadcrumb",
+    "ios": "NavigationStack's back stack",
+    "android": "the top app bar's up navigation",
+    "flutter": "AppBar leading back button"
+  },
+  "web": {
+    "class": "nd-breadcrumb",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "breadcrumb.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "breadcrumb.current",
+      "bg": "surface.base",
+      "min": 4.5
+    }
+  ]
+}

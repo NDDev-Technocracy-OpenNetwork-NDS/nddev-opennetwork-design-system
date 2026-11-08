@@ -1,0 +1,27 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "density": {
+        "note": "Denser controls; touch targets never fall below the platform minimum."
+      }
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "control-sm": {
+      "$value": "{control.compact.sm}"
+    },
+    "control-md": {
+      "$value": "{control.compact.md}"
+    },
+    "control-lg": {
+      "$value": "{control.compact.lg}"
+    },
+    "field": {
+      "$value": "{control.compact.field}"
+    },
+    "target-min": {
+      "$value": "{control.compact.target-min}"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "radio": {
+    "$description": "Radio button in a radio group: a ring with a dot.",
+    "border": {
+      "$root": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{border.strong}"
+      },
+      "invalid": {
+        "$type": "color",
+        "$value": "{status.danger.border}"
+      }
+    },
+    "fill": {
+      "checked": {
+        "$type": "color",
+        "$value": "{accent.fill}"
+      }
+    },
+    "mark": {
+      "$type": "color",
+      "$value": "{accent.on-fill}"
+    },
+    "label": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "size": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.125,
+        "unit": "rem"
+      }
+    }
+  }
+}

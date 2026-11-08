@@ -1,0 +1,69 @@
+{
+  "name": "Error summary",
+  "category": "feedback",
+  "status": "implemented",
+  "summary": "The errors of a refused form, as links to their fields, focused on submit.",
+  "pattern": {
+    "html": "<div role=\"alert\" tabindex=\"-1\"> with a list of links"
+  },
+  "tokens": "error-summary",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "title",
+      "required": true,
+      "description": "How many problems."
+    },
+    {
+      "part": "list",
+      "required": true,
+      "description": "Each error links to its field."
+    }
+  ],
+  "variants": [
+    {
+      "id": "default",
+      "description": ""
+    }
+  ],
+  "states": ["default", "focus-visible"],
+  "cues": {},
+  "keyboard": [
+    {
+      "keys": "Tab",
+      "action": "Through the error links."
+    },
+    {
+      "keys": "Enter",
+      "action": "Moves focus to the field."
+    }
+  ],
+  "a11y": {
+    "role": "alert",
+    "name": "Its title.",
+    "notes": ["Receives focus when the form is refused."],
+    "wcag": ["1.3.1", "2.4.3", "3.3.1", "3.3.3", "4.1.3"]
+  },
+  "platforms": {
+    "web": ".nd-error-summary",
+    "ios": "an alert section at the top of the Form",
+    "android": "a Card at the top, focused",
+    "flutter": "a banner at the top of the Form"
+  },
+  "web": {
+    "class": "nd-error-summary",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "error-summary.text",
+      "bg": "error-summary.fill",
+      "min": 4.5
+    },
+    {
+      "fg": "error-summary.border",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

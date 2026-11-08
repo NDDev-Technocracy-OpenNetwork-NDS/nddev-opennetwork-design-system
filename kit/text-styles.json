@@ -1,0 +1,133 @@
+{
+  "$description": "OpenNetwork text styles.",
+  "scripts": {
+    "$description": "Per script: the languages written in it, the family that replaces font.sans, whether tracking and case apply (Arabic and Chinese have no case; tracking breaks Arabic joining), and the leading of body text.",
+    "latin": {
+      "languages": ["en"],
+      "family": "font.sans",
+      "tracking": true,
+      "case": true
+    },
+    "cyrillic": {
+      "languages": ["ru", "kk"],
+      "family": "font.sans",
+      "tracking": true,
+      "case": true
+    },
+    "arabic": {
+      "languages": ["ar"],
+      "family": "font.sans-ar",
+      "tracking": false,
+      "case": false,
+      "body-leading": "script-leading.ar"
+    },
+    "han": {
+      "languages": ["zh"],
+      "family": "font.sans-zh",
+      "tracking": false,
+      "case": false,
+      "body-leading": "script-leading.zh"
+    }
+  },
+  "styles": {
+    "display": {
+      "$description": "The page's one display heading .",
+      "family": "font.sans",
+      "size": "text-size.display",
+      "leading": "text-leading.display",
+      "weight": "weight.regular",
+      "tracking": "tracking.tight",
+      "wrap": "balance"
+    },
+    "h1": {
+      "$description": "Page heading. Every heading is set in Plex Regular ; size carries the hierarchy.",
+      "family": "font.sans",
+      "size": "text-size.h1",
+      "leading": "text-leading.h1",
+      "weight": "weight.regular",
+      "tracking": "tracking.snug",
+      "wrap": "balance"
+    },
+    "h2": {
+      "$description": "Section heading.",
+      "family": "font.sans",
+      "size": "text-size.h2",
+      "leading": "text-leading.h2",
+      "weight": "weight.regular",
+      "tracking": "tracking.snug",
+      "wrap": "balance"
+    },
+    "h3": {
+      "$description": "Card and group heading.",
+      "family": "font.sans",
+      "size": "text-size.h3",
+      "leading": "text-leading.h3",
+      "weight": "weight.regular",
+      "tracking": "tracking.snug",
+      "wrap": "balance"
+    },
+    "h4": {
+      "$description": "Minor heading, dialog and panel title.",
+      "family": "font.sans",
+      "size": "text-size.h4",
+      "leading": "text-leading.h4",
+      "weight": "weight.regular",
+      "tracking": "tracking.snug",
+      "wrap": "balance"
+    },
+    "lead": {
+      "$description": "The paragraph that opens a page or section, in the secondary text colour.",
+      "family": "font.sans",
+      "size": "text-size.body-lg",
+      "leading": "text-leading.body-lg",
+      "weight": "weight.regular",
+      "tracking": "tracking.normal",
+      "wrap": "pretty",
+      "body": true
+    },
+    "body": {
+      "$description": "Running text and controls' text.",
+      "family": "font.sans",
+      "size": "text-size.body",
+      "leading": "text-leading.body",
+      "weight": "weight.regular",
+      "tracking": "tracking.normal",
+      "wrap": "pretty",
+      "body": true
+    },
+    "label": {
+      "$description": "Hints, metadata, chips and compact controls.",
+      "family": "font.sans",
+      "size": "text-size.label",
+      "leading": "text-leading.label",
+      "weight": "weight.regular",
+      "tracking": "tracking.normal"
+    },
+    "kicker": {
+      "$description": "Upper-case label over a heading or a field ; never the only cue.",
+      "family": "font.sans",
+      "size": "text-size.label",
+      "leading": "text-leading.label",
+      "weight": "weight.regular",
+      "tracking": "tracking.wider",
+      "case": "upper"
+    },
+    "caption": {
+      "$description": "Captions, legal lines and footnotes.",
+      "family": "font.sans",
+      "size": "text-size.caption",
+      "leading": "text-leading.caption",
+      "weight": "weight.regular",
+      "tracking": "tracking.normal"
+    },
+    "code": {
+      "$description": "Commands, keys and code, slightly smaller than the text around it.",
+      "family": "font.mono",
+      "size": "text-size.body",
+      "leading": "text-leading.body",
+      "weight": "weight.regular",
+      "tracking": "tracking.normal",
+      "scale": 0.95
+    }
+  }
+}

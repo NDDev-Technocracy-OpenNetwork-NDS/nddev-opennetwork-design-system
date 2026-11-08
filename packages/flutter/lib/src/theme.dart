@@ -7,90 +7,81 @@ import 'tokens.dart';
 /// Native controls using the platform OpenNetwork kit, without seed-derived hues.
 abstract final class OpenNetworkTheme {
   static bool _fontLicenseRegistered = false;
-  static ThemeData dark({double width = OpenNetworkTypography.viewportMin}) =>
-      _theme(Brightness.dark, width);
-  static ThemeData light({double width = OpenNetworkTypography.viewportMin}) =>
-      _theme(Brightness.light, width);
+  static ThemeData dark({
+    double width = OpenNetworkTypography.viewportMin,
+    bool reduceMotion = false,
+  }) => _theme(Brightness.dark, width, reduceMotion: reduceMotion);
+  static ThemeData light({
+    double width = OpenNetworkTypography.viewportMin,
+    bool reduceMotion = false,
+  }) => _theme(Brightness.light, width, reduceMotion: reduceMotion);
 
-  static ThemeData _theme(Brightness brightness, double width) {
+  static ThemeData darkContrast({
+    double width = OpenNetworkTypography.viewportMin,
+    bool reduceMotion = false,
+  }) => _theme(
+    Brightness.dark,
+    width,
+    contrast: true,
+    reduceMotion: reduceMotion,
+  );
+  static ThemeData lightContrast({
+    double width = OpenNetworkTypography.viewportMin,
+    bool reduceMotion = false,
+  }) => _theme(
+    Brightness.light,
+    width,
+    contrast: true,
+    reduceMotion: reduceMotion,
+  );
+
+  static ThemeData _theme(
+    Brightness brightness,
+    double width, {
+    bool contrast = false,
+    bool reduceMotion = false,
+  }) {
     if (!_fontLicenseRegistered) {
       _fontLicenseRegistered = true;
       LicenseRegistry.addLicense(() async* {
         yield LicenseEntryWithLineBreaks(
-          ['IBM Plex Sans'],
+          ['IBM Plex Sans', 'IBM Plex Sans Arabic'],
           await rootBundle.loadString(
-            'packages/nddev_opennetwork_design_system/assets/fonts/OFL.txt',
+            'packages/nddev_opennetwork_design_system/fonts/OFL-IBM-Plex.txt',
           ),
         );
       });
     }
     final dark = brightness == Brightness.dark;
-    final c = dark ? OpenNetworkColors.dark : OpenNetworkColors.light;
+    final c = dark
+        ? (contrast ? OpenNetworkColors.darkContrast : OpenNetworkColors.dark)
+        : (contrast
+              ? OpenNetworkColors.lightContrast
+              : OpenNetworkColors.light);
     final inverse = dark ? OpenNetworkColors.light : OpenNetworkColors.dark;
     final shape = RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(OpenNetworkRadii.lg),
     );
-    final t =
-        ((width - OpenNetworkTypography.viewportMin) /
-                (OpenNetworkTypography.viewportMax -
-                    OpenNetworkTypography.viewportMin))
-            .clamp(0.0, 1.0);
-    TextStyle type(double min, double max, double leading) => TextStyle(
+    TextStyle type(String role, double leading) => TextStyle(
       fontFamily: OpenNetworkTypography.fontFamily.first,
       package: 'nddev_opennetwork_design_system',
-      fontSize: min + (max - min) * t,
+      fontSize: OpenNetworkTypography.sizeAt(role, width),
       height: leading,
       fontWeight: FontWeight.w400,
       color: c.textPrimary,
     );
-    final body = type(
-      OpenNetworkTypography.bodyMin,
-      OpenNetworkTypography.bodyMax,
-      OpenNetworkTypography.bodyLeading,
-    );
-    final label = type(
-      OpenNetworkTypography.labelMin,
-      OpenNetworkTypography.labelMax,
-      OpenNetworkTypography.labelLeading,
-    );
-    final caption = type(
-      OpenNetworkTypography.captionMin,
-      OpenNetworkTypography.captionMax,
-      OpenNetworkTypography.captionLeading,
-    );
+    final body = type('body', OpenNetworkTypography.bodyLeading);
+    final label = type('label', OpenNetworkTypography.labelLeading);
+    final caption = type('caption', OpenNetworkTypography.captionLeading);
     final text = TextTheme(
-      displayLarge: type(
-        OpenNetworkTypography.displayMin,
-        OpenNetworkTypography.displayMax,
-        OpenNetworkTypography.displayLeading,
-      ),
-      headlineLarge: type(
-        OpenNetworkTypography.h1Min,
-        OpenNetworkTypography.h1Max,
-        OpenNetworkTypography.h1Leading,
-      ),
-      headlineMedium: type(
-        OpenNetworkTypography.h2Min,
-        OpenNetworkTypography.h2Max,
-        OpenNetworkTypography.h2Leading,
-      ),
-      headlineSmall: type(
-        OpenNetworkTypography.h3Min,
-        OpenNetworkTypography.h3Max,
-        OpenNetworkTypography.h3Leading,
-      ),
-      titleLarge: type(
-        OpenNetworkTypography.h4Min,
-        OpenNetworkTypography.h4Max,
-        OpenNetworkTypography.h4Leading,
-      ),
+      displayLarge: type('display', OpenNetworkTypography.displayLeading),
+      headlineLarge: type('h1', OpenNetworkTypography.h1Leading),
+      headlineMedium: type('h2', OpenNetworkTypography.h2Leading),
+      headlineSmall: type('h3', OpenNetworkTypography.h3Leading),
+      titleLarge: type('h4', OpenNetworkTypography.h4Leading),
       titleMedium: body,
       titleSmall: label,
-      bodyLarge: type(
-        OpenNetworkTypography.bodyLgMin,
-        OpenNetworkTypography.bodyLgMax,
-        OpenNetworkTypography.bodyLgLeading,
-      ),
+      bodyLarge: type('bodyLg', OpenNetworkTypography.bodyLgLeading),
       bodyMedium: body,
       bodySmall: caption.copyWith(color: c.textSecondary),
       labelLarge: body,
@@ -158,7 +149,7 @@ abstract final class OpenNetworkTheme {
           shape: WidgetStatePropertyAll(shape),
           elevation: const WidgetStatePropertyAll(0),
           animationDuration: Duration(
-            milliseconds: OpenNetworkMotion.uiFast.toInt(),
+            milliseconds: reduceMotion ? 0 : OpenNetworkMotion.uiFast.toInt(),
           ),
           textStyle: WidgetStatePropertyAll(
             quiet ? body.copyWith(decoration: TextDecoration.underline) : body,

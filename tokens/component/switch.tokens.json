@@ -1,0 +1,53 @@
+{
+  "switch": {
+    "$description": "Switch: an on/off setting that applies at once; the thumb moves and the track fills (with an accent edge that meets 3:1 on the page), and the label states the setting.",
+    "track": {
+      "$root": {
+        "$type": "color",
+        "$value": "{surface.sunken}"
+      },
+      "checked": {
+        "$type": "color",
+        "$value": "{accent.fill}"
+      }
+    },
+    "border": {
+      "$root": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{border.strong}"
+      },
+      "checked": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      }
+    },
+    "thumb": {
+      "$root": {
+        "$type": "color",
+        "$value": "{text.secondary}"
+      },
+      "checked": {
+        "$type": "color",
+        "$value": "{accent.on-fill}"
+      }
+    },
+    "width": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.75,
+        "unit": "rem"
+      }
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.5,
+        "unit": "rem"
+      }
+    }
+  }
+}

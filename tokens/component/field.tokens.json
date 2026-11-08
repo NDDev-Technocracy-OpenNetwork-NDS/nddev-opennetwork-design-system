@@ -1,0 +1,88 @@
+{
+  "field": {
+    "fill": {
+      "$type": "color",
+      "$value": "{surface.raised}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "placeholder": {
+      "$type": "color",
+      "$value": "{text.tertiary}"
+    },
+    "label": {
+      "$root": {
+        "$type": "color",
+        "$value": "{text.tertiary}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{accent.text}"
+      }
+    },
+    "hint": {
+      "$type": "color",
+      "$value": "{text.secondary}"
+    },
+    "border": {
+      "$root": {
+        "$type": "color",
+        "$value": "{border.control}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{border.strong}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      },
+      "invalid": {
+        "$type": "color",
+        "$value": "{status.danger.border}"
+      }
+    },
+    "error": {
+      "$type": "color",
+      "$value": "{status.danger.text}"
+    },
+    "disabled": {
+      "text": {
+        "$type": "color",
+        "$value": "{text.tertiary}"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.lg}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.field}"
+    },
+    "padding-inline": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.875,
+        "unit": "rem"
+      }
+    },
+    "padding-block": {
+      "$type": "dimension",
+      "$value": "{space.3}"
+    },
+    "search": {
+      "$description": "A search box in a list's toolbar (551:5058): the control height beside the filters and the smaller radius.",
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control-md}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.md}"
+      }
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "platform": {
+        "unit": "CSS px and rem"
+      }
+    }
+  },
+  "text-size": {
+    "$type": "dimension",
+    "display": {
+      "$value": {
+        "value": 76,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 40,
+              "unit": "px"
+            },
+            "viewport": [320, 1920]
+          }
+        }
+      }
+    },
+    "h1": {
+      "$value": {
+        "value": 64,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 34,
+              "unit": "px"
+            },
+            "viewport": [320, 1920]
+          }
+        }
+      }
+    },
+    "h2": {
+      "$value": {
+        "value": 48,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 28,
+              "unit": "px"
+            },
+            "viewport": [320, 1920]
+          }
+        }
+      }
+    },
+    "h3": {
+      "$value": {
+        "value": 32,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 22,
+              "unit": "px"
+            },
+            "viewport": [320, 1920]
+          }
+        }
+      }
+    },
+    "h4": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 19,
+              "unit": "px"
+            },
+            "viewport": [320, 1440]
+          }
+        }
+      }
+    },
+    "body-lg": {
+      "$value": {
+        "value": 20,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 18,
+              "unit": "px"
+            },
+            "viewport": [320, 1440]
+          }
+        }
+      }
+    },
+    "body": {
+      "$value": {
+        "value": 18,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 16,
+              "unit": "px"
+            },
+            "viewport": [320, 1440]
+          }
+        }
+      }
+    },
+    "label": {
+      "$value": {
+        "value": 14,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 13,
+              "unit": "px"
+            },
+            "viewport": [320, 1440]
+          }
+        }
+      }
+    },
+    "caption": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      },
+      "$extensions": {
+        "ai.nddev": {
+          "fluid": {
+            "min": {
+              "value": 12,
+              "unit": "px"
+            },
+            "viewport": [320, 1440]
+          }
+        }
+      }
+    }
+  },
+  "font": {
+    "$type": "fontFamily",
+    "$description": "One stack per script; the platform names its own fallbacks.",
+    "sans": {
+      "$value": [
+        "IBM Plex Sans",
+        "IBM Plex Sans Fallback",
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "sans-ar": {
+      "$value": [
+        "IBM Plex Sans Arabic",
+        "IBM Plex Sans",
+        "IBM Plex Sans Fallback",
+        "system-ui",
+        "Segoe UI",
+        "Tahoma",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "sans-zh": {
+      "$value": [
+        "IBM Plex Sans",
+        "Noto Sans SC",
+        "IBM Plex Sans Fallback",
+        "system-ui",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    "mono": {
+      "$value": [
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Consolas",
+        "Liberation Mono",
+        "monospace"
+      ]
+    }
+  },
+  "control": {
+    "$type": "dimension",
+    "$description": "Control and target sizes per density; the density modifier aliases size.* to one of them.",
+    "$extensions": {
+      "ai.nddev": {
+        "private": true
+      }
+    },
+    "comfortable": {
+      "sm": {
+        "$value": {
+          "value": 2.5,
+          "unit": "rem"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 3,
+          "unit": "rem"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 3.75,
+          "unit": "rem"
+        }
+      },
+      "field": {
+        "$value": {
+          "value": 4.375,
+          "unit": "rem"
+        }
+      },
+      "target-min": {
+        "$value": {
+          "value": 2.75,
+          "unit": "rem"
+        }
+      }
+    },
+    "compact": {
+      "sm": {
+        "$value": {
+          "value": 2,
+          "unit": "rem"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 2.5,
+          "unit": "rem"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 3,
+          "unit": "rem"
+        }
+      },
+      "field": {
+        "$value": {
+          "value": 3.5,
+          "unit": "rem"
+        }
+      },
+      "target-min": {
+        "$value": {
+          "value": 1.5,
+          "unit": "rem"
+        }
+      }
+    }
+  }
+}

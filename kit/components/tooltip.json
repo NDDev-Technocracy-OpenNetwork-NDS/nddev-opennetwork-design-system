@@ -1,0 +1,59 @@
+{
+  "name": "Tooltip",
+  "category": "container",
+  "status": "implemented",
+  "summary": "A short description of a control, on hover and on focus.",
+  "pattern": {
+    "apg": "tooltip",
+    "html": "role=tooltip referenced by aria-describedby"
+  },
+  "tokens": "tooltip",
+  "textStyle": "caption",
+  "anatomy": [
+    {
+      "part": "bubble",
+      "required": true,
+      "description": "Inverse surface; does not cover its control."
+    }
+  ],
+  "variants": [
+    {
+      "id": "description",
+      "description": "Adds to the control's name."
+    }
+  ],
+  "states": ["hidden", "shown"],
+  "cues": {},
+  "keyboard": [
+    {
+      "keys": "Escape",
+      "action": "Hides it without moving focus."
+    }
+  ],
+  "a11y": {
+    "role": "tooltip",
+    "name": "",
+    "notes": [
+      "Never the only place of essential information; hoverable and persistent (1.4.13).",
+      "Placement: shown as a popover (popover=hint or manual) in the top layer and linked by CSS anchor positioning (anchor-name on the control, position-anchor on the tooltip), it sits centred above the control and flips below near the top of the viewport."
+    ],
+    "wcag": ["1.4.3", "1.4.13", "4.1.2"]
+  },
+  "platforms": {
+    "web": ".nd-tooltip",
+    "ios": ".help (macOS)",
+    "android": "TooltipBox",
+    "flutter": "Tooltip"
+  },
+  "web": {
+    "class": "nd-tooltip",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "tooltip.text",
+      "bg": "tooltip.fill",
+      "min": 4.5
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import 'brand_geometry.dart';
+import 'icons.dart';
 import 'tokens.dart';
 
 /// The platform's authentic mark and stacked direction lockup.
@@ -31,7 +31,11 @@ class OpenNetworkBrand extends StatelessWidget {
           children: [
             SizedBox.square(
               dimension: OpenNetworkSizes.brand,
-              child: CustomPaint(painter: _Mark(theme.colorScheme.primary)),
+              child: NDVectorIcon(
+                NDBrand.mark,
+                size: OpenNetworkSizes.brand,
+                color: theme.colorScheme.primary,
+              ),
             ),
             const SizedBox(width: OpenNetworkSpacing.three),
             Flexible(
@@ -59,27 +63,4 @@ class OpenNetworkBrand extends StatelessWidget {
       ),
     );
   }
-}
-
-class _Mark extends CustomPainter {
-  _Mark(this.color);
-  final Color color;
-  @override
-  void paint(Canvas canvas, Size size) {
-    final scale = math.min(
-      size.width / nddevMarkSize.width,
-      size.height / nddevMarkSize.height,
-    );
-    canvas.save();
-    canvas.translate(
-      (size.width - nddevMarkSize.width * scale) / 2,
-      (size.height - nddevMarkSize.height * scale) / 2,
-    );
-    canvas.scale(scale);
-    canvas.drawPath(nddevMarkPath(), Paint()..color = color);
-    canvas.restore();
-  }
-
-  @override
-  bool shouldRepaint(_Mark oldDelegate) => color != oldDelegate.color;
 }

@@ -1,0 +1,109 @@
+{
+  "size": {
+    "$type": "dimension",
+    "icon": {
+      "$value": {
+        "value": 1.5,
+        "unit": "rem"
+      }
+    },
+    "icon-md": {
+      "$value": {
+        "value": 1.875,
+        "unit": "rem"
+      }
+    },
+    "icon-lg": {
+      "$value": {
+        "value": 3.125,
+        "unit": "rem"
+      }
+    },
+    "brand": {
+      "$value": {
+        "value": 2,
+        "unit": "rem"
+      }
+    },
+    "home-art-max": {
+      "$value": {
+        "value": 44,
+        "unit": "rem"
+      }
+    },
+    "home-art-centered-max": {
+      "$value": {
+        "value": 36,
+        "unit": "rem"
+      }
+    },
+    "featured-card-min": {
+      "$value": {
+        "value": 20,
+        "unit": "rem"
+      }
+    },
+    "direction-card-min": {
+      "$value": {
+        "value": 10.5,
+        "unit": "rem"
+      }
+    },
+    "dock-tile": {
+      "$value": {
+        "value": 3.5,
+        "unit": "rem"
+      }
+    },
+    "dock-icon": {
+      "$value": {
+        "value": 1.375,
+        "unit": "rem"
+      }
+    },
+    "dock-max": {
+      "$value": {
+        "value": 40,
+        "unit": "rem"
+      }
+    }
+  },
+  "mark": {
+    "$type": "dimension",
+    "pip": {
+      "$value": {
+        "value": 0.1875,
+        "unit": "rem"
+      },
+      "$description": "A 3 px pip and lane."
+    },
+    "dot": {
+      "$value": {
+        "value": 0.3125,
+        "unit": "rem"
+      },
+      "$description": "The small dot and its 5 px lane: kickers, the page bar, rails."
+    },
+    "node": {
+      "$value": {
+        "value": 0.5625,
+        "unit": "rem"
+      },
+      "$description": "A 9 px node on a time line."
+    },
+    "dot-lg": {
+      "$value": {
+        "value": 0.9375,
+        "unit": "rem"
+      },
+      "$description": "The 15 px dot at a heading's, a rail's or a foot's end."
+    },
+    "stroke": {
+      "$value": {
+        "value": 1.5,
+        "unit": "px"
+      },
+      "$description": "The stroke of drawn controls: a menu's bars, a chevron, a disclosure's plus."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "motion": {
+        "note": "Interface transitions and the art's scenes at full length."
+      }
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "ui-fast": {
+      "$value": {
+        "value": 150,
+        "unit": "ms"
+      }
+    },
+    "ui": {
+      "$value": {
+        "value": 250,
+        "unit": "ms"
+      }
+    },
+    "scene": {
+      "$value": {
+        "value": 450,
+        "unit": "ms"
+      }
+    },
+    "scene-slow": {
+      "$value": {
+        "value": 900,
+        "unit": "ms"
+      }
+    }
+  }
+}

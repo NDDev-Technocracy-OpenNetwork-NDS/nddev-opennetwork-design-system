@@ -1,0 +1,77 @@
+{
+  "name": "Disclosure",
+  "category": "container",
+  "status": "implemented",
+  "summary": "Shows or hides a section; an accordion is a list of them.",
+  "pattern": {
+    "apg": "disclosure",
+    "html": "<button aria-expanded aria-controls>"
+  },
+  "tokens": "disclosure",
+  "textStyle": "body",
+  "anatomy": [
+    {
+      "part": "toggle",
+      "required": true,
+      "description": "A real button with the label and a chevron that turns."
+    },
+    {
+      "part": "note",
+      "required": false,
+      "description": "Why the section is optional."
+    },
+    {
+      "part": "body",
+      "required": true,
+      "description": "Hidden with the hidden attribute when closed."
+    }
+  ],
+  "variants": [
+    {
+      "id": "single",
+      "description": "One section."
+    },
+    {
+      "id": "accordion",
+      "description": "Several; headings wrap the toggles."
+    }
+  ],
+  "states": ["collapsed", "expanded", "hover", "focus-visible"],
+  "cues": {
+    "expanded": "The chevron turns; aria-expanded."
+  },
+  "keyboard": [
+    {
+      "keys": "Enter, Space",
+      "action": "Toggles."
+    }
+  ],
+  "a11y": {
+    "role": "button with aria-expanded",
+    "name": "Its label.",
+    "notes": [],
+    "wcag": ["1.3.1", "2.1.1", "2.4.7", "2.4.13", "4.1.2"]
+  },
+  "platforms": {
+    "web": ".nd-details",
+    "ios": "DisclosureGroup",
+    "android": "an expandable Row with AnimatedVisibility",
+    "flutter": "ExpansionTile"
+  },
+  "web": {
+    "class": "nd-details",
+    "modifiers": []
+  },
+  "contrast": [
+    {
+      "fg": "disclosure.text",
+      "bg": "surface.base",
+      "min": 4.5
+    },
+    {
+      "fg": "disclosure.mark",
+      "bg": "surface.base",
+      "min": 3
+    }
+  ]
+}

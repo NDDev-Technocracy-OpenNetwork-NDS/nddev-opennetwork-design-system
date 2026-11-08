@@ -1,0 +1,674 @@
+{
+  "$extensions": {
+    "ai.nddev": {
+      "theme": {
+        "scheme": "light"
+      }
+    }
+  },
+  "palette": {
+    "surface": {
+      "$type": "color",
+      "base": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9451, 0.9451, 0.9451],
+          "hex": "#f1f1f1"
+        }
+      },
+      "raised": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        }
+      },
+      "sunken": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9216, 0.9216, 0.9216],
+          "hex": "#ebebeb"
+        }
+      },
+      "overlay": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        }
+      }
+    },
+    "text": {
+      "$type": "color",
+      "primary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "hex": "#000000"
+        }
+      },
+      "secondary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4, 0.4, 0.4],
+          "hex": "#666666"
+        }
+      },
+      "tertiary": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4157, 0.4157, 0.4157],
+          "hex": "#6a6a6a"
+        }
+      }
+    },
+    "border": {
+      "$type": "color",
+      "subtle": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8706, 0.8706, 0.8706],
+          "hex": "#dedede"
+        }
+      },
+      "control": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4627, 0.4627, 0.4627],
+          "hex": "#767676"
+        }
+      },
+      "strong": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.302, 0.302, 0.302],
+          "hex": "#4d4d4d"
+        }
+      }
+    },
+    "focus": {
+      "$type": "color",
+      "ring": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "hex": "#000000"
+        }
+      }
+    },
+    "subtle-mix": {
+      "$type": "number",
+      "$value": 0.12,
+      "$description": "Share of the brand in the accent subtle tint over surface.base."
+    },
+    "lit-mix": {
+      "$type": "number",
+      "$value": 0.06
+    }
+  },
+  "seed": {
+    "$type": "color",
+    "fill": {
+      "$type": "color"
+    },
+    "role": {
+      "closing": {
+        "$type": "color"
+      },
+      "crosslink": {
+        "$type": "color"
+      }
+    },
+    "heading": {
+      "$type": "color",
+      "on": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7216, 0.5804, 0.0549],
+          "hex": "#b8940e"
+        }
+      }
+    },
+    "edge": {
+      "$type": "color"
+    }
+  },
+  "component": {
+    "direction-card": {
+      "border": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      }
+    },
+    "pair": {
+      "border": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "{surface.raised}"
+      }
+    },
+    "map-card": {
+      "surface": {
+        "$type": "color",
+        "$value": "{accent.fill}",
+        "$extensions": {
+          "ai.nddev": {
+            "css": "color-mix(in srgb, var(--accent-fill) 4%, var(--surface-raised))",
+            "modify": {
+              "mix": {
+                "with": "{surface.raised}",
+                "amount": 0.96,
+                "space": "srgb"
+              }
+            }
+          }
+        }
+      }
+    },
+    "compare": {
+      "border": {
+        "$type": "color",
+        "$value": "{border.subtle}"
+      },
+      "surface": {
+        "$type": "gradient",
+        "$value": [
+          {
+            "color": "{border.subtle}",
+            "position": 0
+          },
+          {
+            "color": {
+              "colorSpace": "srgb",
+              "components": [0, 0, 0],
+              "alpha": 0,
+              "hex": "#000000"
+            },
+            "position": 1
+          }
+        ],
+        "$extensions": {
+          "ai.nddev": {
+            "css": "linear-gradient(110deg, color-mix(in srgb, var(--border-subtle) 70%, transparent), transparent)"
+          }
+        },
+        "$description": "Wash across a comparison block: on the web a 110 degree gradient from the first stop at low alpha to transparent (ai.nddev.css)."
+      }
+    },
+    "signal": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0, 0.4706, 0.549],
+        "hex": "#00788c"
+      }
+    },
+    "person": {
+      "surface": {
+        "$type": "gradient",
+        "$value": [
+          {
+            "color": {
+              "colorSpace": "srgb",
+              "components": [0, 0, 0],
+              "alpha": 0,
+              "hex": "#000000"
+            },
+            "position": 0
+          },
+          {
+            "color": "{surface.raised}",
+            "position": 0.76
+          }
+        ],
+        "$extensions": {
+          "ai.nddev": {
+            "css": "linear-gradient(180deg, transparent, var(--surface-raised) 76%), color-mix(in srgb, #B7B7B7 40%, var(--surface-raised))"
+          }
+        },
+        "$description": "A person card: a fade to the surface over a grey tint on the web (ai.nddev.css); the stops are its top layer."
+      },
+      "place": {
+        "$type": "color",
+        "$value": "{surface.sunken}"
+      }
+    },
+    "art": {
+      "glow": {
+        "$type": "number",
+        "$value": 0.4
+      },
+      "tint": {
+        "$type": "color",
+        "$value": "{accent.brand}"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{accent.brand}",
+        "$extensions": {
+          "ai.nddev": {
+            "css": "color-mix(in oklab, var(--accent-brand), var(--accent-text) 50%)",
+            "modify": {
+              "mix": {
+                "with": "{accent.text}",
+                "amount": 0.5,
+                "space": "oklab"
+              }
+            }
+          }
+        }
+      },
+      "solid": {
+        "$type": "color",
+        "$value": "{accent.brand}",
+        "$extensions": {
+          "ai.nddev": {
+            "css": "color-mix(in oklab, var(--accent-brand) 60%, var(--surface-base))",
+            "modify": {
+              "mix": {
+                "with": "{surface.base}",
+                "amount": 0.4,
+                "space": "oklab"
+              }
+            }
+          }
+        }
+      },
+      "shade": {
+        "$type": "color",
+        "$value": "{text.primary}",
+        "$extensions": {
+          "ai.nddev": {
+            "css": "color-mix(in srgb, var(--text-primary) 55%, transparent)",
+            "modify": {
+              "alpha": 0.55
+            }
+          }
+        }
+      },
+      "specular": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        },
+        "$description": "The light the art's solids are lifted towards in their highlights (the tone ladder's lightest steps): white in either scheme, a theme's own where it sets one."
+      },
+      "on": {
+        "$type": "color",
+        "contour": {
+          "from": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.8667, 0.8667, 0.8667],
+              "hex": "#dddddd"
+            }
+          },
+          "to": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.6667, 0.5333, 0.0],
+              "hex": "#aa8800"
+            }
+          },
+          "spark": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [1.0, 0.8471, 0.2471],
+              "hex": "#ffd83f"
+            }
+          },
+          "deep": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [1.0, 0.8353, 0.2314],
+              "hex": "#ffd53b"
+            }
+          }
+        }
+      },
+      "closing": {
+        "$type": "color",
+        "ink": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.3255, 0.2196, 0.7373],
+            "hex": "#5338bc"
+          }
+        }
+      },
+      "diagram": {
+        "$type": "color",
+        "$description": "The section diagrams: Dev's and RnD's figures and points, and AI's mass with its rim.",
+        "dev": {
+          "point": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0627, 0.1412, 0.8157],
+              "hex": "#1024d0"
+            }
+          },
+          "ring": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.4314, 0.4314, 0.4314],
+              "hex": "#6e6e6e"
+            }
+          },
+          "turning": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0627, 0.1412, 0.8157],
+              "hex": "#1024d0"
+            }
+          },
+          "fill": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0627, 0.1412, 0.8157],
+              "hex": "#1024d0"
+            }
+          },
+          "grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.1059, 1.0],
+              "alpha": 0.65,
+              "hex": "#001bff"
+            }
+          },
+          "deep-grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.0863, 0.5882],
+              "alpha": 0.7,
+              "hex": "#001696"
+            }
+          }
+        },
+        "rnd": {
+          "point": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.6275, 0.0667, 0.4],
+              "hex": "#a01166"
+            }
+          },
+          "ring": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.902, 0.4078, 0.6588],
+              "hex": "#e668a8"
+            }
+          },
+          "turning": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.902, 0.4078, 0.6588],
+              "hex": "#e668a8"
+            }
+          },
+          "fill": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [1.0, 0.7608, 0.8863],
+              "hex": "#ffc2e2"
+            }
+          },
+          "grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [1.0, 0.2471, 0.6588],
+              "alpha": 0.63,
+              "hex": "#ff3fa8"
+            }
+          },
+          "deep-grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.8039, 0.5137, 0.651],
+              "alpha": 0.7,
+              "hex": "#cd83a6"
+            }
+          }
+        },
+        "ai": {
+          "clear": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [1.0, 1.0, 1.0],
+              "hex": "#ffffff"
+            }
+          },
+          "deep": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.4314, 1.0, 0.5569],
+              "hex": "#6eff8e"
+            }
+          },
+          "lit": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.098, 0.6314, 0.2627],
+              "hex": "#19a143"
+            }
+          },
+          "grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.2471, 1.0, 0.4745],
+              "alpha": 0.8,
+              "hex": "#3fff79"
+            }
+          },
+          "deep-grain": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0, 0.651, 0.3255],
+              "hex": "#00a653"
+            }
+          },
+          "rim": {
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [0.0118, 0.1451, 0.1451],
+              "hex": "#032525"
+            }
+          }
+        }
+      }
+    },
+    "tile": {
+      "surface": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8941, 0.8941, 0.8941],
+          "hex": "#e4e4e4"
+        }
+      }
+    },
+    "tag": {
+      "border": {
+        "$type": "color",
+        "$value": "{accent.border}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{text.primary}"
+      }
+    },
+    "work-tag": {
+      "$type": "color",
+      "$value": "{accent.text}"
+    },
+    "featured": {
+      "surface": {
+        "$type": "color",
+        "$value": "{tile.surface}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{accent.edge}"
+      },
+      "open-fill": {
+        "$type": "color",
+        "$value": "{accent.fill}"
+      },
+      "open-text": {
+        "$type": "color",
+        "$value": "{accent.on-fill}"
+      },
+      "open-border": {
+        "$type": "color",
+        "$value": "{accent.fill}"
+      }
+    },
+    "cells": {
+      "rule": {
+        "$type": "color",
+        "$value": "{accent.fill}"
+      }
+    }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "1": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.12,
+          "hex": "#000000"
+        },
+        "offsetX": {
+          "value": 0.0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 1.0,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 3.0,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "2": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.12,
+          "hex": "#000000"
+        },
+        "offsetX": {
+          "value": 0.0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 6.0,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 16.0,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "3": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.16,
+          "hex": "#000000"
+        },
+        "offsetX": {
+          "value": 0.0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 16.0,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 40.0,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    }
+  },
+  "chart": {
+    "$type": "color",
+    "$description": "Categorical data series: Okabe\u2013Ito hues whose lightness is spread per theme so every pair stays apart (CIEDE2000 \u2265 10) with normal vision and under simulated deuteranopia, protanopia and tritanopia, and each holds 3:1 (4.5:1 in contrast themes) on the page surfaces. Pair every series with a label, marker or dash; never colour alone.",
+    "series": {
+      "1": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1804, 0.5451, 0.8039],
+          "hex": "#2e8bcd"
+        },
+        "$description": "Okabe\u2013Ito blue hue family; lightness set for this theme."
+      },
+      "2": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6863, 0.4824, 0.0941],
+          "hex": "#af7b18"
+        },
+        "$description": "Okabe\u2013Ito orange hue family; lightness set for this theme."
+      },
+      "3": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0863, 0.4745, 0.349],
+          "hex": "#167959"
+        },
+        "$description": "Okabe\u2013Ito bluish green hue family; lightness set for this theme."
+      },
+      "4": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5137, 0.2157, 0.0],
+          "hex": "#833700"
+        },
+        "$description": "Okabe\u2013Ito vermillion hue family; lightness set for this theme."
+      },
+      "5": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3255, 0.0275, 0.2275],
+          "hex": "#53073a"
+        },
+        "$description": "Okabe\u2013Ito reddish purple hue family; lightness set for this theme."
+      },
+      "6": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0235, 0.298, 0.4235],
+          "hex": "#064c6c"
+        },
+        "$description": "Okabe\u2013Ito sky blue hue family; lightness set for this theme."
+      }
+    }
+  }
+}
