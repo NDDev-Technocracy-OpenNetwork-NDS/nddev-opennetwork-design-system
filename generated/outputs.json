@@ -105,7 +105,7 @@
       "src/emit/llms.ts": "3db3ab00debd000c14bd385d6bf6d6ef3cdd851c446ecda43b57f17bdba4e8a7",
       "src/emit/native.ts": "5f5f1a3c0647b14137b9e22c78619bdbb143f636c8dd11619cce4b60d290664e",
       "src/emit/opennetwork.ts": "384d8d9b91ccbbb98e3c4302870c56464efd9a0b3171283f125b8ae3c9c00931",
-      "src/emit/readmes.ts": "8aeaad54fd98f959c9e63300437a329a006dfb66c2899bf5038b38787ab52cd5",
+      "src/emit/readmes.ts": "11a3b2f8998cdf238fb4ecd71b3408a27495979e16da6cf7454b60507e1071d0",
       "src/emit/reference.ts": "4fe81bc74954645f6f61b7e82ec574ea5338ff766485c2d0e0e1ec0ebf74137b",
       "src/emit/rust.ts": "4931e318533c894ba700eb74f746fb7d2a223a19889df515ba94a710c309c9e6",
       "src/emit/swift.ts": "4b7842032f6a681f726a9c3ab7c08e640871621dd0542f64f5f90a0db699b95d",
@@ -277,7 +277,7 @@
       "src/emit/llms.ts": "3db3ab00debd000c14bd385d6bf6d6ef3cdd851c446ecda43b57f17bdba4e8a7",
       "src/emit/native.ts": "5f5f1a3c0647b14137b9e22c78619bdbb143f636c8dd11619cce4b60d290664e",
       "src/emit/opennetwork.ts": "384d8d9b91ccbbb98e3c4302870c56464efd9a0b3171283f125b8ae3c9c00931",
-      "src/emit/readmes.ts": "8aeaad54fd98f959c9e63300437a329a006dfb66c2899bf5038b38787ab52cd5",
+      "src/emit/readmes.ts": "11a3b2f8998cdf238fb4ecd71b3408a27495979e16da6cf7454b60507e1071d0",
       "src/emit/reference.ts": "4fe81bc74954645f6f61b7e82ec574ea5338ff766485c2d0e0e1ec0ebf74137b",
       "src/emit/rust.ts": "4931e318533c894ba700eb74f746fb7d2a223a19889df515ba94a710c309c9e6",
       "src/emit/swift.ts": "4b7842032f6a681f726a9c3ab7c08e640871621dd0542f64f5f90a0db699b95d",
@@ -1736,7 +1736,7 @@
       "executable": false
     },
     "packages/web/README.md": {
-      "sha256": "f16a2be9576fcc4adbe59cb5427455aa5884d2d6b4ec3a916da1880f7b1bd870",
+      "sha256": "c6d33dd34c00fc16022825a807e4bad7c3cb493d58f5ac20acf4918a35d8ad71",
       "scope": "packages",
       "executable": false
     },

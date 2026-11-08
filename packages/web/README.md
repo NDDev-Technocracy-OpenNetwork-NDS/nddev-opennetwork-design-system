@@ -17,6 +17,6 @@
 
 The page maps `prefers-contrast: more` to the contrast themes (`registry.contrastThemes`) and `prefers-color-scheme` to `registry.systemThemes`.
 
-Nested contexts retain the nearest explicit theme/direction and platform/density in browsers with CSS `@scope` (Baseline March 2026). Declaring the default web platform, comfortable density or standard motion also restores that context after an inherited override. Flat selectors remain for older engines; they do not establish correct palettes through contradictory nested contexts. `just test-browser` runs the reference page, the accessibility trees and the context suite in Chromium, Firefox and WebKit.
+Nested contexts retain the nearest explicit theme/direction and platform/density in browsers with CSS `@scope` (Baseline March 2026). Declaring the default web platform, comfortable density or standard motion also restores that context after an inherited override. Flat selectors remain for older engines; they do not establish correct palettes through contradictory nested contexts. `just test-browser` exercises reference components, accessible names, keyboard patterns, motion and narrow/wide layout in Chromium, Firefox and WebKit.
 
 Consume a release: copy this directory from the tag `vX.Y.Z` into the product and record the tag and the directory digest (docs/adr/0001-architecture.md §13). Never edit the copy; update it from a newer tag.
