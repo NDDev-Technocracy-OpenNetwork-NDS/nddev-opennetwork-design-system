@@ -3,6 +3,8 @@ set shell := ["bash", "-euo", "pipefail", "-c"]
 default:
     @just --list
 
+setup: install
+
 install:
     bun install --frozen-lockfile --ignore-scripts
 
@@ -14,6 +16,7 @@ tokens: generate
 
 # Source checks only; builds, applications and tests run on runners.
 check:
+    just --fmt --check
     python3 scripts/check-public-source.py
     node src/cli.ts check
     bun run typecheck
@@ -37,7 +40,9 @@ test-browser:
     bun run test:browser
 
 platforms *targets:
-    bash scripts/check-platforms.sh {{targets}}
+    bash scripts/check-platforms.sh {{ targets }}
 
 serve:
     node scripts/serve.ts
+
+verify: check test test-browser

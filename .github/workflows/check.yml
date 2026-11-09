@@ -3,6 +3,8 @@ name: NDS checks
 on:
   pull_request:
     branches: [main, dev]
+  push:
+    branches: [dev]
   workflow_dispatch:
 
 permissions:
@@ -17,12 +19,11 @@ jobs:
     runs-on: ubuntu-26.04
     timeout-minutes: 40
     steps:
+      - name: Disable external telemetry
+        uses: NDDev-Technocracy-OpenNetwork/nddev-ci/actions/telemetry@52d8302d2272967a21fd8e3ae594205588648777 # v0.6.28
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3
-        with:
-          just-version: "1.59.0"
       - name: Install verified Flutter SDK
         shell: bash
         run: |
@@ -40,7 +41,9 @@ jobs:
         with:
           bun-version: "1.4.3"
       - name: Install locked generator dependencies
-        run: just install
+        uses: NDDev-Technocracy-OpenNetwork/nddev-ci/actions/recipe@52d8302d2272967a21fd8e3ae594205588648777 # v0.6.28
+        with:
+          recipe: setup
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version-file: .python-version
@@ -87,6 +90,8 @@ jobs:
           - target: apple
             os: macos-15
     steps:
+      - name: Disable external telemetry
+        uses: NDDev-Technocracy-OpenNetwork/nddev-ci/actions/telemetry@52d8302d2272967a21fd8e3ae594205588648777 # v0.6.28
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -113,6 +118,8 @@ jobs:
     needs: [reference, platforms]
     runs-on: ubuntu-26.04
     steps:
+      - name: Disable external telemetry
+        uses: NDDev-Technocracy-OpenNetwork/nddev-ci/actions/telemetry@52d8302d2272967a21fd8e3ae594205588648777 # v0.6.28
       - name: Require every package and reference check
         env:
           REFERENCE: ${{ needs.reference.result }}
@@ -120,31 +127,8 @@ jobs:
         run: test "$REFERENCE" = success && test "$PLATFORMS" = success
 
   workflows:
-    # Workflow lint and audit plus the secret scan: new commits on pull requests,
-    # the full history on main (STD-0004 library tools, verified prebuilt binaries).
-    runs-on: ubuntu-26.04
-    timeout-minutes: 10
     permissions:
       contents: read
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-      - uses: NDDev-Technocracy-Standarts/std-0004-ci-cd-workflows/.github/actions/tools@c192c6adcf22088abf456635de614d42e8fa3f8d # nddev-cicd-v0.6.20
-        with:
-          capability: security
-      - name: Lint and audit workflows
-        run: |
-          actionlint
-          zizmor --offline --no-progress .github
-      - name: Scan new pull request commits, or the full history on main
-        env:
-          BASE: ${{ github.event.pull_request.base.sha }}
-          HEAD: ${{ github.event.pull_request.head.sha }}
-        run: |
-          if [ -n "$BASE" ]; then
-            gitleaks git --no-banner --redact --log-opts="$BASE..$HEAD" .
-          else
-            gitleaks git --no-banner --redact .
-          fi
+    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/merge-stops.yml@52d8302d2272967a21fd8e3ae594205588648777 # v0.6.28
+    with:
+      hosted-runner: ubuntu-26.04
