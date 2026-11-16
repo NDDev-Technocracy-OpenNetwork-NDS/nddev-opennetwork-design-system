@@ -3,6 +3,9 @@ name: NDS checks
 on:
   pull_request:
     branches: [main, dev]
+    types: [opened, synchronize, reopened, edited]
+  push:
+    branches: [dev]
   workflow_dispatch:
 
 permissions:
@@ -119,32 +122,10 @@ jobs:
           PLATFORMS: ${{ needs.platforms.result }}
         run: test "$REFERENCE" = success && test "$PLATFORMS" = success
 
-  workflows:
-    # Workflow lint and audit plus the secret scan: new commits on pull requests,
-    # the full history on main (STD-0004 library tools, verified prebuilt binaries).
-    runs-on: ubuntu-26.04
-    timeout-minutes: 10
+  merge-stops:
+    if: github.event_name == 'pull_request'
+    uses: NDDev-Technocracy-OpenNetwork/nddev-ci/.github/workflows/merge-stops.yml@6cf64d17c08dfc75392c55784b872fe9a6056553 # v0.6.57
     permissions:
       contents: read
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-      - uses: NDDev-Technocracy-Standarts/std-0004-ci-cd-workflows/.github/actions/tools@c192c6adcf22088abf456635de614d42e8fa3f8d # nddev-cicd-v0.6.20
-        with:
-          capability: security
-      - name: Lint and audit workflows
-        run: |
-          actionlint
-          zizmor --offline --no-progress .github
-      - name: Scan new pull request commits, or the full history on main
-        env:
-          BASE: ${{ github.event.pull_request.base.sha }}
-          HEAD: ${{ github.event.pull_request.head.sha }}
-        run: |
-          if [ -n "$BASE" ]; then
-            gitleaks git --no-banner --redact --log-opts="$BASE..$HEAD" .
-          else
-            gitleaks git --no-banner --redact .
-          fi
+    with:
+      hosted-runner: ubuntu-26.04
