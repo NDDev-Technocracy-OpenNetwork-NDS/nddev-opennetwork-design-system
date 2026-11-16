@@ -109,9 +109,10 @@ jobs:
           swift test --package-path packages/apple
 
   contract:
-    if: ${{ !cancelled() }}
+    if: ${{ always() }}
     needs: [reference, platforms]
     runs-on: ubuntu-26.04
+    timeout-minutes: 5
     steps:
       - name: Require every package and reference check
         env:
